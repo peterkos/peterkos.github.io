@@ -1,0 +1,53 @@
+@import "_variables.scss";
+
+
+div.main {
+	height: 300px;
+	width: 100%;
+	overflow: hidden; //Disables h1 spacing issue
+	background-color: $headerColor;
+
+	h1, p {
+		text-align: center;
+		vertical-align: middle;
+	}
+	h1 { font-size: 3em; }
+
+	.profile-pic {
+		img {
+			// border-radius: 50%;
+			width: 50px;
+			height: 50px;
+			margin: 0 auto;
+		}
+	}
+} //End of .main
+
+div.langs {
+	background-color: $langColor;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+
+	h1 { padding: $textPadding;}
+
+	.col {
+		height: 100px;
+	}
+
+	.col1, .col2, .col3 {
+		background-color: rgba(218, 187, 255, 0.4);
+		padding: 5px;
+		width: 200px;
+		height: 150px;
+		margin: 10px;
+		color: white;
+		font-weight: bold;
+		font-size: 2em;
+		text-align: center;
+	}
+} //End of .langs

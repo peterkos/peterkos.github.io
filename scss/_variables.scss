@@ -1,0 +1,10 @@
+$headerColor: #001F3F;
+$langColor: #02376e;
+
+$textPadding: 40px;
+
+
+@mixin sizing($itemsPerRow) {
+	// width: ((100% - (($itemsPerRow - 1) * $margin)) / $itemsPerRow);
+	width: ((100% - ($itemsPerRow - 1)) / $itemsPerRow);
+}
