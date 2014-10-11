@@ -1,3 +1,3 @@
 ##Hello!
 
-This is the repository for all of the files at [peterkos.github.io](peterkos.github.io). 
+This is my attempt at using [gulp](http://gulpjs.com), featuring barebones-styling and absolutely no content! :+1:
