@@ -1,0 +1,15 @@
+---
+layout: post
+title:  "New Blog"
+date:   2014-10-10 16:39:49
+tags: featured
+---
+I've started a blog!
+
+This will (mainly) accompany my [YouTube](http://youtube.com/pkos91) channel with text forms of most videos, and stuff that generally isn't fit for a full ~5-20 mintue tutorial. Expect a few code snippets (as seen below) as well.
+
+{% gist peterkos/68311cb3c31274cd2f62 %}
+
+Additionally, below every post will be links to instructions for installing any dependencies. For example, if I do a post on a jekyll plugin, I'll [put a link]() to my Jekyll installation guide.
+
+Thanks for coming by!

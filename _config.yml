@@ -1,0 +1,54 @@
+# Build settings
+markdown: kramdown
+highlighter: pygments
+date: /:month-:day-:year/:title.html
+# Site settings
+title: "Peter Kos"
+description: >
+   Developer, Student, Artist
+
+email: pkos91@icloud.com
+#blog logo
+logo: "/assets/images/github_profilepic.png"
+# blog cover
+cover: "/assets/images/blog_bg2.jpeg"
+
+name: 'Peter Kos'
+author: 'Peter Kos'
+author_image: "/assets/images/github_profilepic.png"
+
+paginate:	5
+
+url: "peterkos.github.io" # the base hostname & protocol for your site
+# baseurl: "peterkos.github.io"
+baseurl: ""
+
+# social icons and sharing options
+social:
+  - icon:	youtube
+    url:	https://youtube.com/pkos91
+    desc: Subscribe on youtube
+    share_url:
+    share_title:
+    share_link:
+
+#  - icon:	facebook
+#    url:	https://facebook.com/???
+#    desc: Connect with me facebook
+#    share_url: //www.facebook.com/sharer.php
+#    share_title: ?t=
+#    share_link: "&amp;u="
+
+  - icon:	github
+    url:	https://github.com/peterkos
+    desc:	Fork me on github
+    share_url:
+    share_title:
+    share_link:
+
+  # - icon: twitter
+  #   url:  https://twitter.com/pkos91
+  #   desc: Follow me on twitter
+  #   share_url: http://twitter.com/share
+  #   share_title: ?text=
+  #   share_link: "&amp;url="
