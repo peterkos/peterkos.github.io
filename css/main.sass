@@ -1,18 +1,14 @@
 ---
 ---
-
-@import 'syntax-highlighting'
-
 @import 'bourbon/bourbon'
 
 .cf
-  @include clearfix
+  // @include clearfix
 
 $rs: 16px
 
 $font-serif: Linux Libertine
 $font-sans: Open Sans, MundoSans, "Helvetica Neue", Arial, Helvetica, sans-serif
-
 
 @mixin respond-to($breakpoint)
   @media only screen and (max-width: $breakpoint + px)
@@ -587,21 +583,3 @@ body
   margin-top: 50px
 .post-tag-articleimage
   display: none
-
-// pre,
-// code
-//   font-size: 15px
-//   border: 1px solid #e8e8e8
-//   border-radius: 3px
-//   background-color: white
-
-// code
-//   padding: 1px 5px
-
-// pre
-//   padding: 8px 12px
-//   overflow-x: scroll
-//   > code
-//     border: 0
-//     padding-right: 0
-//     padding-left: 0
