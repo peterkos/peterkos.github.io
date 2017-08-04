@@ -3,18 +3,35 @@
 
 @import 'jekyll-theme-cayman';
 
-.posts {
+.page-header {
+	a {
+		text-decoration: none;
+		color: white;
+	}
+}
+
+.btn {
+
+	font-size: 14pt;
+	margin-bottom: 0;
+	margin-top: 10px;
+
+	@include medium {
+		padding: .6rem 2rem;
+	}
+
+}
+
+.posts li {
 
 	list-style: none;
 	// background-color: #e6e6e6;
 	border: thin solid $border-color;
 	border-radius: 8px;
 	padding: 20px;
-
 	
 	&:hover {
 		// Random idea: y-offset based on screen position?
-		/* offset-x | offset-y | blur-radius | color */
 		box-shadow: 0px 4px 0px $border-color;
 	}
 
@@ -22,5 +39,6 @@
 		color: black;
 		font-size: 25pt;
 		font-weight: bold;
+	
 	}
 }
