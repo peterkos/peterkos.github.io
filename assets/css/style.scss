@@ -44,6 +44,33 @@
 }
 
 // POST PAGE
+
+.page-header-page {
+	color: $header-heading-color;
+	background-color: purple;
+	height: 100px;
+
+	a, h2 {
+		display: inline-block;
+		// float: left;
+	}
+
+	.project-name {
+		margin: auto;
+		padding: 20px;
+	}
+
+	.project-tagline-short {
+		margin: 0;
+		padding: 0;
+	}
+
+	.btn {
+		
+	}
+
+}
+
 .post {
 
 	h1 {
