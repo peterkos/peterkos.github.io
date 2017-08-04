@@ -4,6 +4,9 @@
 @import 'jekyll-theme-cayman';
 
 .page-header {
+	background-image: url("/assets/images/headerbg.jpg");
+	background-position: 0% 50%;
+
 	a {
 		text-decoration: none;
 		color: white;
