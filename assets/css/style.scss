@@ -25,10 +25,10 @@
 .posts li {
 
 	list-style: none;
-	// background-color: #e6e6e6;
 	border: thin solid $border-color;
 	border-radius: 8px;
 	padding: 20px;
+	margin-top: 3%;
 	
 	&:hover {
 		// Random idea: y-offset based on screen position?
@@ -39,6 +39,5 @@
 		color: black;
 		font-size: 25pt;
 		font-weight: bold;
-	
 	}
 }
