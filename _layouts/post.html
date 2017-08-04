@@ -11,14 +11,18 @@
 </head>
 <body>
 	<section class="page-header-page">
-		<a href="/index.html">
-			<h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1>
-		</a>
-		<h2 class="project-tagline-short">{{ site.shortdescription | default: site.github.project_tagline }}</h2>
-		<!-- Page -->
-		<a href="_code/code.html" class="btn">Code</a>
-		<a href="_music/music.html" class="btn">Music</a>
-		<a href="_design/design.html" class="btn">Design</a>
+		<ul>
+			<a href="/index.html">
+				<h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1>
+			</a>
+			<h2 class="project-tagline-short">{{ site.shortdescription | default: site.github.project_tagline }}</h2>
+			<!-- Page -->
+			<div class="links">
+				<a href="/_code/code.html" class="btn">Code</a>
+				<a href="/_music/music.html" class="btn">Music</a>
+				<a href="/_design/design.html" class="btn">Design</a>
+			</div>
+		</ul>
 	</section>
 
 	<section class="main-content">
@@ -28,7 +32,6 @@
 			<h1>{{ page.title }}</h1>
 			<h6>{{ page.date }}</h6>
 			{{ page.content }}
-		<h1>
 
 		</div>
 
