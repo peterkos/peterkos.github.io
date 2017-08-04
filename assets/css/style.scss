@@ -30,6 +30,8 @@
 	border-radius: 8px;
 	padding: 20px;
 	margin-top: 3%;
+	transition: box-shadow 0.2s;
+
 	
 	&:hover {
 		// Random idea: y-offset based on screen position?
