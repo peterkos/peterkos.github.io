@@ -88,11 +88,29 @@
 		font-size: 25pt;
 		padding-bottom: 0;
 		margin-bottom: 0;
+
+		transition-property: margin-left;
+  		transition-duration: 0.5s;
+
+  		&:hover {
+  			margin-left: -40px;
+  		}
+
 	}	
 
-	 h6 {
-	 	margin-top: 0;
-	 	margin-bottom: 2rem;
-	 }
+	h6 {
+		margin-top: 0;
+		margin-bottom: 2rem;
+	}
+
+	.back {
+		font-size: 3rem;
+		display: inline;
+		padding-right: 20px;
+		opacity: 0.7;
+		text-decoration: none;
+		color: inherit;
+
+	}
 
 }
