@@ -38,13 +38,18 @@
 	transition: box-shadow 0.2s;
 
 	&:hover {
-		// Random idea: y-offset based on screen position?
 		box-shadow: 0px 4px 0px $border-color;
 	}
 
+	// Post title
 	a {
 		color: black;
 		font-size: 25pt;
+	}
+
+	// Date
+	h6 {
+		margin-top: 0;
 	}
 }
 
@@ -104,8 +109,9 @@
 
 }
 
-// Categories
 
+// Categories
+// TODO
 
 // Category page
 .categorypagelist {
