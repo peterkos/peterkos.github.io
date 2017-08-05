@@ -2,8 +2,14 @@
 @import "rouge-github";
 @import "variables";
 
+@mixin large {
+	@media screen and (min-width: #{$large-breakpoint}) {
+		@content;
+	}
+}
+
 @mixin medium {
-	@media screen and (min-width: #{$medium-breakpoint}) {
+	@media screen and (min-width: #{$medium-breakpoint}) and (max-width: #{$large-breakpoint}) {
 		@content;
 	}
 }
@@ -58,6 +64,10 @@ a {
 		margin-left: 1rem;
 	}
 
+	@include large {
+		padding: 0.75rem 1rem;
+	}
+
 	@include medium {
 		padding: 0.6rem 0.9rem;
 		font-size: 0.9rem;
@@ -82,6 +92,10 @@ a {
 	background-color: $header-bg-color;
 	background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
 
+	@include large {
+		padding: 5rem 6rem;
+	}
+
 	@include medium {
 		padding: 3rem 4rem;
 	}
@@ -94,6 +108,10 @@ a {
 .project-name {
 	margin-top: 0;
 	margin-bottom: 0.1rem;
+
+	@include large {
+		font-size: 3.25rem;
+	}
 
 	@include medium {
 		font-size: 2.25rem;
@@ -108,6 +126,10 @@ a {
 	margin-bottom: 2rem;
 	font-weight: normal;
 	opacity: 0.7;
+
+	@include large {
+		font-size: 1.25rem;
+	}
 
 	@include medium {
 		font-size: 1.15rem;
@@ -125,8 +147,15 @@ a {
 		margin-top: 0;
 	}
 
+	@include large {
+		max-width: 64rem;
+		padding: 2rem 6rem;
+		margin: 0 auto;
+		font-size: 1.1rem;
+	}
+
 	@include medium {
-		padding: 2rem 10rem;
+		padding: 2rem 4rem;
 		font-size: 1.1rem;
 	}
 
@@ -249,18 +278,18 @@ a {
 		width: 100%;
 		overflow: auto;
 		word-break: normal;
-	word-break: keep-all; // For Firefox to horizontally scroll wider tables.
-	-webkit-overflow-scrolling: touch;
+		word-break: keep-all; // For Firefox to horizontally scroll wider tables.
+		-webkit-overflow-scrolling: touch;
 
-	th {
-		font-weight: bold;
-	}
+		th {
+			font-weight: bold;
+		}
 
-	th,
-	td {
-		padding: 0.5rem 1rem;
-		border: 1px solid $table-border-color;
-	}
+		th,
+		td {
+			padding: 0.5rem 1rem;
+			border: 1px solid $table-border-color;
+		}
 }
 
 dl {
@@ -293,6 +322,10 @@ hr {
 	margin-top: 2rem;
 	border-top: solid 1px $hr-border-color;
 
+	@include large {
+		font-size: 1rem;
+	}
+	
 	@include medium {
 		font-size: 1rem;
 	}
