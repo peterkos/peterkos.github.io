@@ -111,7 +111,41 @@
 
 
 // Categories
-// TODO
+.categories {
+
+	list-style: none;
+	text-align: center;
+	padding: 0;
+
+	li {
+		color: $body-text-color;
+		font-size: 10pt;
+		display: inline;
+
+		// Dot between characters, excluded for first/last below
+		&:after {
+			content:"\00B7";
+		}
+
+		// "Categories" text
+		&:first-child {
+			text-transform: uppercase;
+			&:after { content: ""; }
+		}
+
+		&:last-child {
+			&:after { content: ""; }	
+		}
+
+		// The actual categories
+		a {
+			text-decoration: none;
+			color: $header-bg-color;
+		}
+
+	}
+
+}
 
 // Category page
 .categorypagelist {

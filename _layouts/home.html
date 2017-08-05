@@ -23,15 +23,20 @@
 	</section>
 
 	<section class="main-content">
+
 		{{ content }}
 
-		<!-- Category list -->
-		<!-- <ul class="categories">
+
+		<!-- Category list, with link to each page -->
+		<ul class="categories">
+			<li>Categories:</li>
 			{% for category in site.categories %}
 			<li>
+				<a href="/categories/{{ category[0] }}">{{ category[0] }}</a>
 			</li>
 			{% endfor %}
-		</ul> -->
+		</ul>
+
 
 		<!-- Posts! -->
 		<ul class="posts">
@@ -43,6 +48,7 @@
 			</li>
 			{% endfor %}
 		</ul>
+
 
 		<footer class="site-footer">
 			{% if site.github.is_project_page %}
