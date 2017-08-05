@@ -2,7 +2,7 @@
 layout: post
 title:  "Another post"
 date:   2017-08-03 19:56:39 -0400
-categories: test
+categories: C iOS Java Lua Music Swift Web
 ---
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
