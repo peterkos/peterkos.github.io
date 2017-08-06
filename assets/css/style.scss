@@ -3,9 +3,15 @@
 
 @import 'jekyll-theme-cayman';
 
+
+html, body {
+	height: 100%;
+}
+
 .page-header {
-	background-image: url("/assets/images/headerbg.jpg");
-	background-position: 0% 50%;
+	background: linear-gradient(to bottom, #3f1628 0%, #CF5958 100%);
+	// Future design!
+	// height: 60%;
 
 	a {
 		text-decoration: none;
@@ -33,7 +39,7 @@
 	list-style: none;
 	border: thin solid $border-color;
 	border-radius: 8px;
-	padding: 20px;
+	padding: 0px 20px 20px;
 	margin-top: 3%;
 	transition: box-shadow 0.2s;
 
@@ -52,6 +58,9 @@
 		margin-top: 0;
 	}
 }
+
+
+
 
 // POST PAGE
 
@@ -117,6 +126,7 @@
 }
 
 
+
 // Categories
 .categories {
 
@@ -151,6 +161,8 @@
 	}
 
 }
+
+
 
 // Category page
 .categorypagelist {
