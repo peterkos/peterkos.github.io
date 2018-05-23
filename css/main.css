@@ -31,7 +31,7 @@ nav {
   .music .album1 .info {
     color: white; }
   .music .album1 iframe {
-    height: 588px; }
+    height: 588px !important; }
 .music .album2 {
   height: 720px;
   background-color: #36374a;
@@ -39,7 +39,7 @@ nav {
   .music .album2 .info {
     color: white; }
   .music .album2 iframe {
-    height: 720px; }
+    height: 720px !important; }
 .music .album3 {
   height: 555px;
   background-color: purple;
@@ -47,7 +47,7 @@ nav {
   .music .album3 .info {
     color: white; }
   .music .album3 iframe {
-    height: 555px; }
+    height: 555px !important; }
 .music .album4 {
   height: 442px;
   background-color: gray;
@@ -55,7 +55,7 @@ nav {
   .music .album4 .info {
     color: black; }
   .music .album4 iframe {
-    height: 442px; }
+    height: 442px !important; }
 .music .album5 {
   height: 786px;
   background-color: pink;
@@ -63,7 +63,7 @@ nav {
   .music .album5 .info {
     color: black; }
   .music .album5 iframe {
-    height: 786px; }
+    height: 786px !important; }
 .music .album iframe {
   float: left;
   display: inline-block;

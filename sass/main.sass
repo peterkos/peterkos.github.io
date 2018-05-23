@@ -2,6 +2,11 @@
 
 // This is so hacky, but alas, Bandcamp iframes are as they are.
 $heights: (1: 588px, 2: 720px, 3: 555px, 4: 442px, 5: 786px)
+// $heights: (1: 600px, 2: 600px, 3: 600px, 4: 600px, 5: 600px)
+
+
+	
+
 $colors: (1: hsla(60, 10%, 24%, 1.00), 2: hsla(237, 16%, 25%, 1.00), 3: purple, 4: gray, 5: pink)
 
 
@@ -29,8 +34,12 @@ $colors: (1: hsla(60, 10%, 24%, 1.00), 2: hsla(237, 16%, 25%, 1.00), 3: purple, 
 					color: black
 			
 			// Set height of bandcamp player
+			// !important overrides HTML setting (in case of error)
+			// Commented fixed height is for possibly standardizing heights of all players
+			// However, it doesn't seem to work too well with smaller albums and single tracks :(
 			iframe
-				height: $currentHeight
+				height: $currentHeight !important
+				// height: 600px !important
 
 
 			// For debugging map values
