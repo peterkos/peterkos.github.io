@@ -24,32 +24,39 @@ nav {
     nav h2.disabled {
       opacity: 0.4; }
 
-.music {
-  margin: 0 10% 0 10%; }
-  .music .album1 {
+.music .album1 {
+  height: 588px;
+  background-color: #434337;
+  padding: 20px 15% 20px 15%; }
+  .music .album1 .info {
+    color: white; }
+  .music .album1 iframe {
     height: 588px; }
-    .music .album1 p::after {
-      content: "588px"; }
-    .music .album1 iframe {
-      height: 588px; }
-  .music .album2 {
-    height: 100px; }
-    .music .album2 p::after {
-      content: "100px"; }
-    .music .album2 iframe {
-      height: 100px; }
-  .music .album3 {
+  .music .album1 p::after {
+    content: "24%"; }
+.music .album2 {
+  height: 200px;
+  background-color: white;
+  padding: 20px 15% 20px 15%; }
+  .music .album2 .info {
+    color: black; }
+  .music .album2 iframe {
+    height: 200px; }
+  .music .album2 p::after {
+    content: "100%"; }
+.music .album3 {
+  height: 820px;
+  background-color: purple;
+  padding: 20px 15% 20px 15%; }
+  .music .album3 .info {
+    color: white; }
+  .music .album3 iframe {
     height: 820px; }
-    .music .album3 p::after {
-      content: "820px"; }
-    .music .album3 iframe {
-      height: 820px; }
-  .music .album4 p::after {
-    content: ""; }
-  .music .album {
-    border: 2px solid pink;
-    margin-top: 100px; }
-    .music .album iframe {
-      float: left;
-      display: inline-block;
-      margin-right: 20px; }
+  .music .album3 p::after {
+    content: "25.09804%"; }
+.music .album {
+  border: 2px solid pink; }
+  .music .album iframe {
+    float: left;
+    display: inline-block;
+    margin-right: 20px; }
