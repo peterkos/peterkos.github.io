@@ -1,10 +1,10 @@
+* {
+  font-family: sans-serif; }
+
 body {
   height: 100%;
   padding: 0;
   margin: 0; }
-
-* {
-  font-family: sans-serif; }
 
 h1.name {
   font-size: 4.5rem;
@@ -27,36 +27,48 @@ nav {
 .music .album1 {
   height: 588px;
   background-color: #434337;
-  padding: 20px 15% 20px 15%; }
+  padding: 40px 15%; }
   .music .album1 .info {
     color: white; }
   .music .album1 iframe {
     height: 588px; }
-  .music .album1 p::after {
-    content: "24%"; }
 .music .album2 {
-  height: 200px;
-  background-color: white;
-  padding: 20px 15% 20px 15%; }
+  height: 720px;
+  background-color: #36374a;
+  padding: 40px 15%; }
   .music .album2 .info {
-    color: black; }
+    color: white; }
   .music .album2 iframe {
-    height: 200px; }
-  .music .album2 p::after {
-    content: "100%"; }
+    height: 720px; }
 .music .album3 {
-  height: 820px;
+  height: 555px;
   background-color: purple;
-  padding: 20px 15% 20px 15%; }
+  padding: 40px 15%; }
   .music .album3 .info {
     color: white; }
   .music .album3 iframe {
-    height: 820px; }
-  .music .album3 p::after {
-    content: "25.09804%"; }
-.music .album {
-  border: 2px solid pink; }
-  .music .album iframe {
-    float: left;
-    display: inline-block;
-    margin-right: 20px; }
+    height: 555px; }
+.music .album4 {
+  height: 442px;
+  background-color: gray;
+  padding: 40px 15%; }
+  .music .album4 .info {
+    color: black; }
+  .music .album4 iframe {
+    height: 442px; }
+.music .album5 {
+  height: 786px;
+  background-color: pink;
+  padding: 40px 15%; }
+  .music .album5 .info {
+    color: black; }
+  .music .album5 iframe {
+    height: 786px; }
+.music .album iframe {
+  float: left;
+  display: inline-block;
+  margin-right: 20px; }
+.music .album h6 {
+  margin: 0 !important;
+  font-size: 10px;
+  color: gray; }

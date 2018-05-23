@@ -1,13 +1,8 @@
 
 
-
-
 // This is so hacky, but alas, Bandcamp iframes are as they are.
-
-// $height1: 588px
-
-$heights: (1: 588px, 2: 200px, 3: 820px)
-$colors: (1: hsla(60, 10%, 24%, 1.00), 2: white, 3: purple)
+$heights: (1: 588px, 2: 720px, 3: 555px, 4: 442px, 5: 786px)
+$colors: (1: hsla(60, 10%, 24%, 1.00), 2: hsla(237, 16%, 25%, 1.00), 3: purple, 4: gray, 5: pink)
 
 
 // Function that sets each album's div height to match the Bandcamp player
@@ -23,7 +18,7 @@ $colors: (1: hsla(60, 10%, 24%, 1.00), 2: white, 3: purple)
 			// Set height of div, along with padding and color
 			height: $currentHeight
 			background-color: $currentColor
-			padding: 20px 15% 20px 15%
+			padding: 40px 15%
 
 			// Readability
 			@if lightness($currentColor) <= 30%
@@ -41,16 +36,16 @@ $colors: (1: hsla(60, 10%, 24%, 1.00), 2: white, 3: purple)
 			// For debugging map values
 			p::after
 				// content: "#{$currentHeight}"
-				content: "#{lightness($currentColor)}"
+				// content: "#{lightness($currentColor)}"
 			
+*
+	font-family: sans-serif
 
 body
 	height: 100%
 	padding: 0
 	margin: 0
 
-*
-	font-family: sans-serif
 
 h1.name
 	font-size: 4.5rem
@@ -77,14 +72,14 @@ nav
 
 .music
 
-	@include setHeight(1, 3)
+	@include setHeight(1, length($heights))
 
 
 	.album
 
 		// Album padding is handled in the mixin, to allow dynamically-assigned background
 		// to expand around the edges
-		border: 2px solid pink
+		// border: 2px solid pink
 			
 
 		iframe
@@ -92,8 +87,11 @@ nav
 			display: inline-block
 			margin-right: 20px
 
-
-
+		h6
+			margin: 0 !important
+			font-size: 10px
+			color: gray
+		
 
 
 	
@@ -101,3 +99,6 @@ nav
 // see https://panic.com/blog/itunes-11-and-colors/
 // and https://thomaspark.co/2012/12/the-itunes-expanding-album-effect-in-css-js/
 // and http://charlesleifer.com/blog/using-python-and-k-means-to-find-the-dominant-colors-in-images/
+
+// While we're at it, more references:
+// http://jackiebalzer.com/color
