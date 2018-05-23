@@ -1,0 +1,55 @@
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0; }
+
+* {
+  font-family: sans-serif; }
+
+h1.name {
+  font-size: 4.5rem;
+  font-weight: 1;
+  padding-top: 100px;
+  text-align: center; }
+
+nav {
+  text-align: center;
+  padding-bottom: 10%; }
+  nav h2 {
+    display: inline-block;
+    font-size: 5rem;
+    margin: 20px; }
+    nav h2.page {
+      padding-top: 10%; }
+    nav h2.disabled {
+      opacity: 0.4; }
+
+.music {
+  margin: 0 10% 0 10%; }
+  .music .album1 {
+    height: 588px; }
+    .music .album1 p::after {
+      content: "588px"; }
+    .music .album1 iframe {
+      height: 588px; }
+  .music .album2 {
+    height: 100px; }
+    .music .album2 p::after {
+      content: "100px"; }
+    .music .album2 iframe {
+      height: 100px; }
+  .music .album3 {
+    height: 820px; }
+    .music .album3 p::after {
+      content: "820px"; }
+    .music .album3 iframe {
+      height: 820px; }
+  .music .album4 p::after {
+    content: ""; }
+  .music .album {
+    border: 2px solid pink;
+    margin-top: 100px; }
+    .music .album iframe {
+      float: left;
+      display: inline-block;
+      margin-right: 20px; }

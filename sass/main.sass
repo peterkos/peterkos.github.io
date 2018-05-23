@@ -1,27 +1,75 @@
 
 
+
+
+// This is so hacky, but alas, Bandcamp iframes are as they are.
+
+// $height1: 588px
+
+$heights: (1: 588px, 2: 100px, 3: 820px)
+
+
+// Function that sets each album's div height to match the Bandcamp player
+=setHeight($first, $last) 
+	@for $i from $first through $last
+		$currentHeight: map-get($heights, $i)
+		.album#{$i}
+			height: $currentHeight
+			p::after
+				content: "#{$currentHeight}"
+			iframe
+				height: $currentHeight
+
 body
-	background-color: #FFE8C6
 	height: 100%
 	padding: 0
 	margin: 0
 
+*
+	font-family: sans-serif
 
-h1
-	font-family: "bodoni 72 oldstyle", "serif"
-	font-weight: 10
-	// font-size: 8vw
-	font-size: 8rem
-	text-transform: uppercase
+h1.name
+	font-size: 4.5rem
+	font-weight: 1
+	padding-top: 100px
+	text-align: center
 
-h1, p
-	color: #655959
+nav
+	text-align: center
+
+	h2
+		display: inline-block
+		font-size: 5rem
+		margin: 20px
+
+		&.page
+			padding-top: 10%
+
+		&.disabled
+			opacity: 0.4
+	
+	padding-bottom: 10%
+		
+
+.music
+
+	margin: 0 10% 0 10%
+	@include setHeight(1, 4)
+
+
+	.album
+		border: 2px solid pink
+		margin-top: 100px
+			
+
+		iframe
+			float: left
+			display: inline-block
+			margin-right: 20px
+	
 
 
 
 
-// Smaller than 14"-ish laptop
-@media screen and (max-width: 1450px)
 
-// Phones
-@media screen and (max-width: 1000px)
+	
