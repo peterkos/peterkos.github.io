@@ -1,5 +1,11 @@
 
 
+// I really need to create a partial by now...
+$fa-font-path: "../fontawesome/webfonts"
+@import "../fontawesome/scss/fontawesome.scss"
+@import "../fontawesome/scss/fa-solid.scss"
+@import "../fontawesome/scss/fa-brands.scss"
+
 // "Feel" of the site
 $transitionDuration: 0.2s
 
@@ -55,12 +61,29 @@ body
 	padding: 0
 	margin: 0
 
-
 h1.name
 	font-size: 4.5rem
 	font-weight: 1
 	padding-top: 100px
 	text-align: center
+	margin-bottom: 20px
+	
+.contact
+	text-align: center
+	margin: 0
+	padding: 0
+
+	li
+		// opacity: 0.4
+		display: inline
+		margin: 20px
+		transition: all $transitionDuration
+
+		a
+			color: black
+
+		&:hover
+			opacity: 1
 
 nav
 	text-align: center
@@ -137,6 +160,16 @@ nav
 			font-size: 10px
 			color: gray
 		
+footer
+	padding: 10px
+	background-color: #333333
+	
+	p
+		text-align: center
+		color: white
+
+	
+
 
 
 	
