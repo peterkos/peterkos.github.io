@@ -1,12 +1,15 @@
 
 
+// "Feel" of the site
+$transitionDuration: 0.2s
+
+// Some color variables
+$green: hsla(107, 57%, 59%, 1.00)
+$red: hsla(344, 58%, 58%, 1.00)
+$blue: hsla(223, 57%, 58%, 1.00)
+
 // This is so hacky, but alas, Bandcamp iframes are as they are.
 $heights: (1: 588px, 2: 720px, 3: 555px, 4: 442px, 5: 786px)
-// $heights: (1: 600px, 2: 600px, 3: 600px, 4: 600px, 5: 600px)
-
-
-	
-
 $colors: (1: hsla(60, 10%, 24%, 1.00), 2: hsla(237, 16%, 25%, 1.00), 3: purple, 4: gray, 5: pink)
 
 
@@ -35,17 +38,14 @@ $colors: (1: hsla(60, 10%, 24%, 1.00), 2: hsla(237, 16%, 25%, 1.00), 3: purple, 
 			
 			// Set height of bandcamp player
 			// !important overrides HTML setting (in case of error)
-			// Commented fixed height is for possibly standardizing heights of all players
-			// However, it doesn't seem to work too well with smaller albums and single tracks :(
 			iframe
 				height: $currentHeight !important
-				// height: 600px !important
-
 
 			// For debugging map values
 			p::after
 				// content: "#{$currentHeight}"
 				// content: "#{lightness($currentColor)}"
+
 			
 *
 	font-family: sans-serif
@@ -69,28 +69,64 @@ nav
 		display: inline-block
 		font-size: 5rem
 		margin: 20px
+		user-select: none
 
 		&.page
-			padding-top: 10%
+			margin-top: 10%
 
 		&.disabled
-			opacity: 0.4
+			color: lightgray
+
+		&.design, &.music, &.code
+			transition: all $transitionDuration
+
+		&.design:hover
+			color: $green
+			cursor: not-allowed
+		&.music:hover
+			color: $red
+		&.code:hover
+			color: $blue
+			cursor: not-allowed
 	
-	padding-bottom: 10%
-		
+	.tags
+		user-select: none
+
+		input
+			visibility: hidden
+
+			&:checked + label
+				opacity: 1
+				transform: translateY(-20px)
+
+		label
+			opacity: 0.5
+			display: inline-block
+			text-decoration: none
+			border: 1px solid gray
+			border-radius: 4px
+			padding: 10px
+			margin: 6% 20px 3% 20px
+			user-select: none
+			transition: all $transitionDuration
+
+			&:hover
+				cursor: pointer
+				background-color: $red
+				color: white
+				
+			&:active
+				cursor: pointer
+				box-shadow: inset 0px 2px 15px lighten(black, 40%)
 
 .music
-
 	@include setHeight(1, length($heights))
 
 
 	.album
-
 		// Album padding is handled in the mixin, to allow dynamically-assigned background
 		// to expand around the edges
-		// border: 2px solid pink
 			
-
 		iframe
 			float: left
 			display: inline-block

@@ -13,16 +13,64 @@ h1.name {
   text-align: center; }
 
 nav {
-  text-align: center;
-  padding-bottom: 10%; }
+  text-align: center; }
   nav h2 {
     display: inline-block;
     font-size: 5rem;
-    margin: 20px; }
+    margin: 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
     nav h2.page {
-      padding-top: 10%; }
+      margin-top: 10%; }
     nav h2.disabled {
-      opacity: 0.4; }
+      color: lightgray; }
+    nav h2.design, nav h2.music, nav h2.code {
+      -webkit-transition: all 0.2s;
+      transition: all 0.2s; }
+    nav h2.design:hover {
+      color: #75d25b;
+      cursor: not-allowed; }
+    nav h2.music:hover {
+      color: #d25677; }
+    nav h2.code:hover {
+      color: #5779d1;
+      cursor: not-allowed; }
+  nav .tags {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+    nav .tags input {
+      visibility: hidden; }
+      nav .tags input:checked + label {
+        opacity: 1;
+        -webkit-transform: translateY(-20px);
+        -ms-transform: translateY(-20px);
+        transform: translateY(-20px); }
+    nav .tags label {
+      opacity: 0.5;
+      display: inline-block;
+      text-decoration: none;
+      border: 1px solid gray;
+      border-radius: 4px;
+      padding: 10px;
+      margin: 6% 20px 3% 20px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-transition: all 0.2s;
+      transition: all 0.2s; }
+      nav .tags label:hover {
+        cursor: pointer;
+        background-color: #d25677;
+        color: white; }
+      nav .tags label:active {
+        cursor: pointer;
+        -webkit-box-shadow: inset 0px 2px 15px #666666;
+        box-shadow: inset 0px 2px 15px #666666; }
 
 .music .album1 {
   height: 588px;
@@ -72,3 +120,5 @@ nav {
   margin: 0 !important;
   font-size: 10px;
   color: gray; }
+
+/*# sourceMappingURL=main.css.map */
