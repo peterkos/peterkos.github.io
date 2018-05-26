@@ -99,66 +99,39 @@
   margin-left: .3em; }
 
 .fa-spin {
-  -webkit-animation: fa-spin 2s infinite linear;
   animation: fa-spin 2s infinite linear; }
 
 .fa-pulse {
-  -webkit-animation: fa-spin 1s infinite steps(8);
   animation: fa-spin 1s infinite steps(8); }
-
-@-webkit-keyframes fa-spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg); }
-
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg); } }
 
 @keyframes fa-spin {
   0% {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
     transform: rotate(0deg); }
 
   100% {
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
     transform: rotate(360deg); } }
 .fa-rotate-90 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
   transform: rotate(90deg); }
 
 .fa-rotate-180 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
   transform: rotate(180deg); }
 
 .fa-rotate-270 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
-  -webkit-transform: rotate(270deg);
-  -ms-transform: rotate(270deg);
   transform: rotate(270deg); }
 
 .fa-flip-horizontal {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
-  -webkit-transform: scale(-1, 1);
-  -ms-transform: scale(-1, 1);
   transform: scale(-1, 1); }
 
 .fa-flip-vertical {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
-  -webkit-transform: scale(1, -1);
-  -ms-transform: scale(1, -1);
   transform: scale(1, -1); }
 
 .fa-flip-horizontal.fa-flip-vertical {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
-  -webkit-transform: scale(-1, -1);
-  -ms-transform: scale(-1, -1);
   transform: scale(-1, -1); }
 
 :root .fa-rotate-90,
@@ -166,7 +139,6 @@
 :root .fa-rotate-270,
 :root .fa-flip-horizontal,
 :root .fa-flip-vertical {
-  -webkit-filter: none;
   filter: none; }
 
 .fa-stack {
@@ -3221,7 +3193,7 @@ h1.name {
   font-weight: 1;
   padding-top: 100px;
   text-align: center;
-  margin-bottom: 10px; }
+  margin-bottom: 20px; }
 
 .contact {
   text-align: center;
@@ -3230,12 +3202,9 @@ h1.name {
   .contact li {
     display: inline;
     margin: 20px;
-    -webkit-transition: all 0.2s;
     transition: all 0.2s; }
-    .contact li a {
-      color: black; }
-    .contact li:hover {
-      opacity: 1; }
+  .contact i {
+    color: #bc34ac; }
 
 nav {
   text-align: center; }
@@ -3243,108 +3212,107 @@ nav {
     display: inline-block;
     font-size: 5rem;
     margin: 20px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none; }
     nav h2.page {
       margin-top: 10%; }
     nav h2.disabled {
       color: lightgray; }
     nav h2.design, nav h2.music, nav h2.code {
-      -webkit-transition: all 0.2s;
       transition: all 0.2s; }
     nav h2.design:hover {
-      color: #75d25b;
+      color: #6ed053;
       cursor: not-allowed; }
     nav h2.music:hover {
-      color: #d25677; }
+      color: #d05374; }
     nav h2.code:hover {
-      color: #5779d1;
+      color: #5376d0;
       cursor: not-allowed; }
   nav .tags {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none; }
     nav .tags input {
       visibility: hidden; }
       nav .tags input:checked + label {
         opacity: 1;
-        -webkit-transform: translateY(-20px);
-        -ms-transform: translateY(-20px);
-        transform: translateY(-20px); }
+        background-color: #d05374;
+        color: white;
+        transform: translateY(-20px);
+        border-color: white; }
     nav .tags label {
       opacity: 0.5;
       display: inline-block;
       text-decoration: none;
-      border: 1px solid gray;
-      border-radius: 4px;
-      padding: 10px;
       margin: 6% 20px 3% 20px;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
+      padding: 10px;
+      border: 1px solid gray;
+      border-radius: 7px;
       user-select: none;
-      -webkit-transition: all 0.2s;
       transition: all 0.2s; }
       nav .tags label:hover {
         cursor: pointer;
-        background-color: #d25677;
-        color: white; }
+        background-color: #d05374;
+        color: white;
+        border-color: white; }
       nav .tags label:active {
         cursor: pointer;
-        -webkit-box-shadow: inset 0px 2px 15px #666666;
+        background-color: #d05374;
+        color: white;
         box-shadow: inset 0px 2px 15px #666666; }
 
 .music .album1 {
-  height: 588px;
   background-color: #434337;
   padding: 40px 15%; }
   .music .album1 .info {
     color: white; }
-  .music .album1 iframe {
-    height: 588px !important; }
+    .music .album1 .info .date {
+      color: #c8c8bc !important; }
 .music .album2 {
-  height: 720px;
   background-color: #36374a;
   padding: 40px 15%; }
   .music .album2 .info {
     color: white; }
-  .music .album2 iframe {
-    height: 720px !important; }
+    .music .album2 .info .date {
+      color: #b5b6c9 !important; }
 .music .album3 {
-  height: 555px;
   background-color: purple;
   padding: 40px 15%; }
   .music .album3 .info {
     color: white; }
-  .music .album3 iframe {
-    height: 555px !important; }
+    .music .album3 .info .date {
+      color: #ff7fff !important; }
 .music .album4 {
-  height: 442px;
-  background-color: gray;
+  background-color: whitesmoke;
   padding: 40px 15%; }
   .music .album4 .info {
     color: black; }
-  .music .album4 iframe {
-    height: 442px !important; }
+    .music .album4 .info .date {
+      color: #0a0a0a !important; }
 .music .album5 {
-  height: 786px;
-  background-color: pink;
+  background-color: #6ed053;
   padding: 40px 15%; }
   .music .album5 .info {
     color: black; }
-  .music .album5 iframe {
-    height: 786px !important; }
-.music .album iframe {
-  float: left;
-  display: inline-block;
-  margin-right: 20px; }
-.music .album h6 {
-  margin: 0 !important;
-  font-size: 10px;
-  color: gray; }
+    .music .album5 .info .date {
+      color: #4aac2f !important; }
+.music .album {
+  display: flex; }
+  .music .album iframe {
+    float: left;
+    display: inline-block;
+    margin-right: 20px; }
+  .music .album .info {
+    padding: 20px; }
+    .music .album .info h1.title {
+      margin-bottom: 0; }
+    .music .album .info h6.date {
+      margin: 10px 0;
+      font-size: 15px;
+      text-transform: uppercase;
+      color: gray; }
+    .music .album .info ul {
+      padding: 0;
+      list-style-type: none; }
+      .music .album .info ul li {
+        margin-bottom: 20px; }
 
 footer {
   padding: 10px;
@@ -3352,5 +3320,48 @@ footer {
   footer p {
     text-align: center;
     color: white; }
+
+@media screen and (max-width: 1450px) {
+  .music .album .info {
+    padding: 0; }
+    .music .album .info h1.title {
+      margin: 0; } }
+@media screen and (max-width: 800px) {
+  nav h2 {
+    display: block; }
+  nav .tags label {
+    margin-right: 0;
+    margin-left: 0; }
+
+  .music .album {
+    padding-left: 10%;
+    padding-right: 10%;
+    flex-direction: column; }
+    .music .album iframe {
+      margin: 0 auto;
+      margin-bottom: 20px; } }
+@media screen and (max-width: 500px) {
+  h1.name {
+    padding-top: 0; }
+
+  nav .tags {
+    margin-bottom: 5%; }
+    nav .tags label {
+      display: block;
+      width: 150px;
+      margin: 0 auto; }
+    nav .tags input:checked + label {
+      opacity: 1;
+      transform: translateX(-20px); }
+
+  .music .album {
+    padding: 2%; }
+    .music .album .title, .music .album .date {
+      text-align: center; }
+    .music .album iframe {
+      padding: 5%; }
+    .music .album .info ul {
+      padding-left: 5%;
+      padding-right: 5%; } }
 
 /*# sourceMappingURL=main.css.map */

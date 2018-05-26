@@ -10,13 +10,14 @@ $fa-font-path: "../fontawesome/webfonts"
 $transitionDuration: 0.2s
 
 // Some color variables
-$green: hsla(107, 57%, 59%, 1.00)
-$red: hsla(344, 58%, 58%, 1.00)
-$blue: hsla(223, 57%, 58%, 1.00)
+$green: hsla( 107, 57%, 57%, 1.00)
+$red: hsla(   344, 57%, 57%, 1.00)
+$blue: hsla(  223, 57%, 57%, 1.00)
+$purple: hsla(307, 57%, 47%, 1.00)
 
 // This is so hacky, but alas, Bandcamp iframes are as they are.
 $heights: (1: 588px, 2: 720px, 3: 555px, 4: 442px, 5: 786px)
-$colors: (1: hsla(60, 10%, 24%, 1.00), 2: hsla(237, 16%, 25%, 1.00), 3: purple, 4: gray, 5: pink)
+$colors: (1: hsla(60, 10%, 24%, 1.00), 2: hsla(237, 16%, 25%, 1.00), 3: purple, 4: hsla(0, 0%, 96%, 1.00), 5: $green)
 
 
 // Function that sets each album's div height to match the Bandcamp player
@@ -30,7 +31,7 @@ $colors: (1: hsla(60, 10%, 24%, 1.00), 2: hsla(237, 16%, 25%, 1.00), 3: purple, 
 		.album#{$i}
 		
 			// Set height of div, along with padding and color
-			height: $currentHeight
+			// height: $currentHeight
 			background-color: $currentColor
 			padding: 40px 15%
 
@@ -38,14 +39,21 @@ $colors: (1: hsla(60, 10%, 24%, 1.00), 2: hsla(237, 16%, 25%, 1.00), 3: purple, 
 			@if lightness($currentColor) <= 30%
 				.info
 					color: white
+					.date
+						// color: darken(white, 30%) !important
+						color: invert(complement($currentColor)) !important
 			@else
 				.info
 					color: black
+					.date
+						// color: lighten(black, 30%) !important
+						color: invert(complement($currentColor)) !important
 			
 			// Set height of bandcamp player
 			// !important overrides HTML setting (in case of error)
+			// (turned off to allow text to overflow?)
 			iframe
-				height: $currentHeight !important
+				// height: $currentHeight !important
 
 			// For debugging map values
 			p::after
@@ -74,16 +82,12 @@ h1.name
 	padding: 0
 
 	li
-		// opacity: 0.4
 		display: inline
 		margin: 20px
 		transition: all $transitionDuration
 
-		a
-			color: black
-
-		&:hover
-			opacity: 1
+	i
+		color: $purple
 
 nav
 	text-align: center
@@ -120,16 +124,19 @@ nav
 
 			&:checked + label
 				opacity: 1
+				background-color: $red
+				color: white
 				transform: translateY(-20px)
+				border-color: white
 
 		label
 			opacity: 0.5
 			display: inline-block
 			text-decoration: none
-			border: 1px solid gray
-			border-radius: 4px
-			padding: 10px
 			margin: 6% 20px 3% 20px
+			padding: 10px
+			border: 1px solid gray
+			border-radius: 7px
 			user-select: none
 			transition: all $transitionDuration
 
@@ -137,28 +144,49 @@ nav
 				cursor: pointer
 				background-color: $red
 				color: white
+				border-color: white
 				
 			&:active
 				cursor: pointer
+				background-color: $red
+				color: white
 				box-shadow: inset 0px 2px 15px lighten(black, 40%)
 
 .music
+	
+	// Album padding is handled in the mixin, to allow dynamically-assigned background
+	// to expand around the edges
 	@include setHeight(1, length($heights))
 
-
-	.album
-		// Album padding is handled in the mixin, to allow dynamically-assigned background
-		// to expand around the edges
+	.album	
+		display: flex
 			
 		iframe
 			float: left
 			display: inline-block
 			margin-right: 20px
 
-		h6
-			margin: 0 !important
-			font-size: 10px
-			color: gray
+		.info
+
+			// Mirrors padding on top of iframe to container div
+			padding: 20px 
+
+			h1.title
+				margin-bottom: 0
+				// margin-top: 20px
+			h6.date
+				margin: 10px 0
+				font-size: 15px
+				text-transform: uppercase
+				color: gray
+
+			ul
+				padding: 0
+				list-style-type: none
+
+				li
+					margin-bottom: 20px
+
 		
 footer
 	padding: 10px
@@ -169,10 +197,6 @@ footer
 		color: white
 
 	
-
-
-
-	
 // TODO: Make this smarter and do it automatically
 // see https://panic.com/blog/itunes-11-and-colors/
 // and https://thomaspark.co/2012/12/the-itunes-expanding-album-effect-in-css-js/
@@ -180,3 +204,69 @@ footer
 
 // While we're at it, more references:
 // http://jackiebalzer.com/color
+
+
+// Smaller than 14"-ish laptop
+@media screen and (max-width: 1450px)
+
+	.music .album .info
+		padding: 0
+
+		h1.title
+			margin: 0
+
+// Phablet territory
+@media screen and (max-width: 800px) 
+	nav 
+		h2
+			display: block
+
+		.tags label
+			margin-right: 0
+			margin-left: 0
+
+	.music .album
+		padding-left: 10%
+		padding-right: 10%
+		flex-direction: column
+
+		iframe
+			margin: 0 auto
+			margin-bottom: 20px
+
+
+// The NORMAL sized phones for NORMAL people 
+@media screen and (max-width: 500px)
+
+	h1.name
+		padding-top: 0
+
+	nav 
+		.tags 
+			margin-bottom: 5%
+
+			label
+				display: block
+				width: 150px
+				margin: 0 auto
+
+			input:checked + label
+				opacity: 1
+				transform: translateX(-20px)
+		
+
+	.music .album
+		// padding-left: 1%
+		// padding-right: 1%
+		padding: 2%
+
+		.title, .date
+			text-align: center
+
+		iframe
+			padding: 5%
+
+		.info 
+			ul
+				padding-left: 5%
+				padding-right: 5%
