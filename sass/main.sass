@@ -71,7 +71,7 @@ body
 
 h1.name
 	font-size: 4.5rem
-	font-weight: 1
+	font-weight: heavy
 	padding-top: 100px
 	text-align: center
 	margin-bottom: 20px
@@ -217,9 +217,17 @@ footer
 
 // Phablet territory
 @media screen and (max-width: 800px) 
-	nav 
-		h2
+	
+	nav
+		// FIXME: make tags smaller and less prominent
+		// Any content above the fold should only serve as peek, not meat!
+		.pages
+			margin-top: 10%
+
+		h2.page
 			display: block
+			margin: 0
+
 
 		.tags label
 			margin-right: 0
@@ -258,13 +266,14 @@ footer
 	.music .album
 		// padding-left: 1%
 		// padding-right: 1%
-		padding: 2%
+		padding: 0
 
 		.title, .date
 			text-align: center
 
 		iframe
-			padding: 5%
+			padding: 5% 0
+			margin: 0 auto
 
 		.info 
 			ul

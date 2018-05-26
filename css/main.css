@@ -3190,7 +3190,7 @@ body {
 
 h1.name {
   font-size: 4.5rem;
-  font-weight: 1;
+  font-weight: heavy;
   padding-top: 100px;
   text-align: center;
   margin-bottom: 20px; }
@@ -3327,8 +3327,11 @@ footer {
     .music .album .info h1.title {
       margin: 0; } }
 @media screen and (max-width: 800px) {
-  nav h2 {
-    display: block; }
+  nav .pages {
+    margin-top: 10%; }
+  nav h2.page {
+    display: block;
+    margin: 0; }
   nav .tags label {
     margin-right: 0;
     margin-left: 0; }
@@ -3355,11 +3358,12 @@ footer {
       transform: translateX(-20px); }
 
   .music .album {
-    padding: 2%; }
+    padding: 0; }
     .music .album .title, .music .album .date {
       text-align: center; }
     .music .album iframe {
-      padding: 5%; }
+      padding: 5% 0;
+      margin: 0 auto; }
     .music .album .info ul {
       padding-left: 5%;
       padding-right: 5%; } }
