@@ -69,6 +69,10 @@ body
 	padding: 0
 	margin: 0
 
+a 
+	text-decoration: none
+	color: inherit
+
 h1.name
 	font-size: 4.5rem
 	font-weight: heavy
@@ -97,24 +101,26 @@ nav
 		font-size: 5rem
 		margin: 20px
 		user-select: none
+		opacity: 0.4
 
-		&.page
+		.page
 			margin-top: 10%
-
-		&.disabled
-			color: lightgray
 
 		&.design, &.music, &.code
 			transition: all $transitionDuration
 
-		&.design:hover
+		&.design
 			color: $green
-			cursor: not-allowed
-		&.music:hover
+		&.music
 			color: $red
-		&.code:hover
+		&.code
 			color: $blue
-			cursor: not-allowed
+
+		&.active
+			opacity: 1
+
+		&:hover
+			opacity: 1
 	
 	.tags
 		user-select: none
@@ -189,12 +195,16 @@ nav
 
 		
 footer
-	padding: 10px
 	background-color: #333333
+	position: absolute
+	width: 100%
+	bottom: 0
 	
 	p
 		text-align: center
-		color: white
+		color: gray
+		font-size: 8pt
+
 
 	
 // TODO: Make this smarter and do it automatically
