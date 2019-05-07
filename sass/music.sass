@@ -9,4 +9,26 @@ a.current
 	border-left: 10px solid $musicColor
 	color: $musicColor !important
 
-	
+
+.articles
+	margin-left: $sidebarWidth
+	display: flex 
+	flex-wrap: wrap
+	border-top: 10px solid gray
+
+	// "Title" of each album container
+	& > h1
+		font-family: "Helvetica", "sans-serif"
+		font-weight: 800
+		font-size: 3.5rem
+		display: table-cell
+		align-self: center
+		margin-right: 100px
+		margin-left: -200px
+
+	.album
+		width: 250px
+		height: 350px
+		border: 1px solid black
+		margin: 30px 30px 30px 0px
+		padding: 30px

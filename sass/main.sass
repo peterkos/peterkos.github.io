@@ -14,6 +14,11 @@ $contactColor: #f7f48b
 @import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,400i,700|Fira+Mono:400,700')
 
 
+// Estimated width of sidebar, because px+% can't be added.
+// Is it off? Yeah. Do I LOOK like some sort of scientist?
+// No? Wow, that's awful rude of you. Judging someone based
+// on their appearance. You should be ashamed. ASHAMED, I SAY.
+$sidebarWidth: 520px
 
 // ACTUAL STYLING
 
@@ -78,16 +83,3 @@ h1, h2, h3, h4, h5, h6
 		// border-top: 1px solid gray
 		// border-bottom: 1px solid gray
 		// text-align: center
-		
-
-// Rip this for now
-.content
-
-	display: flex 
-	flex-wrap: wrap
-
-	.code
-		width: 250px
-		height: 350px
-		border: 1px solid black
-		margin: 30px 30px 30px 0px
