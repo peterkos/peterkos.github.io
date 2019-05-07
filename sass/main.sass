@@ -29,8 +29,6 @@ h1, h2, h3, h4, h5, h6
 
 .sidebar
 	margin-left: 4%
-	margin-bottom: 80px
-
 	width: 500px
 
 	// Title
@@ -56,6 +54,14 @@ h1, h2, h3, h4, h5, h6
 			text-decoration: none
 			color: black
 			transition: all 0.1s
+
+			// As much as I'd love to sass-ify this, it'll take too much time.
+			&.current
+				border-left: 10px solid $homeColor
+				color: $homeColor
+				margin-left: -20px
+				padding-left: 10px
+
 	
 	.home:hover
 		color: $homeColor !important
@@ -79,6 +85,7 @@ h1, h2, h3, h4, h5, h6
 		// text-align: center
 
 		p
+			line-height: 1.4
 			font-size: 2rem
 
 		a.code
