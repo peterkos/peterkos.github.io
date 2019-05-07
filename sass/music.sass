@@ -14,21 +14,36 @@ a.current
 	margin-left: $sidebarWidth
 	display: flex 
 	flex-wrap: wrap
-	border-top: 10px solid gray
+	// border-top: 10px solid gray
 
 	// "Title" of each album container
 	& > h1
 		font-family: "Helvetica", "sans-serif"
-		font-weight: 800
 		font-size: 3.5rem
-		display: table-cell
-		align-self: center
-		margin-right: 100px
-		margin-left: -200px
+		margin: 100px 100px 0px 100px
 
 	.album
-		width: 250px
-		height: 350px
-		border: 1px solid black
+		width: 350px
+		height: 555px
 		margin: 30px 30px 30px 0px
-		padding: 30px
+		padding: 10px
+
+		// Just a filler for album art
+		.imgtemp
+			background-color: rgba(black, 0.2)
+			height: 350px
+			// height: 555px
+			margin-bottom: 10px // h1 is annoying w/ margin-top
+		
+		h1
+			display: inline
+
+		.tags
+			list-style: none
+			padding: 0
+
+			li
+				display: inline
+				border: 1px solid gray
+				padding: 4px
+				border-radius: 5px
