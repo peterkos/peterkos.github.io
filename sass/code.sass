@@ -4,7 +4,7 @@
 
 @import main
 
-$darkTransitionDuration: 1s
+$darkTransitionDuration: 0s
 
 body
 	animation: toDark forwards $darkTransitionDuration
@@ -27,11 +27,29 @@ a
 	100%
 		color: rgba(white, 0.5)
 
-
-
 // As much as I'd love to sass-ify this, it'll take too much time.
 a.current
 	border-left: 10px solid $codeColor
 	color: $codeColor !important
 
+
+.content h1
+	color: white
+	display: block !important
+	text-align: center !important
+
+
+.skills
+	display: flex
+	align-items: center
+	align-content: space-around
+
 	
+
+	.skill
+		width: 300px
+		height: 250px
+		border: 1px solid rgba(white, 0.8)
+
+
+
