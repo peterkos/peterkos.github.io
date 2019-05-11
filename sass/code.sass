@@ -4,6 +4,31 @@
 
 @import main
 
+$darkTransitionDuration: 1s
+
+body
+	animation: toDark forwards $darkTransitionDuration
+
+a
+	animation: toLight forwards $darkTransitionDuration 
+
+// Body background color transition
+@keyframes toDark
+	0%
+		background-color: white
+		color: black
+	100%
+		background-color: #111
+		color: white
+
+@keyframes toLight
+	0%
+		color: black
+	100%
+		color: rgba(white, 0.5)
+
+
+
 // As much as I'd love to sass-ify this, it'll take too much time.
 a.current
 	border-left: 10px solid $codeColor
