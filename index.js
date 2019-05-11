@@ -11,7 +11,7 @@ pagemap(document.querySelector('#map'), {
     viewport: null,
     styles: {
         'header,footer,section,article': "rgba(0,0,0,0.08)",
-        'h1,a, p': "rgba(0,0,0,0.10)",
+        'h1,a, p, iframe': "rgba(0,0,0,0.10)",
         'h2,h3,h4': "rgba(0,0,0,0.08)"
     },
     back: "rgba(0,0,0,0.02)",
