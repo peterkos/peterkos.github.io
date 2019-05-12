@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.js"],"names":["console","log"],"mappings":";;;AAMA,aAFA,QAAA,oBAEAA,QAAQC,IAAI","file":"peterkos.github.io.18e89534.js","sourceRoot":"..","sourcesContent":["\n\n\n// Import our SASS\nimport \"./sass/main.sass\";\n\nconsole.log(\"hallo\");\n"]}
