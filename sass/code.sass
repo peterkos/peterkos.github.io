@@ -33,23 +33,63 @@ a.current
 	color: $codeColor !important
 
 
-.content h1
+.skills h1
 	color: white
-	display: block !important
-	text-align: center !important
+	text-align: center
 
+
+.realContent
+	flex: 1	
 
 .skills
 	display: flex
-	align-items: center
-	align-content: space-around
-
-	
+	justify-content: space-around
 
 	.skill
 		width: 300px
 		height: 250px
 		border: 1px solid rgba(white, 0.8)
+
+		ul li
+			font-family: monospace
+			font-size: 1rem
+			list-style: square inside
+
+.divider
+	width: 100px
+	border-bottom: 5px dashed white
+	margin: 50px auto
+	display: block
+
+
+.projects
+	.project
+		border: 1px solid white
+		// height: 250px
+		margin: 0px auto 30px auto
+		padding: 10px 10px 10px 30px
+	
+	.featured
+		display: flex
+
+		.project
+			width: 40%
+
+			.info
+				display: block
+				float: left
+
+			.image
+				display: block
+				float: right
+				width: 200px
+				height: 200px
+				background-color: rgba(white, 0.25)
+
+
+	.project-big
+
+
 
 
 
