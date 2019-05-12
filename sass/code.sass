@@ -5,6 +5,7 @@
 @import main
 
 $darkTransitionDuration: 0s
+$dividerMargin: 50px
 
 body
 	animation: toDark forwards $darkTransitionDuration
@@ -43,12 +44,16 @@ a.current
 
 .skills
 	display: flex
-	justify-content: space-around
+	justify-content: space-evenly
 
 	.skill
 		width: 300px
 		height: 250px
 		border: 1px solid rgba(white, 0.8)
+		transition: 0.4s all
+
+		&:hover
+			border: 7px solid $codeColor
 
 		ul li
 			font-family: monospace
@@ -58,19 +63,23 @@ a.current
 .divider
 	width: 100px
 	border-bottom: 5px dashed white
-	margin: 50px auto
+	margin: $dividerMargin auto
 	display: block
 
 
 .projects
 	.project
 		border: 1px solid white
-		// height: 250px
-		margin: 0px auto 30px auto
+		margin: 0 auto
 		padding: 10px 10px 10px 30px
+		transition: 0.4s all
+
+		&:hover
+			border: 7px solid $codeColor
 	
 	.featured
 		display: flex
+		margin-bottom: $dividerMargin
 
 		.project
 			width: 40%
@@ -86,8 +95,20 @@ a.current
 				height: 200px
 				background-color: rgba(white, 0.25)
 
+	.other
+		display: grid
+		grid-template-columns: auto auto auto auto
+		grid-gap: 30px 30px
+		justify-content: center
+		// display: flex
+		// justify-content: center
+		// flex-wrap: wrap
 
-	.project-big
+		// Square projects in a grid
+		.project
+			width: 300px
+			height: 300px
+			// margin-bottom: 30px
 
 
 
