@@ -1,19 +1,23 @@
 {
-  "name": "peterkos-alt",
+  "name": "peterkos.github.io",
   "version": "1.0.0",
-  "description": "",
+  "description": "This repo is for my personal website at [http://peterkos.me](http://peterkos.me).",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel index.html"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://peterkos@github.com/peterkos/peterkos.github.io.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "node-sass": "^4.12.0",
-    "pagemap": "^1.2.0"
+  "bugs": {
+    "url": "https://github.com/peterkos/peterkos.github.io/issues"
   },
+  "homepage": "https://github.com/peterkos/peterkos.github.io#readme",
   "devDependencies": {
-    "cssnano": "^4.1.10"
+    "sass": "^1.22.7"
   }
 }
