@@ -57,7 +57,8 @@ nav
 	z-index: 1
 
 	h1
-		font-size: 60pt
+		font-size: 70pt
+		margin: 30px 0 20px 0 // offset by -10 on .info hover
 		color: #333
 	
 	.social
@@ -71,6 +72,11 @@ nav
 		box-shadow: rgba(81, 89, 126, 0.2) 0px 0px 50px 0px
 		font-style: italic
 		font-size: 14pt
+		transition: 0.3s all
+
+		&:hover
+			transition: 0.3s all
+			transform: translateY(10px)
 
 	.cs
 		color: #FF0000
