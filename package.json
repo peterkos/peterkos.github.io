@@ -19,5 +19,9 @@
   "homepage": "https://github.com/peterkos/peterkos.github.io#readme",
   "devDependencies": {
     "sass": "^1.22.7"
+  },
+  "dependencies": {
+    "i": "^0.3.6",
+    "typeit": "^6.0.3"
   }
 }
