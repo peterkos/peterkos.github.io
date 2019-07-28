@@ -9,13 +9,12 @@ import TypeIt from "typeit"
 // CSS would probably be better but oh well.
 new TypeIt("#typeit", {
 	strings: ["<b>teaching</b>.", 
-	"<b>coding</b>.", 
-	"<b>designing</b>.", 
-	"<b>composing</b>.", 
-	"<b>using the cowboy emoji unironically</b>.", 
-	"<b>watching linustechtips</b>.", 
+	"<b>writing Swift</b>.", 
+	"<b>re-designing my website</b>.", 
+	"<b>composing orchestral music</b>.", 
+	"<b>using the cowboy emoji unironically</b>.",
 	"<b>yelling into the void</b>.", 
-	"<b>twittereeting</b>."],
+	"<b></b>."],
 	speed: 200,
 	cursorSpeed: 1000,
 	nextStringDelay: 3000,
