@@ -9,19 +9,24 @@
 
 
 // GLOABL STYLES
+html, body
+	height: 100%
+
+body
+	overflow: hidden
+
 h1,p
 	font-family: "Fira Sans", sans-serif
 
 
-
 nav
-
 	font-family: "Fira Sans", sans-serif
 	text-transform: uppercase
 	letter-spacing: 5px
 	font-size: 12.7pt
-	float: right
-	margin-right: 20%
+	text-align: right
+	margin-top: 150px
+	margin-right: 10%
 	color: #333
 	z-index: 1
 
@@ -30,21 +35,24 @@ nav
 	
 	ul li
 		display: inline
+		padding-bottom: 5px
 
-img.effect
-	position: absolute
-	top: 0
-	left: 0
-	min-width: 100%
-	min-height: 100%
-	z-index: -1
+	li.active
+		border-bottom: 5px solid #AD99D6
+
+.effect-outer
+
+	img.effect
+		position: absolute
+		top: 0
+		right: 0
+		min-width: 120%
+		z-index: -1
 
 // HERO
 .hero
 	width: 80%
-	height: 70%
 	margin: 0 auto
-	margin-top: 100px
 	// clear: right // Prevent nav from sneaking into hero
 	z-index: 1
 
@@ -57,11 +65,12 @@ img.effect
 
 	.info
 		background-color: white
-		width: 500px
-		padding: 30px
+		width: 450px
+		padding: 20px
 		border-radius: 20px
 		box-shadow: rgba(81, 89, 126, 0.2) 0px 0px 50px 0px
 		font-style: italic
+		font-size: 14pt
 
 	.cs
 		color: #FF0000
