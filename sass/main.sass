@@ -11,6 +11,16 @@ $headerFontSize: 60pt
 // Fira sans font
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:200i,400,400i,700,700i&display=swap')
 
+@font-face
+	font-family: Academico
+	src: url("../fonts/Academico-Regular.otf") format("opentype")
+
+@font-face
+	font-family: Academico
+	font-weight: italic
+	src: url("../fonts/Academico-Italic.otf") format("opentype")
+
+
 
 // GLOABL STYLES
 html
@@ -153,13 +163,53 @@ nav
 
 	.narrative
 		margin: 0 auto
+		margin-bottom: 100px
 		width: 600px
 
 		p
 			color: #555
-			font-family: serif
+			font-family: "Academico", serif
 			text-align: center
-			font-size: 30pt
+			font-size: 28pt
+
+	.project
+		display: block
+		margin: 0 auto
+		width: 50vw
+		height: 400px
+
+		.text
+			position: relative
+			float: left
+			display: inline
+			width: 70%
+
+			h2, .stack
+				display: inline
+
+			h2
+				font-family: "Fira Sans", sans-serif
+				font-size: 50pt
+				padding-right: 30px
+
+			.stack
+				font-family: "Fira Sans", sans-serif
+				font-size: 12pt
+				font-weight: 200
+
+			.description
+				font-family: "Academico", serif
+				margin-left: 50px // Indented effect
+				margin-top: 10px
+				font-size: 15pt
+				line-height: 24pt
+
+		img
+			float: right
+
+		.links
+			display: none
+
 
 
 
