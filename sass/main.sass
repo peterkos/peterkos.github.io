@@ -169,11 +169,23 @@ nav
 			text-align: center
 			font-size: 20pt
 
+
+	.projects
+		display: grid
+		grid-template-columns: 1fr 1fr
+		grid-template-rows: 1fr 1fr
+		grid-gap: 20px
+
+
 	.project
 		display: block
 		margin: 0 auto
-		width: 70vw
-		height: 400px
+		// height: 400px
+		// width: 30%
+		// border: 2px solid gray
+		box-shadow: 0px 0px 0px 1px rgba(black, 0.1)
+		border-radius: 8px
+		padding: 30px
 
 		.text
 			position: relative
@@ -186,7 +198,7 @@ nav
 
 			h2
 				font-family: "Fira Sans", sans-serif
-				font-size: 50pt
+				font-size: 30pt
 				padding-right: 30px
 
 			.stack
@@ -198,11 +210,14 @@ nav
 				font-family: "Academico", serif
 				margin-left: 50px // Indented effect
 				margin-top: 20px
-				font-size: 15pt
-				line-height: 24pt
+				font-size: 12pt
+				line-height: 20pt
 
 		img.logo
 			float: right
+			width: 200px
+			height: 200px
+
 		
 		// This one's special and needs shadow for contrast w/ white background
 		.ilabeacon
@@ -211,6 +226,11 @@ nav
 
 
 		// All of this code is gross!
+
+		// Disabled for now
+		.links, .links2, .bubble
+			display: none !important
+
 		.links
 			display: inline-block
 			margin-left: 50px // Indented effect
