@@ -18,10 +18,10 @@
   },
   "homepage": "https://github.com/peterkos/peterkos.github.io#readme",
   "devDependencies": {
-    "sass": "^1.22.7"
+    "sass": "^1.23.3"
   },
   "dependencies": {
     "i": "^0.3.6",
-    "typeit": "^6.0.3"
+    "typeit": "^6.1.1"
   }
 }
