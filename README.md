@@ -1,10 +1,13 @@
 
 
 
-# peterkos.me
+# peterkos.github.io
+### version 5: yale inspired
 
-This repo is for my personal website at [http://peterkos.me](http://peterkos.me). 
+This one was inpsired by Yale's webiste design, mainly because I was applying to transfer there in early 2019. (That didn't happen :sob:)
 
-Uses SASS ~~and possibly Coffeescript in the future~~. I like to do as much as I can in SASS before resorting to primitive methods of JavaScript. What is this, 2006? Preprocessors do half of the work for us!
+Anyways, here's a "current" screenshot of the site:
 
-Anyways, just go to the site, and if you're feeling pretty proactive, feel free to drop an issue/PR here. 
+<img src=".github/screen_current.png" />
+
+The `code` page is super not finished, but I'm pretty happy with how Music turned out.
