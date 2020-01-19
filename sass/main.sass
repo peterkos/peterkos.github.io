@@ -6,7 +6,7 @@
 $homeColor: #f47c7c
 $codeColor: #70a1d7
 $musicColor: #a1de93
-$contactColor: #f7f48b
+$contactColor: #f7c28b // #f7f48b
 
 
 // IMPORTS
@@ -29,27 +29,39 @@ h1, h2, h3, h4, h5, h6
 	font-family: "Fira Mono", monospace
 	font-weight: 400
 
-.sidebar
-	margin-left: 4%
+// Minimap, per pagemap
+#map
+	position: fixed
+	top: 10px
+	right: 10px
 	width: 500px
+	height: 20%
+	z-index: 100
 
-	// Title
+.title
+	margin-left: 4%
+	margin-bottom: 2%
+
 	h1
 		font-size: 5rem
 		margin-bottom: 0
-		margin-left: -7px // Manually align to navigation
-	
-	// Subtitle
-	p
-		font-size: 1.2rem
+		margin-left: -19px // Manually align to navigation
+
+.content, .twoCol
+	display: flex
+
+
+.sidebar
+	display: inline-block
+	margin-left: 4%
 
 	// Navigation
 	ul
-		padding-left: 0px
-		margin-top: 50px
+		padding-left: 0
+		margin-top: 0
 
 	ul li
-		font-size: 2rem
+		font-size: 1.5rem
 		list-style: none
 
 		a
@@ -75,11 +87,21 @@ h1, h2, h3, h4, h5, h6
 
 .articles
 
+	margin-top: 10%
+	margin-left: 5%
+
+	self-align: flex-start
+
 	.article
-		display: block
+		display: inline-block
 		margin: 0 auto
 		width: 60vw
 		padding-left: 40px
 		// border-top: 1px solid gray
 		// border-bottom: 1px solid gray
 		// text-align: center
+
+		// Aligns top of paragraph with top of sidebar.
+		// I'm insane, I know.
+		p:first-child 
+			margin-top: -2px

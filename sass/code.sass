@@ -4,9 +4,113 @@
 
 @import main
 
+$darkTransitionDuration: 0s
+$dividerMargin: 50px
+
+body
+	animation: toDark forwards $darkTransitionDuration
+
+a
+	animation: toLight forwards $darkTransitionDuration 
+
+// Body background color transition
+@keyframes toDark
+	0%
+		background-color: white
+		color: black
+	100%
+		background-color: #111
+		color: white
+
+@keyframes toLight
+	0%
+		color: black
+	100%
+		color: rgba(white, 0.5)
+
 // As much as I'd love to sass-ify this, it'll take too much time.
 a.current
 	border-left: 10px solid $codeColor
 	color: $codeColor !important
 
+
+.skills h1
+	color: white
+	text-align: center
+
+
+.realContent
+	flex: 1	
+
+.skills
+	display: flex
+	justify-content: space-evenly
+
+	.skill
+		width: 300px
+		height: 250px
+		border: 1px solid rgba(white, 0.8)
+		transition: 0.4s all
+
+		&:hover
+			border: 7px solid $codeColor
+
+		ul li
+			font-family: monospace
+			font-size: 1rem
+			list-style: square inside
+
+.divider
+	width: 100px
+	border-bottom: 5px dashed white
+	margin: $dividerMargin auto
+	display: block
+
+
+.projects
+	.project
+		border: 1px solid white
+		margin: 0 auto
+		padding: 10px 10px 10px 30px
+		transition: 0.4s all
+
+		&:hover
+			border: 7px solid $codeColor
 	
+	.featured
+		display: flex
+		margin-bottom: $dividerMargin
+
+		.project
+			width: 40%
+
+			.info
+				display: block
+				float: left
+
+			.image
+				display: block
+				float: right
+				width: 200px
+				height: 200px
+				background-color: rgba(white, 0.25)
+
+	.other
+		display: grid
+		grid-template-columns: auto auto auto auto
+		grid-gap: 30px 30px
+		justify-content: center
+		// display: flex
+		// justify-content: center
+		// flex-wrap: wrap
+
+		// Square projects in a grid
+		.project
+			width: 300px
+			height: 300px
+			// margin-bottom: 30px
+
+
+
+
+
