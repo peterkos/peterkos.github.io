@@ -27,4 +27,10 @@ jobs:
       - name: Hugo-Site
         uses: chabad360/hugo-actions@v2
         with:
-          buildPath: 'docs'
+          buildPath: 'docs' # Docs branch because GH Pages limits it on personal sites
+      - name: Publish
+          uses: peaceiris/actions-gh-pages@v3
+          with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            publish_dir: ./docs
+            allow_empty_commit: true
