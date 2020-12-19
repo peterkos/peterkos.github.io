@@ -27,4 +27,3 @@ jobs:
         uses: chabad360/hugo-actions@v2
         with:
           buildPath: 'docs'
-          hugoVersion: 0.73
