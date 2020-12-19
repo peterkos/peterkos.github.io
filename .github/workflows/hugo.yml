@@ -26,11 +26,9 @@ jobs:
         uses: textbook/git-checkout-submodule-action@master
       - name: Hugo-Site
         uses: chabad360/hugo-actions@v2
-        with:
-          buildPath: 'docs' # Docs branch because GH Pages limits it on personal sites
       - name: Publish
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
+          publish_dir: ./public
           allow_empty_commit: true
