@@ -26,6 +26,5 @@ jobs:
       - name: Hugo-Site
         uses: chabad360/hugo-actions@v2
         with:
-          branch: main
           buildPath: 'docs'
           hugoVersion: 0.73
