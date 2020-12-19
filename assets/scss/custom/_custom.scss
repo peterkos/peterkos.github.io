@@ -1,0 +1,23 @@
+
+
+
+// Imports
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@600&display=swap');
+
+
+
+[data-theme="dark"]:root {
+    // --color-bg: blue;
+}
+
+
+.post-title, .post-subtitle, .post-nav, .related-title, thead, dt,
+.post-body h1,
+.post-body h2,
+.post-body h3,
+.post-body h4,
+.post-body h5,
+.post-body h6, {
+    font-family: "Fira Sans", sans-serif;
+}
