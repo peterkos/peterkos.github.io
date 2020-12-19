@@ -1,7 +1,7 @@
-_site
-.sass-cache
-.jekyll-metadata
-/dist
-/node_modules
-/.cache
-/.DS_Store
+# Generated files by hugo
+/public/
+/resources/_gen/
+hugo_stats.json
+
+.cache
+.DS_Store
