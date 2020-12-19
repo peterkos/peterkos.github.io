@@ -24,8 +24,8 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Hugo-Site
-      # You may pin to the exact commit or the version.
-      # uses: chabad360/hugo-actions@3a5b10adf0b017f695597e22ebcb79e40fd6cb4e
         uses: chabad360/hugo-actions@v2
         with:
+          branch: main
+          buildPath: 'docs'
           hugoVersion: 0.73
