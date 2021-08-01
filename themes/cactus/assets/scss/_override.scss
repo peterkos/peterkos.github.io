@@ -11,6 +11,16 @@ $font-size: 18px;
 $logo-width:  80px;
 $logo-height: 80px;
 
+
+html {
+    border-top: none !important;
+}
+
+body {
+    line-height: 1.4 !important;
+    flex: none !important;
+}
+
 // Why this is not a variable is baffling to me
 h1, h2, h3, h4, h5, h6,
 .h1, .h2 {
@@ -27,8 +37,13 @@ p {
 }
 
 article .content {
+    display: inline-block;
+    // Overscroll
+    margin-bottom: 20vh;
+
     h1, h2, h3, h4, h5, h6 {
         font-size: 1.8rem;
+        font-weight: 400;
 
         &::before {
             font-size: 1.8rem !important;
