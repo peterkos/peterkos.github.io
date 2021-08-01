@@ -11,7 +11,6 @@ $font-size: 18px;
 $logo-width:  80px;
 $logo-height: 80px;
 
-
 // Why this is not a variable is baffling to me
 h1, h2, h3, h4, h5, h6,
 .h1, .h2 {
@@ -21,6 +20,10 @@ h1, h2, h3, h4, h5, h6,
 h1, .h1 {
     // default: top3rem, bottom1rem
     margin-top: 2rem;
+}
+
+p {
+    text-align: left !important;
 }
 
 article .content {
@@ -33,11 +36,15 @@ article .content {
             top: 0 !important;
         }
     }
+
+    p {
+        // No word breaks
+        hyphens: none;
+    }
 }
 
 #header {
     display: flex;
-    // justify-content: left;
     align-items: center;
 
     #logo {
