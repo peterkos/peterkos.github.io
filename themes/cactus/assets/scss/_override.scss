@@ -6,7 +6,7 @@ $font-family-title: "Fira Sans";
 $font-family-body: "Fira Code";
 $font-family-mono: "Fira Code";
 
-$font-size: 20px;
+$font-size: 18px;
 
 $logo-width:  80px;
 $logo-height: 80px;
@@ -21,6 +21,18 @@ h1, h2, h3, h4, h5, h6,
 h1, .h1 {
     // default: top3rem, bottom1rem
     margin-top: 2rem;
+}
+
+article .content {
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 1.8rem;
+
+        &::before {
+            font-size: 1.8rem !important;
+            left: -1.8rem !important;
+            top: 0 !important;
+        }
+    }
 }
 
 #header {
