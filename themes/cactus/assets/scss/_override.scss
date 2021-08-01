@@ -1,0 +1,26 @@
+
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap');
+
+
+$font-family-title: "Fira Sans";
+$font-family-body: "Fira Code";
+$font-family-mono: "Fira Code";
+
+$font-size: 20px;
+
+
+// Why this is not a variable is baffling to me
+h1, h2, h3, h4, h5, h6,
+.h1, .h2 {
+    font-family: $font-family-title;
+}
+
+#header {
+    #nav ul {
+        font-size: 1.5rem;
+    }
+}
+
+.post-list .post-item .meta {
+    font-size: $font-size!important;
+}
