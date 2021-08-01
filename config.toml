@@ -69,7 +69,8 @@ weight = 4
   show_updated = true # default
   showReadTime = false
 
-  logo = "logo1.svg/"
+  # For local dev, remove leading `images/`
+  logo = "images/logo1.svg/"
 
   [params.comments]
     enabled = false # default
