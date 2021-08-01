@@ -4,6 +4,8 @@
 @import "mixins";
 @import "extend";
 @import "fonts";
+
+// If imported later, variables don't work for some reason
 @import "override";
 
 // global-reset()

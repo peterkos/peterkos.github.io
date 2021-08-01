@@ -37,8 +37,12 @@ article .content {
 
 #header {
     display: flex;
-    justify-content: space-between;
+    // justify-content: left;
     align-items: center;
+
+    #logo {
+        margin-right: 25px !important;
+    }
 
     #nav {
         margin-bottom: 20px;
