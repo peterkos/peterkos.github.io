@@ -5,12 +5,20 @@
         <h1>{{ .Site.Title }}</h1>
       </div>
     </a>
+    {{ $current := . }}
     <ul>
       <li class="icon">
         <a href="#" aria-label="Menu"><i class="fas fa-bars fa-2x" aria-hidden="true"></i></a>
       </li>
       {{ range .Site.Menus.main }}
-        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        <li>
+          <!-- src: https://discourse.gohugo.io/t/another-way-to-make-a-menu-item-active/17029 -->
+          {{ $active := or ($current.IsMenuCurrent "nav" .) ($current.HasMenuCurrent "nav" .) }}
+          {{ $active = or $active (eq .Name $current.Title) }}
+          {{ $active = or $active (and (eq .Name "Writings") (eq $current.Section "posts")) }}
+          {{ $active = or $active (and (eq .Name "Tags") (eq $current.Section "tags")) }}
+          <a href="{{ .URL }}" {{ if $active }} class="active" {{ end }}>{{ .Name }}</a>
+        </li>
       {{ end }}
     </ul>
   </div>

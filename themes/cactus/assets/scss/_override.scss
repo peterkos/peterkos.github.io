@@ -38,6 +38,10 @@ h1, .h1 {
 
         ul {
             font-size: 1.5rem;
+
+            .active {
+                color: $color-active !important;
+            }
         }
 
         #logo-link {
