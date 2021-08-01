@@ -1,7 +1,7 @@
 ---
 title: "Initial Blog"
 date: 2021-07-31T22:25:54-04:00
-draft: true
+draft: false
 ---
 
 
