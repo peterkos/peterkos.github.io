@@ -1,7 +1,7 @@
 {{ define "main" }}
   <section id="about">
   {{ if isset .Site.Params "description" }}
-    {{ .Site.Params.description | $.Page.RenderString }}
+    <p>{{ .Site.Params.description | $.Page.RenderString }}</p>
   {{ end }}
   {{ if isset .Site.Params "social" }}
       <p>Find me on
@@ -108,4 +108,7 @@
     </ul>
   </section>
   {{ end }}
+
+  {{ partial "music.html" . }}
+
 {{ end }}
