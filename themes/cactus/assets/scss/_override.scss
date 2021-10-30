@@ -3,8 +3,8 @@
 
 
 $font-family-title: "Fira Sans";
-$font-family-body: "Fira Code";
-$font-family-mono: "Fira Code";
+$font-family-body: "Fira Sans";
+$font-family-mono: "Fira Sans";
 
 $font-size: 18px;
 
@@ -97,5 +97,15 @@ article .content {
     table {
         display: block;
         width: 100%;
+    }
+}
+
+// About page
+
+#about {
+    #photo {
+        width: 200px;
+        height: 200px;
+        float: left;
     }
 }
