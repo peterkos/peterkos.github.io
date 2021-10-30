@@ -8,11 +8,11 @@ compile_sass = true
 build_search_index = true
 
 # Important :)
-theme = "zola-pickles"
+theme = "hyde"
 
 # Site config
 title = "Peter Kos"
-
+description = "I write orchestral music, hammer out lots of code, and spend too much time watching cat videos."
 
 
 
@@ -22,5 +22,12 @@ title = "Peter Kos"
 highlight_code = true
 
 [extra]
-# Put all your custom variables here
-subtitle = "music + code nonsense, with cats for sense"
+
+# hyde_theme = "theme-base-0d"
+hyde_sticky = false
+
+hyde_links = [
+    {url = "https://github.com/peterkos", name = "GitHub"},
+    {url = "https://twitter.com/pkos91", name = "Twitter"},
+    {url = "https://linkedin.com/in/peter-kos", name = "LinkedIn"},
+]
