@@ -1,88 +1,34 @@
-baseURL = "https://peterkos.me"
-languageCode = "en-us"
+# The URL the site will be built for
+base_url = "https://peterkos.me"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = true
+
+# Important :)
+theme = "hyde"
+
+# Site config
 title = "Peter Kos"
-theme = "cactus"
-copyright = "" # cactus will use title if copyright is not set
-disqusShortname = "example" # Used when comments is enabled. Cactus will use site title if not set
-# googleAnalytics = "UA-1234-5"
+description = "I write orchestral music, hammer out lots of code, and spend too much time watching cat videos."
 
 
-# summaryLength = 2
 
-# Main menu which appears below site header.
-[[menu.main]]
-name = "Home"
-url = "/"
-weight = 1
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
 
-[[menu.main]]
-name = "Writings"
-url = "/posts"
-weight = 2
+[extra]
 
-[[menu.main]]
-name = "Tags"
-url = "/tags"
-weight = 3
+# hyde_theme = "theme-base-0d"
+hyde_sticky = false
 
-[[menu.main]]
-name = "About"
-url = "/about"
-weight = 4
-
-[markup]
-  [markup.tableOfContents]
-    endLevel = 4
-    ordered = false
-    startLevel = 2
-  [markup.highlight]
-    codeFences = true
-    guessSyntax = false
-    hl_Lines = ""
-    lineNoStart = 1
-    lineNos = true
-    lineNumbersInTable = false
-    noClasses = true
-    style = "dracula"
-    tabWidth = 4
-
-[params]
-
-  colortheme = "dark-custom" # dark, light, white, or classic
-  rss = true # generate rss feed. default value is false
-  googleAnalyticsAsync = true # use asynchronous tracking. Synchronous tracking by default
-  showAllPostsArchive = false # default
-
-  # Home page settings
-  description = "Hello! I'm Peter. I write orchestral music, hammer out lots of code, and spend too much time watching cat videos."
-  mainSection = "posts" # your main section
-  showAllPostsOnHomePage = false # default
-  postsOnHomePage = 5 # this option will be ignored if showAllPostsOnHomePage is set to true
-  tagsOverview = true # show tags overview by default.
-  showProjectsList = true # show projects list by default (if projects data file exists).
-  projectsUrl = "https://github.com/peterkos" # title link for projects list
-
-  # https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference
-  dateFormat = "Jan 2"
-
-  # Post page settings
-  show_updated = true # default
-  showReadTime = false
-
-  logo = "logo1.svg"
-
-  [params.comments]
-    enabled = false # default
-    engine = "disqus" # more supported engines will be added.
-
-  # the value of name should be an valid font awesome icon name (brands type)
-  # https://fontawesome.com/icons?d=gallery&s=brands
-  [[params.social]]
-    name = "github"
-    link = "https://github.com/peterkos"
-  [[params.social]]
-    name = "linkedin"
-    link = "https://www.linkedin.com/in/peterkos/"
-  [[params.social]]
-    name = "email"
-    link = "pkos91@icloud.com"  # no need for "mailto:" in the head
+hyde_links = [
+    {url = "https://github.com/peterkos", name = "GitHub"},
+    {url = "https://twitter.com/pkos91", name = "Twitter"},
+    {url = "https://linkedin.com/in/peter-kos", name = "LinkedIn"},
+    {url = "bit.ly/peterkos-music-portfolio-2021", name = "Music Portfolio"}
+]

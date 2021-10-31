@@ -1,0 +1,43 @@
+
+
+{% extends "hyde/templates/index.html" %}
+
+
+{% block extra_head %}
+<head>
+    <!-- GFonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="{{ get_url(path="custom.css", trailing_slash=false) }}">
+</head>
+{% endblock extra_head %}
+
+
+{% block sidebar %}
+    <div class="sidebar">
+            <div class="sidebar-image">
+                <img id="logo" src="{{ get_url(path="logo1.svg") }}">
+            </div>
+
+            <div class="sidebar-about">
+                {% block sidebar_about %}
+                    <a href="{{ config.base_url }}"><h1>{{ config.title }}</h1></a>
+                    {% if config.description %}
+                    <p class="lead">{{config.description}}</p>
+                    {% endif %}
+                {% endblock sidebar_about %}
+            </div>
+
+            <ul class="sidebar-nav">
+                {% block sidebar_nav %}
+                {% for link in config.extra.hyde_links %}
+                <li class="sidebar-nav-item"><a href="{{link.url}}">{{link.name}}</a></li>
+                {% endfor %}
+                {% endblock sidebar_nav %}
+            </ul>
+        </div>
+    </div>
+{% endblock sidebar %}

@@ -1,0 +1,36 @@
+
+
+
+
+#logo {
+    width: 40%;
+    background-color: white;
+    padding: 15px;
+}
+
+.sidebar {
+    padding: 2rem;
+}
+
+.sidebar-about {
+    h1 {
+        font-family: "Lato", serif;
+    }
+
+    .lead {
+        font-style: italic;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 48em) {
+    .sidebar {
+        width: 20rem;
+    }
+}
+
+
+// I don't like this emoji lol
+.zola-anchor {
+    display: none;
+}
