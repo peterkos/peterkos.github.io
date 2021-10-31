@@ -1,0 +1,26 @@
+
+
+
+
+#logo {
+    width: 40%;
+    background-color: white;
+    padding: 15px;
+}
+
+.sidebar-about {
+
+    h1 {
+        font-family: "Lato", serif;
+    }
+
+    .lead {
+        font-style: italic;
+    }
+}
+
+@media (min-width: 48em) {
+    .sidebar {
+        width: 20rem;
+    }
+}
