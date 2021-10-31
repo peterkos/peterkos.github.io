@@ -30,4 +30,5 @@ hyde_links = [
     {url = "https://github.com/peterkos", name = "GitHub"},
     {url = "https://twitter.com/pkos91", name = "Twitter"},
     {url = "https://linkedin.com/in/peter-kos", name = "LinkedIn"},
+    {url = "bit.ly/peterkos-music-portfolio-2021", name = "Music Portfolio"}
 ]
