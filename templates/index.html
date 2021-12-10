@@ -51,3 +51,20 @@
         </div>
     </div>
 {% endblock sidebar %}
+
+{% block content %}
+    <div class="posts">
+        <!-- Needed to remove the reverse! -->
+        {% for page in section.pages %}
+          <div class="post">
+            <h1 class="post-title">
+              <a href="{{ page.permalink }}">
+                {{ page.title }}
+              </a>
+            </h1>
+
+            <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
+          </div>
+        {% endfor %}
+    </div>
+{% endblock content %}
