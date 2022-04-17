@@ -1,8 +1,9 @@
 
 
-
 .content {
     margin: 0 auto;
+    width: 48em;
+    min-width: 0;
 }
 
 #logo {
@@ -11,8 +12,11 @@
     padding: 15px;
 }
 
+
 .sidebar {
     padding: 2rem;
+    position: fixed;
+    height: 100%;
 }
 
 .sidebar-about {
@@ -26,13 +30,53 @@
     }
 }
 
-@media (min-width: 48em) {
+// Very messy CSS mobile styling...
+
+@media screen and (max-width: 100em) {
     .sidebar {
-        width: 20rem;
+        width: 12rem;
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 80em) {
+
+    html {
+        font-size: 16px;
     }
 
     .content {
-        max-width: 45rem;
+        margin-left: 12rem;
+        max-width: 40rem;
+        width: calc(100% - 12rem);
+    }
+}
+
+// Mobile sidebar
+@media screen and (max-width: 28em) {
+
+    #logo {
+        margin: 0 auto;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: relative;
+    }
+
+    .sidebar-nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .sidebar-nav-item {
+        display: inline;
+    }
+
+    .content {
+        margin: 0;
+        width: 100%;
     }
 }
 
