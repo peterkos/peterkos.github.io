@@ -1,6 +1,9 @@
 
 
 
+.content {
+    margin: 0 auto;
+}
 
 #logo {
     width: 40%;
@@ -26,6 +29,10 @@
 @media (min-width: 48em) {
     .sidebar {
         width: 20rem;
+    }
+
+    .content {
+        max-width: 45rem;
     }
 }
 
