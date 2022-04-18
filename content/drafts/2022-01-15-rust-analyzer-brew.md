@@ -1,6 +1,7 @@
 +++
 title = "rust-analyzer homebrew"
-date = 2022-01-15
+date  = 2022-01-15
+draft = true
 +++
 
 homebrew installs in
