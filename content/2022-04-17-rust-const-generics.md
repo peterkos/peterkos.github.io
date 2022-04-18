@@ -9,7 +9,7 @@ _Topics include: generics, const generics, monomorphization, macros, and GitHub 
 
 Generics are a powerful language tool to use in any language. In Rust, these are especially powerful, and by powerful I mean really efficient.
 
-Let's look at a brief example to get familair with syntax:
+Let's look at a brief example to get familiar with syntax:
 
 ```rust
 trait HasPrintData { /* ... */ }
@@ -150,7 +150,7 @@ let middle_d = Note { name: NoteName::D, pitch: 3}
 // Monomorphization does not occur here, as there are no generics in use.
 ```
 
-This reveals the motivation behind the humble const generic. If we want to have a type that is exclusively distinguished by a constant (some might say "by association" of a constant), then a const generic is a fantastic qualifier. (Arrays are a good example here.) Otherwise, if a type will have _many_ invocations with different values, it may be better to stick to a traditional parameter-in-struct appraoch.
+This reveals the motivation behind the humble const generic. If we want to have a type that is exclusively distinguished by a constant (some might say "by association" of a constant), then a const generic is a fantastic qualifier. (Arrays are a good example here.) Otherwise, if a type will have _many_ invocations with different values, it may be better to stick to a traditional parameter-in-struct approach.
 
 Now that we've established the basics of const generics, let's dig more into the edge cases we may encounter.
 
@@ -206,7 +206,7 @@ In response to the hype (and against the technical difficulty), a [project group
 
 Beofre we discuss the bleeding edge of const generics, let's take a quick look at an implementation of a specific const generics feature to better understand the complexity around this issue.
 
-One of the more anticipiated issues is the use of const generics as an expression:
+One of the more anticipated issues is the use of const generics as an expression:
 ```rust
 fn foo<const T: usize>() -> [i32; T + 1] { /* ... */ }
 ```
@@ -242,15 +242,15 @@ All of this is to point out the technical difficulty in implementing _one_ addit
 What about the future of const generics? What's left for the quirky language feature that axed one more set of macros from the standard library?
 
 Looking through the [current list of nightly features][9], there's a few relevant ones for const generics, in particular:
-- **adt_const_params (95174)**
-- **generic_arg_infer (85077)**
-- **generic_const_exprs (76560) (supportive issue)**
+- **adt_const_params ([#95174][24])**
+- **generic_arg_infer ([#85077][25])**
+- **generic_const_exprs ([#76560][26]) (supportive issue)**
 
-The last RFC, `generic_const_exprs` proposes a new inline `const { ... }` syntax that allows for blocks of code to be evaluated into a `const` value at compile time. The relevant piece here for const generics is that currently, array length expressions cannot refer to generic parameters:
+The last RFC, `generic_const_exprs` proposes a new inline `const { ... }` syntax that allows for blocks of code to be evaluated into a `const` value at compile time[^5]. The relevant piece here for const generics is that currently, array length expressions cannot refer to generic parameters:
 
 ```rust
 fn gen_arr<T, const N: usize>() {
-    let cool_arr = [4i32; N];
+    let cool_arr = [4i32; N + 1];
 }
 ```
 (This might be useful in side-stepping the const generic expression limitations, or at the very least in making more of the code readable for contexts where arrays depend on the size of a type, i.e., `std::mem::size_of::<T>()`.)
@@ -297,7 +297,10 @@ This goes to show the impressive complexity and power underneath every Rust feat
 [21]: https://rustc-dev-guide.rust-lang.org/hir.html#the-hir
 [22]: https://github.com/rust-lang/rust/pull/74595
 [23]: https://rust-lang.zulipchat.com/#narrow/stream/146212-t-compiler.2Fconst-eval/topic/.60ConstEvaluatable.60.20generic.20functions/near/204554918
-
+[24]: https://github.com/rust-lang/rust/issues/95174
+[25]: https://github.com/rust-lang/rust/issues/85077
+[26]: https://github.com/rust-lang/rust/issues/76560
+[27]: https://twitter.com/pkos91
 
 [^1]: The [RFC 0520][11] added the magic syntax. It's 2014 Rust, so good luck!
 
@@ -306,3 +309,5 @@ This goes to show the impressive complexity and power underneath every Rust feat
 [^3]: See the const generic [RFC 2000][0] for a technical definition of `const generic parameter` vs. `const generic argument`
 
 [^4]: Scoped in technical nature, not in initial featureset. The RFC is remarkably concise!
+
+[^5]: Future Peter here: I wrote this section quite late in the night, and this part might be a bit wrong. I can't find the idea I talked about in the GH issue itself, but it feels right. Reach out to me on Twitter [@pkos91][27] if you want to correct me!
