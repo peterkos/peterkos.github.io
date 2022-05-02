@@ -206,7 +206,7 @@ In response to the hype (and against the technical difficulty), a [project group
 
 ## Generic O(1) Compiler Issues
 
-Beofre we discuss the bleeding edge of const generics, let's take a quick look at an implementation of a specific const generics feature to better understand the complexity around this issue.
+Before we discuss the bleeding edge of const generics, let's take a quick look at an implementation of a specific const generics feature to better understand the complexity around this issue.
 
 One of the more anticipated issues is the use of const generics as an expression:
 ```rust
