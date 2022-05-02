@@ -5,6 +5,8 @@ date = 2022-04-17
 
 _Topics include: generics, const generics, monomorphization, macros, and GitHub archaeology_
 
+_Big thanks to [@Ryan_A_Gillie][28] for proofreading (and emotional support)_
+
 ## The Generic Groundwork
 
 Generics are a powerful language tool to use in any language. In Rust, these are especially powerful, and by powerful I mean really efficient.
@@ -17,7 +19,7 @@ trait HasPrintData { /* ... */ }
 // Defines a generic T that must implement the `HasPrintData` trait
 fn cool_print<T: HasPrintData>(data: T) { /* ... */ }
 
-struct MyType {}
+struct MyType { data: &'static str }
 impl HasPrintData for MyType { /* ... */ }
 
 let asdf_data = MyType{ data: "asdf" };
@@ -301,6 +303,7 @@ This goes to show the impressive complexity and power underneath every Rust feat
 [25]: https://github.com/rust-lang/rust/issues/85077
 [26]: https://github.com/rust-lang/rust/issues/76560
 [27]: https://twitter.com/pkos91
+[28]: https://twitter.com/Ryan_A_Gillie
 
 [^1]: The [RFC 0520][11] added the magic syntax. It's 2014 Rust, so good luck!
 
