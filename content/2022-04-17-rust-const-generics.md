@@ -5,6 +5,8 @@ date = 2022-04-17
 
 _Topics include: generics, const generics, monomorphization, macros, and GitHub archaeology_
 
+_Credit goes to Prof. Matthew Fluet's [Programming Skills: Rust class][29] at RIT for the Rust knowledge, and more directly, the assignment to write a blog post on advanced Rust. I'll be writing another post soon about what it's like to learn Rust in academia -- stay tuned!_
+
 _Big thanks to [@Ryan_A_Gillie][28] for proofreading (and emotional support)_
 
 ## The Generic Groundwork
@@ -304,6 +306,7 @@ This goes to show the impressive complexity and power underneath every Rust feat
 [26]: https://github.com/rust-lang/rust/issues/76560
 [27]: https://twitter.com/pkos91
 [28]: https://twitter.com/Ryan_A_Gillie
+[29]: https://www.cs.rit.edu/~mtf/teaching/20215/psr/
 
 [^1]: The [RFC 0520][11] added the magic syntax. It's 2014 Rust, so good luck!
 
