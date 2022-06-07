@@ -1,10 +1,6 @@
 
 
-.content {
-    margin: 0 auto;
-    width: 48em;
-    min-width: 0;
-}
+
 
 #logo {
     width: 40%;
@@ -12,11 +8,8 @@
     padding: 15px;
 }
 
-
 .sidebar {
     padding: 2rem;
-    position: fixed;
-    height: 100%;
 }
 
 .sidebar-about {
@@ -30,58 +23,56 @@
     }
 }
 
-// Very messy CSS mobile styling...
-
-@media screen and (max-width: 100em) {
+@media (min-width: 48em) {
     .sidebar {
-        width: 12rem;
-        padding: 1rem;
+        width: 20rem;
     }
 }
 
-@media screen and (max-width: 80em) {
-
-    html {
-        font-size: 16px;
-    }
-
-    .content {
-        margin-left: 12rem;
-        max-width: 40rem;
-        width: calc(100% - 12rem);
-    }
-}
-
-// Mobile sidebar
-@media screen and (max-width: 28em) {
-
-    #logo {
-        margin: 0 auto;
-    }
-
-    .sidebar {
-        width: 100%;
-        position: relative;
-    }
-
-    .sidebar-nav {
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
-    }
-
-    .sidebar-nav-item {
-        display: inline;
-    }
-
-    .content {
-        margin: 0;
-        width: 100%;
-    }
+// Blog post marign adjustment
+.content .posts .post {
+    margin-bottom: 2em; // down from 4em
 }
 
 
 // I don't like this emoji lol
 .zola-anchor {
     display: none;
+}
+
+
+// MARK: Custom "overview" section
+//       on top of the blog
+
+
+
+#talks {
+    width: 100%;
+    margin-bottom: 20vh;
+
+    #talks-desc {
+
+    }
+}
+
+#talks-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.talk {
+    width: 200px;
+    height: 150px;
+    background: white;
+    // border: 3px solid blue;
+
+    .template {
+        width: 100%;
+        height: 100%;
+        background-color: lightblue;
+    }
+
+    p {
+        margin: 0;
+    }
 }

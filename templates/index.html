@@ -55,16 +55,41 @@
     </div>
 {% endblock sidebar %}
 
+
 {% block content %}
+    <div id="talks">
+
+        <h1>Talks</h1>
+        <p><i>Various talks I've given, most at RIT.</i></p>
+
+        <div id="talks-wrap">
+            <div class="talk">
+                <div class="template"></div>
+                <p>Intermediate Git</p>
+            </div>
+            <div class="talk">
+                <div class="template"></div>
+                <p>Beginner Git</p>
+            </div>
+            <div class="talk">
+                <div class="template"></div>
+                <p>Distributed Systems: Paper Summary (CSCI 761)</p>
+            </div>
+        </div>
+    </div>
+
     <div class="posts">
+        <h1>Blog</h1>
+        <p><i>Various words I've said, most at the computer.</i></p>
+
         <!-- Needed to remove the reverse! -->
         {% for page in section.pages %}
           <div class="post">
-            <h1 class="post-title">
+            <h2 class="post-title">
               <a href="{{ page.permalink }}">
                 {{ page.title }}
               </a>
-            </h1>
+            </h2>
 
             <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
           </div>
