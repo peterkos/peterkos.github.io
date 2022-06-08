@@ -32,6 +32,20 @@
     }
 }
 
+@media (max-width: 48em) {
+    // Sidebar mobile is done implicitly on L62 |= hyde.css,
+    // so we need to explicitly target the inverse size class
+    // to do custom styling for mobile.
+    #logo {
+        margin: 0 auto;
+    }
+
+    .sidebar-nav {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
 // Blog post marign adjustment
 .content .posts .post {
     margin-bottom: 2em; // down from 4em
