@@ -5,8 +5,6 @@
     max-width: 42rem;
 }
 
-
-
 #logo {
     width: 40%;
     background-color: white;
@@ -50,16 +48,14 @@
 //       on top of the blog
 
 
-
 #talks {
     width: 100%;
-    // margin-bottom: 8'vh;
 }
 
 #talks-wrap {
     display: flex;
     justify-content: space-between;
-
+    flex-wrap: wrap;
 
     // Since the entire thing is wrapped in a link,
     // we only want the title text to be styled like a link,
@@ -67,6 +63,8 @@
     a {
         text-decoration: none;
         color: inherit;
+        display: inline-block;
+        max-width: 30%;
 
         p:not(.desc) {
             color: #268bd2;
@@ -77,23 +75,23 @@
 }
 
 .talk {
-    max-width: 250px;
-    background-color: rgba(black, 0.05);
+    background-color: rgba(black, 0.1);
     padding: 10px;
     border-radius: 5px;
     transition: 0.1s transform;
+    // TODO: Figure out a nice shadow
     // box-shadow: 1px 1px 2px lightgray;
+
+    // Flex content in the card so mobile row layout
+    // can be a one-liner
+    display: flex;
+    flex-direction: column;
 
     &:hover {
         transform: translateY(-8px);
         cursor: pointer;
     }
 
-    .desc {
-        font-size: 0.8rem;
-        font-style: italic;
-        // text-decoration: none;
-    }
 
     .thumbnail {
         width: 100%;
@@ -101,7 +99,55 @@
         background-color: lightblue;
     }
 
+    .content {
+        display: inline;
+    }
+
+    .desc {
+        font-size: 0.8rem;
+        font-style: italic;
+    }
+
     p {
         margin: 0;
+    }
+}
+
+
+@media screen and (max-width: 1100px) {
+
+    // Switch to a row-based layout instead
+
+    #talks-wrap {
+        justify-content: space-around;
+        flex-direction: column;
+
+        a {
+            max-width: none;
+        }
+
+        .talk {
+            flex-direction: row;
+            width: 100%;
+            margin-bottom: 10px;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+
+            &:active {
+                transform: scale(0.98);
+            }
+
+            .thumbnail {
+                margin: 0 1rem 0 0;
+                max-width: 40%;
+            }
+
+            .desc {
+                // Bump up slightly for mobile
+                font-size: 0.9rem;
+            }
+        }
     }
 }
