@@ -103,15 +103,17 @@
 
         <!-- Needed to remove the reverse! -->
         {% for page in section.pages %}
-          <div class="post">
+        <div class="post">
             <h2 class="post-title">
-              <a href="{{ page.permalink }}">
-                {{ page.title }}
-              </a>
+                {% if page.draft %}
+                    <span style="font-size: 1rem;">
+                        [draft] |
+                    </span>
+                {% endif %}
+                <a href="{{ page.permalink }}">{{ page.title }}</a>
             </h2>
-
             <span class="post-date">{{ page.date | date(format="%b %d, %Y") }}</span>
-          </div>
+        </div>
         {% endfor %}
     </div>
 {% endblock content %}
