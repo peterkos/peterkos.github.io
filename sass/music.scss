@@ -18,12 +18,16 @@ $hoverOpacity: 0.25;
     --IIIcolor: 229, 143, 101;
 }
 
+* {
+    transition: 0.25s all;
+}
+
 body {
     background-color: #0D1F22;
     color: white;
 }
 
-h1, p {
+h1, h2, p {
     font-family: "Quicksand", serif;
 }
 
@@ -32,9 +36,17 @@ h1 {
     text-align: center;
 }
 
-* {
-    transition: 0.25s all;
+h2 {
+    font-size: 4rem;
 }
+
+
+.container {
+    max-width: 90vw;
+    margin: 0 auto;
+    margin-top: 10rem;
+}
+
 
 #albums {
     display: flex;
@@ -94,7 +106,8 @@ h1 {
             }
         }
 
-        p {
+        p.desc {
+            margin-top: 10rem;
             position: relative;
             z-index: 1;
             text-align: justify;
@@ -109,8 +122,30 @@ h1 {
 }
 
 
-.container {
-    max-width: 90vw;
-    margin: 0 auto;
-    margin-top: 10rem;
+#details {
+    display: flex;
+    justify-content: flex-start;
+    margin: 10rem 20%;
+
+    h2 {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+    }
+
+    div {
+        align-self: flex-start;
+    }
+
+    p {
+        font-size: 1.4rem;
+        line-height: 3rem;
+
+        &:first-child {
+            // align with start of h2, which is sideways
+            margin-top: -16px;
+        }
+    }
+
+
 }
+
