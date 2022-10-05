@@ -149,3 +149,43 @@ h2 {
 
 }
 
+
+
+@media screen and (max-width: 1400px) {
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+        margin: 0 20px;
+    }
+
+    #albums {
+        // flex-direction: column;
+        flex-wrap: wrap;
+
+        .group {
+            &:not(:first-child) {
+                margin-top: 4rem;
+            }
+
+            p.desc {
+                // display: none;
+                margin: 2rem 0;
+                height: 200px;
+                overflow: hidden;
+            }
+        }
+    }
+
+    #details {
+        margin: 10rem 5%;
+
+        p {
+            font-size: 1rem;
+        }
+    }
+
+}
