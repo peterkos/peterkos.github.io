@@ -51,7 +51,9 @@
                 {% endfor %}
                 {% endblock sidebar_nav %}
                 <!-- <hr> -->
-                <!-- <li class="sidebar-nav-item"><a href="{{ get_url(path="music") }}">I, II, 3</a></li> -->
+                <!-- Turns out hiding it doesn't render it anymore, duh -->
+                <!-- so let it render but not visible to send -->
+                <li class="sidebar-nav-item" style="visibility: hidden"><a href="{{ get_url(path="music") }}">I, II, 3</a></li>
             </ul>
         </div>
     </div>
