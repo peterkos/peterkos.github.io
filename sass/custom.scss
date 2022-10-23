@@ -46,16 +46,29 @@
     }
 }
 
-// Blog post marign adjustment
-.content .posts .post {
-    margin-bottom: 2em; // down from 4em
-}
 
 
 // I don't like this emoji lol
 .zola-anchor {
     display: none;
 }
+
+
+
+// MARK: posts
+
+
+// Blog post marign adjustment
+.content .posts .post {
+    margin-bottom: 2em; // down from 4em
+}
+
+.post {
+    margin: 40px 0px;
+}
+
+
+
 
 
 // MARK: Custom "overview" section

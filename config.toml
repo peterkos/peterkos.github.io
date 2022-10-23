@@ -8,12 +8,16 @@ compile_sass = true
 build_search_index = true
 
 # Important :)
-theme = "hyde"
+theme = "zola-paper"
 
 # Site config
 title = "Peter Kos"
 description = "I write orchestral music, hammer out lots of code, and spend too much time watching cat videos."
 
+taxonomies = [
+    { name = "categories" },
+    { name = "tags" },
+]
 
 
 [markdown]
