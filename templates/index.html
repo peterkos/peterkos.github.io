@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
     <!-- Custom stylesheet -->
     <link rel="stylesheet" href="{{ get_url(path="custom.css", trailing_slash=false) }}">
@@ -63,8 +64,13 @@
 {% block content %}
     <div id="talks">
 
-        <h1>Talks</h1>
-        <p><i>Various talks I've given, most at RIT.</i></p>
+        <div class="section-header">
+            <div class="header-border"></div>
+            <div>
+                <h1>Talks</h1>
+                <p><i>Various talks I've given, most at RIT.</i></p>
+            </div>
+        </div>
 
         <div id="talks-wrap">
             <a href="https://youtu.be/yGHhZjGcU7o" target="_blank">
@@ -72,7 +78,7 @@
                     <img src="{{ get_url(path="talks/csci.png") }}" class="thumbnail">
 
                     <div class="talk-content">
-                        <p>CSCI 761: Dist Systems</p>
+                        <p><b>CSCI 761: Dist Systems</b></p>
                         <p class="desc">A detailed summary of a paper (not mine!) on distributed reconfigurable networks.</p>
                     </div>
                 </div>
@@ -82,7 +88,7 @@
                 <div class="talk">
                     <img src="{{ get_url(path="talks/intermediate-git.png") }}" class="thumbnail">
                     <div class="talk-content">
-                        <p>Intermediate Git</p>
+                        <p><b>Intermediate Git</b></p>
                         <p class="desc">Deep dive into branching, merge conflicts, and daily git commands.</p>
                     </div>
                 </div>
@@ -92,7 +98,7 @@
                 <div class="talk">
                     <img src="{{ get_url(path="talks/beginner-git.png") }}" class="thumbnail">
                     <div class="talk-content">
-                        <p>Beginner Git</p>
+                        <p><b>Beginner Git</b></p>
                         <p class="desc">A brief intro to commits, push/pull, the local git flow.</p>
                     </div>
                 </div>
@@ -102,8 +108,15 @@
     </div>
 
     <div class="posts">
-        <h1>Blog</h1>
-        <p><i>Various words I've said, most at the computer.</i></p>
+
+        <div class="section-header">
+            <div class="header-border"></div>
+            <div>
+                <h1>Blog</h1>
+                <p><i>Various words I've said, most at the computer.</i></p>
+            </div>
+        </div>
+
 
         <!-- Needed to remove the reverse! -->
         {% for page in section.pages %}

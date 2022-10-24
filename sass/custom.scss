@@ -1,8 +1,27 @@
 
+body {
+    font-size: 1.2rem;
+}
+
+p {
+    // font-family: "Libre Baskerville", "sans-serif";
+}
+
+.main {
+    max-width: 60rem;
+}
 
 .content {
     // Bumped up slightly from 38rem
     max-width: 42rem;
+}
+
+.post-content {
+    color: rgba(white, 0.8);
+}
+
+blockquote {
+    color: rgba(white, 0.5);
 }
 
 #logo {
@@ -63,11 +82,49 @@
     margin-bottom: 2em; // down from 4em
 }
 
+.section-header {
+    display: flex;
+    align-content: center;
+    margin: 40px 0px;
+    padding: 10px;
+    border-radius: 5px;
+    // background-color: #333;
+    background-color: rgba(#c4a7e7, 0.1);
+
+    div {
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .header-border {
+        width: 5px;
+        height: 90px;
+        margin-left: -30px;
+        margin-right: 30px;
+        display: inline-block;
+        background-color: #c4a7e7;
+
+    }
+}
+
 .post {
     margin: 40px 0px;
+
+    h2 {
+        font-size: 1.7rem;
+    }
 }
 
 
+// MARK: Nav
+
+.menu li a {
+    &:hover {
+        color: #eb6f92;
+    }
+}
 
 
 
@@ -82,6 +139,7 @@
 #talks-wrap {
     display: flex;
     justify-content: space-between;
+    align-items: stretch;
     flex-wrap: wrap;
 
     // Since the entire thing is wrapped in a link,
@@ -94,7 +152,7 @@
         max-width: 30%;
 
         p:not(.desc) {
-            color: #268bd2;
+            color: #e0def4;
         }
 
 
@@ -102,8 +160,9 @@
 }
 
 .talk {
-    background-color: rgba(black, 0.1);
-    padding: 10px;
+    background-color: rgba(#c4a7e7, 0.2);
+    height: 100%;
+    padding: 15px;
     border-radius: 5px;
     transition: 0.1s transform;
     // TODO: Figure out a nice shadow
@@ -113,20 +172,22 @@
     // can be a one-liner
     display: flex;
     flex-direction: column;
+    align-content: flex-start;
+
 
     &:hover {
         transform: translateY(-8px);
         cursor: pointer;
     }
 
-
     .thumbnail {
         width: 100%;
-        height: 100%;
-        background-color: lightblue;
+        border-radius: 2.5px;
+        background-color: black;
     }
 
-    .content {
+    .talk-content {
+        margin-top: 15px;
         display: inline;
     }
 
@@ -145,10 +206,7 @@
 
 
 
-
-
-
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 600px) {
 
     // Switch to a row-based layout instead
 
