@@ -107,6 +107,26 @@
         </div>
     </div>
 
+    <!--
+    <div class="posts"> -->
+
+        <!-- Needed to remove the reverse! -->
+       <!--  {% for page in section.pages %}
+        <div class="post">
+            <h2 class="post-title">
+                {% if page.draft %}
+                    <span style="font-size: 1rem;">
+                        [draft] |
+                    </span>
+                {% endif %}
+                <a href="{{ page.permalink }}">{{ page.title }}</a>
+            </h2>
+            <span class="post-date">{{ page.date | date(format="%b %d, %Y") }}</span>
+            <p class="post-snippet">{{ page.content | safe }}</p>
+        </div>
+        {% endfor %}
+    </div> -->
+
     <div class="posts">
 
         <div class="section-header">
@@ -118,19 +138,24 @@
         </div>
 
 
-        <!-- Needed to remove the reverse! -->
-        {% for page in section.pages %}
-        <div class="post">
-            <h2 class="post-title">
-                {% if page.draft %}
-                    <span style="font-size: 1rem;">
-                        [draft] |
-                    </span>
-                {% endif %}
-                <a href="{{ page.permalink }}">{{ page.title }}</a>
-            </h2>
-            <span class="post-date">{{ page.date | date(format="%b %d, %Y") }}</span>
-        </div>
+        {% set is_first_page = true %}
+        {% if paginator is defined %}
+            {% set pages = paginator.pages %}
+        {% elif section is defined %}
+            {% set pages = section.pages %}
+        {% endif %}
+        {% for page in pages %}
+            <article class="post-entry">
+                {{ post_macros::page_in_list(page=page)}}
+            </article>
         {% endfor %}
+        {% if paginator is defined %}
+            <footer class="page-footer">
+                <nav class="pagination">
+                    {% if paginator.previous %}<a class="prev" href="{{ paginator.previous }}">← Previous</a>{% else %}<!--Hidden Previous-Button-->{% endif %}
+                    {% if paginator.next %}<a class="next" href="{{ paginator.next }}">Next →</a>{% else %}<!--Hidden Next-Button-->{% endif %}
+                </nav>
+            </footer>
+        {% endif %}
     </div>
 {% endblock content %}

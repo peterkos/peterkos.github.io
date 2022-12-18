@@ -5,6 +5,8 @@ date = 2022-04-17
 
 _Topics include: generics, const generics, monomorphization, macros, and GitHub archaeology_
 
+<!-- more -->
+
 _Credit goes to Prof. Matthew Fluet's [Programming Skills: Rust class][29] at RIT for the Rust knowledge, and more directly, the assignment to write a blog post on advanced Rust. I'll be writing another post soon about what it's like to learn Rust in academia -- stay tuned!_
 
 _Big thanks to [@Ryan_A_Gillie][28] for proofreading (and emotional support)_

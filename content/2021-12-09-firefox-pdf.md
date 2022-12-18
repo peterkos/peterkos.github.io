@@ -5,6 +5,9 @@ date  = 2021-12-09
 
 I wanted a way to set some default parameters in Firefox's PDF viewer to view class lecture notes. No sidebar, `page-fit` view.
 
+<!-- more -->
+
+
 Turns out it's easy!
 
 From [support.mozilla.org](https://support.mozilla.org/en-US/questions/1074524):

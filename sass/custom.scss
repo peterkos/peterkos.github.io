@@ -1,4 +1,9 @@
 
+
+$border-radius: 10px;
+
+
+
 body {
     font-size: 1.2rem;
 }
@@ -85,11 +90,11 @@ blockquote {
 .section-header {
     display: flex;
     align-content: center;
-    margin: 40px 0px;
+    margin: 80px 0px 40px 0px;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: $border-radius;
     // background-color: #333;
-    background-color: rgba(#c4a7e7, 0.1);
+    // background-color: rgba(#c4a7e7, 0.1);
 
     div {
         display: flex;
@@ -111,9 +116,23 @@ blockquote {
 
 .post {
     margin: 40px 0px;
+    background-color: rgba(#c4a7e7, 0.1);
+    padding: 20px;
+    border-radius: $border-radius;
+    transition: ease 0.1s transform;
+    overflow: hidden;
+
+    &:hover {
+        transform: scale(1.01);
+    }
 
     h2 {
+        font-weight: 500;
         font-size: 1.7rem;
+    }
+
+    .post-date {
+        font-size: 1rem;
     }
 }
 
@@ -160,10 +179,10 @@ blockquote {
 }
 
 .talk {
-    background-color: rgba(#c4a7e7, 0.2);
+    background-color: rgba(#c4a7e7, 0.1);
     height: 100%;
     padding: 15px;
-    border-radius: 5px;
+    border-radius: $border-radius;
     transition: 0.1s transform;
     // TODO: Figure out a nice shadow
     // box-shadow: 1px 1px 2px lightgray;
@@ -182,7 +201,7 @@ blockquote {
 
     .thumbnail {
         width: 100%;
-        border-radius: 2.5px;
+        border-radius: 2.5;
         background-color: black;
     }
 
