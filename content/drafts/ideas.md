@@ -1,9 +1,12 @@
-
-
-
 +++
 title = "asdf"
 date = "2022-02-02"
+
+[extra]
+author = "Peter Kos"
+
+[taxonomies]
+tags = []
 +++
 
 

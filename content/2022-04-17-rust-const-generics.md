@@ -1,6 +1,12 @@
 +++
 title = "An O(1) Generic Blog Post About Rust"
 date = 2022-04-17
+
+[extra]
+author = "Peter Kos"
+
+[taxonomies]
+tags = []
 +++
 
 _Topics include: generics, const generics, monomorphization, macros, and GitHub archaeology_

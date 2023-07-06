@@ -1,6 +1,12 @@
 +++
 title = "Set Default pdf.js Settings in Firefox"
 date  = 2021-12-09
+
+[extra]
+author = "Peter Kos"
+
+[taxonomies]
+tags = []
 +++
 
 I wanted a way to set some default parameters in Firefox's PDF viewer to view class lecture notes. No sidebar, `page-fit` view.

@@ -1,6 +1,12 @@
 +++
 title = "Hello, World!"
 date = 2021-07-31
+
+[extra]
+author = "Peter Kos"
+
+[taxonomies]
+tags = []
 +++
 
 ## Background

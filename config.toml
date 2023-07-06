@@ -14,10 +14,10 @@ theme = "zola-paper"
 title = "Peter Kos"
 description = "I write orchestral music, hammer out lots of code, and spend too much time watching cat videos."
 
-taxonomies = [
-    { name = "categories" },
-    { name = "tags" },
-]
+# taxonomies = [
+#     { name = "categories" },
+#     { name = "tags" },
+# ]
 
 
 [markdown]
