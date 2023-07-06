@@ -1,5 +1,4 @@
 +++
-title = "List of blog posts"
-sort_by = "date"
-insert_anchor_links = "right"
+[extra]
+section_path = "posts/_index.md"
 +++
