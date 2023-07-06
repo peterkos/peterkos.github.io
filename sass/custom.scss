@@ -1,10 +1,41 @@
 
+// --- General
 
 :root.light, :root.dark {
     --primary-color: #A65AED;
+    --text-font: 'Fira Sans';
+    // --code-font: 'Fira Code';
 }
 
-header {
-    justify-content: right;
-    gap: 0;
+.content {
+    max-width: 1000px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 150%;
+}
+
+header #title {
+    font-size: 150%;
+}
+
+// ---- Homepage
+
+.list-item {
+    margin-bottom: 30px;
+}
+
+.post-desc-heading {
+    display: flex;
+    justify-content: space-between;
+    h1 {
+        margin: 0;
+    }
+}
+
+
+// ---- Code blocks
+
+pre {
+    padding: 2rem;
 }
