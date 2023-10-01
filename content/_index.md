@@ -1,4 +1,6 @@
 +++
+template = "index.html"
+
 [extra]
-section_path = "posts/_index.md"
+nested_section_path = "posts/_index.md"
 +++
