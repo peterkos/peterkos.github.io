@@ -1,5 +1,9 @@
+
+## macOS auto gen gitignore.cli
+
+
 # General
-.DS_Store
+*.DS_Store
 .AppleDouble
 .LSOverride
 
@@ -25,3 +29,9 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+
+
+## Zola stuff
+
+public/*
