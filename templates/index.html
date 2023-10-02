@@ -1,123 +1,67 @@
 
-
-{% extends "hyde/templates/index.html" %}
-
-
-{% block extra_head %}
-<head>
-    <!-- GFonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-
-    <!-- Custom stylesheet -->
-    <link rel="stylesheet" href="{{ get_url(path="custom.css", trailing_slash=false) }}">
-
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180"    href ="{{ get_url(path="favicon/apple-touch-icon.png") }} ">
-    <link rel="icon" type="image/png" sizes="32x32" href ="{{ get_url(path="favicon/favicon-32x32.png") }} ">
-    <link rel="icon" type="image/png" sizes="16x16" href ="{{ get_url(path="favicon/favicon-16x16.png") }} ">
-    <link rel="manifest"                            href ="{{ get_url(path="favicon/site.webmanifest") }}">
-    <link rel="mask-icon"                           href ="{{ get_url(path="favicon/safari-pinned-tab.svg")}} " color="#333333">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-
-    <!-- Friendly analytics courtesy of umami.is -->
-    <script async defer data-website-id="99946fb4-dcf8-4aa9-a7b0-e2d0876fb29c" src="https://umami.peterkos.me/umami.js"   data-do-not-track="true"></script>
-
-</head>
-{% endblock extra_head %}
+{% extends "base.html" %}
 
 
-{% block sidebar %}
-    <div class="sidebar">
-            <div class="sidebar-image">
-                <img id="logo" src="{{ get_url(path="logo1.svg") }}">
-            </div>
+{% block main_content %}
 
-            <div class="sidebar-about">
-                {% block sidebar_about %}
-                    <a href="{{ config.base_url }}"><h1>{{ config.title }}</h1></a>
-                    {% if config.description %}
-                    <p class="lead">{{config.description}}</p>
-                    {% endif %}
-                {% endblock sidebar_about %}
-            </div>
 
-            <ul class="sidebar-nav">
-                {% block sidebar_nav %}
-                {% for link in config.extra.hyde_links %}
-                <li class="sidebar-nav-item"><a href="{{link.url}}">{{link.name}}</a></li>
+    <!-- Custom hero -->
+    {{ post_macros::page_header(title="About Me") }}
+
+    <section class="body">
+        <!-- Put the about header content in markdown 'cause easier lol -->
+        {% set section = get_section(path="./_index.md") %}
+        {% if section %}
+            {{ section.content | safe }}
+
+            <div class="socials">
+                {% for social in config.extra.socials %}
+                    <a rel="me" href="{{ social.url }}" class="social">
+                        <img alt={{ social.name }} src="/social_icons/{{ social.icon }}.svg">
+                    </a>
                 {% endfor %}
-                {% endblock sidebar_nav %}
-                <!-- <hr> -->
-                <!-- Turns out hiding it doesn't render it anymore, duh -->
-                <!-- so let it render but not visible to send -->
-                <li class="sidebar-nav-item" style="visibility: hidden"><a href="{{ get_url(path="music") }}">I, II, 3</a></li>
-            </ul>
-        </div>
-    </div>
-{% endblock sidebar %}
+                <!-- Note: match width to custom.css .socials > img -->
+                <!-- Edited for transparency, 60% of speed, reversed -->
+                <!-- https://www.deviantart.com/valcreon/art/Nyan-Cat-212131133 -->
+                <img src="./nyan.gif" height="30px">
+            </div>
+        {% endif %}
 
 
-{% block content %}
-    <div id="talks">
+    </section>
 
-        <h1>Talks</h1>
-        <p><i>Various talks I've given, most at RIT.</i></p>
 
-        <div id="talks-wrap">
-            <a href="https://youtu.be/yGHhZjGcU7o" target="_blank">
-                <div class="talk">
-                    <img src="{{ get_url(path="talks/csci.png") }}" class="thumbnail">
 
-                    <div class="talk-content">
-                        <p>CSCI 761: Dist Systems</p>
-                        <p class="desc">A detailed summary of a paper (not mine!) on distributed reconfigurable networks.</p>
-                    </div>
-                </div>
-            </a>
+    <!-- Custom posts section here -->
+    {% if section.extra.nested_section_path -%}
+        {% set section = get_section(path=section.extra.nested_section_path) %}
+    {% endif -%}
 
-            <a href="https://youtu.be/hRKp8gAPwSE" target="_blank">
-                <div class="talk">
-                    <img src="{{ get_url(path="talks/intermediate-git.png") }}" class="thumbnail">
-                    <div class="talk-content">
-                        <p>Intermediate Git</p>
-                        <p class="desc">Deep dive into branching, merge conflicts, and daily git commands.</p>
-                    </div>
-                </div>
-            </a>
+    {{ post_macros::page_header(title=section.title) }}
 
-            <a href="https://youtu.be/meBVLpN8BBI" target="_blank">
-                <div class="talk">
-                    <img src="{{ get_url(path="talks/beginner-git.png") }}" class="thumbnail">
-                    <div class="talk-content">
-                        <p>Beginner Git</p>
-                        <p class="desc">A brief intro to commits, push/pull, the local git flow.</p>
-                    </div>
-                </div>
-            </a>
+    <main class="list">
+        {%- if paginator %}
+            {%- set show_pages = paginator.pages -%}
+        {% else %}
+            {%- set show_pages = section.pages -%}
+        {% endif -%}
 
-        </div>
-    </div>
+        {{ post_macros::list_posts(pages=show_pages) }}
+    </main>
 
-    <div class="posts">
-        <h1>Blog</h1>
-        <p><i>Various words I've said, most at the computer.</i></p>
+    {% if paginator %}
+        <ul class="pagination">
+            {% if paginator.previous %}
+                <span class="page-item page-prev">
+                    <a href={{ paginator.previous }} class="page-link" aria-label="Previous"><span aria-hidden="true">← Prev</span></a>
+                </span>
+            {% endif %}
 
-        <!-- Needed to remove the reverse! -->
-        {% for page in section.pages %}
-        <div class="post">
-            <h2 class="post-title">
-                {% if page.draft %}
-                    <span style="font-size: 1rem;">
-                        [draft] |
-                    </span>
-                {% endif %}
-                <a href="{{ page.permalink }}">{{ page.title }}</a>
-            </h2>
-            <span class="post-date">{{ page.date | date(format="%b %d, %Y") }}</span>
-        </div>
-        {% endfor %}
-    </div>
-{% endblock content %}
+            {% if paginator.next %}
+                <span class="page-item page-next">
+                    <a href={{ paginator.next }} class="page-link" aria-label="Next"><span aria-hidden="true">Next →</span></a>
+                </span>
+            {% endif %}
+        </ul>
+    {% endif %}
+{% endblock main_content %}

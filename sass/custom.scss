@@ -1,174 +1,68 @@
 
+// --- General
+
+:root.light, :root.dark {
+    --primary-color: #A65AED;
+    --text-font: 'Fira Sans';
+    // --code-font: 'Fira Code';
+}
 
 .content {
-    // Bumped up slightly from 38rem
-    max-width: 42rem;
+    max-width: 1000px;
 }
 
-#logo {
-    width: 40%;
-    background-color: white;
-    padding: 15px;
+h1, h2, h3, h4, h5, h6 {
+    font-size: 130%;
 }
 
-.sidebar {
-    padding: 2rem;
+header #title {
+    font-size: 150%;
 }
 
-.sidebar-about {
-    h1 {
-        font-family: "Lato", serif;
-    }
-
-    .lead {
-        font-style: italic;
-        font-size: 1rem;
-    }
+img {
+    border: none;
 }
 
-@media (min-width: 48em) {
-    .sidebar {
-        width: 20rem;
-    }
-}
+// ---- Homepage
 
-@media (max-width: 48em) {
-    // Sidebar mobile is done implicitly on L62 |= hyde.css,
-    // so we need to explicitly target the inverse size class
-    // to do custom styling for mobile.
-    #logo {
-        margin: 0 auto;
-    }
+.socials {
+    margin-top: 2rem;
+    gap: 10px;
 
-    .sidebar-nav {
-        display: flex;
-        justify-content: space-around;
+    .social {
+        padding-bottom: 0;
+        & > img {
+            // yahoo https://albertwalicki.com/learn/solutions/extra-space-below-image
+            display: block;
+            width: 30px;
+            height: 30px;
+        }
     }
 }
 
-// Blog post marign adjustment
-.content .posts .post {
-    margin-bottom: 2em; // down from 4em
+.list>ul {
+    padding: 0;
 }
 
-
-// I don't like this emoji lol
-.zola-anchor {
-    display: none;
+.list-item {
+    margin-bottom: 30px;
 }
 
-
-// MARK: Custom "overview" section
-//       on top of the blog
-
-
-#talks {
-    width: 100%;
-}
-
-#talks-wrap {
+.post-desc-heading {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-
-    // Since the entire thing is wrapped in a link,
-    // we only want the title text to be styled like a link,
-    // not the rest of the content.
-    a {
-        text-decoration: none;
-        color: inherit;
-        display: inline-block;
-        max-width: 30%;
-
-        p:not(.desc) {
-            color: #268bd2;
-        }
-
-
-    }
-}
-
-.talk {
-    background-color: rgba(black, 0.1);
-    padding: 10px;
-    border-radius: 5px;
-    transition: 0.1s transform;
-    // TODO: Figure out a nice shadow
-    // box-shadow: 1px 1px 2px lightgray;
-
-    // Flex content in the card so mobile row layout
-    // can be a one-liner
-    display: flex;
-    flex-direction: column;
-
-    &:hover {
-        transform: translateY(-8px);
-        cursor: pointer;
-    }
-
-
-    .thumbnail {
-        width: 100%;
-        height: 100%;
-        background-color: lightblue;
-    }
-
-    .content {
-        display: inline;
-    }
-
-    .desc {
-        font-size: 0.8rem;
-        font-style: italic;
-    }
-
-    p {
+    h1 {
         margin: 0;
     }
 }
 
-
-// MARK: - Music
-
-
-
+.page-header {
+    font-size: 2.5em;
+}
 
 
+// ---- Code blocks
 
-@media screen and (max-width: 1100px) {
-
-    // Switch to a row-based layout instead
-
-    #talks-wrap {
-        justify-content: space-around;
-        flex-direction: column;
-
-        a {
-            max-width: none;
-        }
-
-        .talk {
-            flex-direction: row;
-            width: 100%;
-            margin-bottom: 10px;
-
-            &:hover {
-                transform: scale(1.02);
-            }
-
-            &:active {
-                transform: scale(0.98);
-            }
-
-            .thumbnail {
-                margin: 0 1rem 0 0;
-                max-width: 40%;
-            }
-
-            .desc {
-                // Bump up slightly for mobile
-                font-size: 0.9rem;
-            }
-        }
-    }
+pre {
+    padding: 2rem;
 }
