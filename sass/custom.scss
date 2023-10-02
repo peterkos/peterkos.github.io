@@ -19,7 +19,26 @@ header #title {
     font-size: 150%;
 }
 
+img {
+    border: none;
+}
+
 // ---- Homepage
+
+.socials {
+    margin-top: 2rem;
+    gap: 10px;
+
+    .social {
+        padding-bottom: 0;
+        & > img {
+            // yahoo https://albertwalicki.com/learn/solutions/extra-space-below-image
+            display: block;
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
 
 .list>ul {
     padding: 0;
