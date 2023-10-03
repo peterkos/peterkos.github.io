@@ -16,7 +16,13 @@
         {% for menu in config.extra.menu %}
             <a href={{ menu.url }}>{{ menu.name }}</a>
         {% endfor %}
-        <a id="dark-mode-toggle" onclick="toggleTheme()" href=""></a>
+
+        <!-- TODO: Cleanup bits from JS required to in-file CSS -->
+        <!-- main hack is the -5px margin from inline-block img thing -->
+        <a id="dark-mode-toggle" onclick="toggleTheme()" href="#">
+            <img src="feather/sun.svg" id="sun-icon" style="border: unset; filter: invert(1); display: none; margin-bottom: -5px;" height="20"/>
+            <img src="feather/moon.svg" id="moon-icon" style="border: unset; display: none; margin-bottom: -5px;" height="20" />
+        </a>
         <script src={{ get_url(path="js/themetoggle.js" ) }}></script>
     </nav>
 </header>
