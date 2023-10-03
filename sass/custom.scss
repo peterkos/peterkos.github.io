@@ -44,6 +44,9 @@ nav {
 
 #dark-mode-toggle {
     border-bottom: none;
+    &:hover {
+        background-color: transparent;
+    }
 }
 
 
