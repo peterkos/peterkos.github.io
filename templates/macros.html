@@ -4,19 +4,19 @@
         <section class="list-item">
 
             <div class="post-desc-heading">
-                <h1 class="title">
-                    <a href={{ page.permalink }}>{{page.title}}</a>
-                </h1>
-
                 <div class="meta">
                     {%- if page.date %}
-                        <time>{{ page.date | date(format="%Y-%m-%d") }}</time>
+                        <time>{{ page.date | date(format="%b %Y") }}</time>
                     {% endif -%}
                     {% if page.draft %}
                         <span class="draft-label">DRAFT</span>
                     {% endif %}
                 </div>
+                <h1 class="title">
+                    <a href={{ page.permalink }}>{{page.title}}</a>
+                </h1>
             </div>
+            <!-- TODO: Bring this back -->
             <!-- <div class="description">
                 {% if page.description %}
                     {{ page.description }}
@@ -45,7 +45,6 @@
     </div>
 {% endmacro content %}
 
-<!-- Everything below here are the rest (e.g., unmodified macros) from macros/macros.html -->
 
 {% macro tags(page, short=false) %}
     {%- if page.taxonomies and page.taxonomies.tags %}
@@ -74,7 +73,7 @@
 
                 <div class="meta">
                     {% if page.date %}
-                        Posted on <time>{{ page.date | date(format="%Y-%m-%d") }}</time>
+                        Posted on <time>{{ page.date | date(format="%b %e, %Y") }}</time>
                     {% endif %}
 
                     {% if page.draft %}
@@ -142,6 +141,13 @@
     </article>
 </main>
 {% endmacro content %}
+
+
+
+
+<!-- Everything below here are the rest (e.g., unmodified macros) from macros/macros.html -->
+
+
 
 {% macro cards_posts(pages) %}
     <div class="cards">

@@ -1,10 +1,18 @@
 
+
+
+
 // --- General
 
 :root.light, :root.dark {
     --primary-color: #A65AED;
-    --text-font: 'Fira Sans';
+    --text-font: "Fira Sans", "Helvetica", sans-serif;
     // --code-font: 'Fira Code';
+}
+
+:root.dark {
+    // Perhaps. Perhaps. (ayu-dark bg)
+    // --bg-0: #0f141d;
 }
 
 .content {
@@ -23,6 +31,22 @@ img {
     border: none;
 }
 
+.page-header {
+    margin: 5rem 0 2rem 0;
+}
+
+// ---- Nav
+
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+#dark-mode-toggle {
+    border-bottom: none;
+}
+
+
 // ---- Homepage
 
 .socials {
@@ -32,7 +56,7 @@ img {
     .social {
         padding-bottom: 0;
         & > img {
-            // yahoo https://albertwalicki.com/learn/solutions/extra-space-below-image
+            // wahoo! https://albertwalicki.com/learn/solutions/extra-space-below-image
             display: block;
             width: 30px;
             height: 30px;
@@ -42,15 +66,22 @@ img {
 
 .list>ul {
     padding: 0;
+    display: grid;
+    gap: 1rem;
+    grid-row-gap: 1.5rem;
+    grid-template-columns: auto 1fr;
 }
 
 .list-item {
+    display: contents;
     margin-bottom: 30px;
+    a {
+        border-bottom: none;
+    }
 }
 
 .post-desc-heading {
-    display: flex;
-    justify-content: space-between;
+    display: contents;
     h1 {
         margin: 0;
     }
