@@ -1,9 +1,12 @@
 
+
+
+
 // --- General
 
 :root.light, :root.dark {
     --primary-color: #A65AED;
-    --text-font: 'Fira Sans';
+    --text-font: "Fira Sans", "Helvetica", sans-serif;
     // --code-font: 'Fira Code';
 }
 
@@ -21,6 +24,10 @@ header #title {
 
 img {
     border: none;
+}
+
+.page-header {
+    margin: 5rem 0 2rem 0;
 }
 
 // ---- Homepage
