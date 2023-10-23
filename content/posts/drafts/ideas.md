@@ -1,6 +1,6 @@
 +++
 title = "Ideas"
-date = "2022-02-02"
+date = "9999-12-12" # HACK: always on top
 draft = true
 
 [extra]
