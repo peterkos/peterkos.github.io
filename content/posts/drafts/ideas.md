@@ -1,6 +1,7 @@
 +++
-title = "asdf"
+title = "Ideas"
 date = "2022-02-02"
+draft = true
 
 [extra]
 author = "Peter Kos"
