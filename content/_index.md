@@ -2,7 +2,8 @@
 template = "index.html"
 
 [extra]
-nested_section_path = "posts/_index.md"
+nested_posts_section_path = "posts/_index.md"
+nested_drafts_section_path = "posts/drafts/_index.md"
 +++
 
 

@@ -6,7 +6,7 @@ draft = true
 
 
 
-
+```ruby
 update xcode command line tools
 reinstall rbenv brew
 brew update
@@ -80,4 +80,5 @@ bundle install
 
 note: do not set a bundle path :)
     bundle unset path
-    
+
+```

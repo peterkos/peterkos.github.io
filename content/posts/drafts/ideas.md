@@ -1,6 +1,7 @@
 +++
-title = "asdf"
-date = "2022-02-02"
+title = "Ideas"
+date = "9999-12-12" # HACK: always on top
+draft = true
 
 [extra]
 author = "Peter Kos"

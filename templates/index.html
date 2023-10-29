@@ -33,8 +33,8 @@
 
 
     <!-- Custom posts section here -->
-    {% if section.extra.nested_section_path -%}
-        {% set section = get_section(path=section.extra.nested_section_path) %}
+    {% if section.extra.nested_posts_section_path -%}
+        {% set section = get_section(path=section.extra.nested_posts_section_path) %}
     {% endif -%}
 
     {{ post_macros::page_header(title=section.title) }}
@@ -64,4 +64,17 @@
             {% endif %}
         </ul>
     {% endif %}
+
+    <!-- Custom drafts section -->
+    {% if section.extra.nested_drafts_section_path -%}
+        {% set section = get_section(path=section.extra.nested_drafts_section_path) %}
+    {% endif -%}
+    {% if section.pages %}
+        {{ post_macros::page_header(title=section.title) }}
+    {% endif %}
+    <main class="list">
+        {{ post_macros::list_posts(pages=section.pages) }}
+    </main>
+
+
 {% endblock main_content %}
