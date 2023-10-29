@@ -10,10 +10,10 @@
     // --code-font: 'Fira Code';
 }
 
-:root.dark {
-    // Perhaps. Perhaps. (ayu-dark bg)
-    // --bg-0: #0f141d;
-}
+// :root.dark {
+//     Perhaps. Perhaps. (ayu-dark bg)
+//     --bg-0: #0f141d;
+// }
 
 .content {
     max-width: 1000px;
@@ -41,14 +41,6 @@ nav {
     display: flex;
     gap: 1rem;
 }
-
-#dark-mode-toggle {
-    border-bottom: none;
-    &:hover {
-        background-color: transparent;
-    }
-}
-
 
 // ---- Homepage
 

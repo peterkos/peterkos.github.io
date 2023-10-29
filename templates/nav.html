@@ -1,28 +1,28 @@
 <header>
-    <!-- <div id="header-main"> -->
+    {# <div id="header-main"> #}
         <a href={{ config.base_url }} id="title">{{ config.title }}</a>
 
-        <!-- moved to index.html -->
-        <!-- <div class="socials">
+        {# moved to index.html #}
+        {# <div class="socials">
             {% for social in config.extra.socials %}
             <a rel="me" href="{{ social.url }}" class="social">
                 <img alt={{ social.name }} src="/social_icons/{{ social.icon }}.svg">
             </a>
             {% endfor %}
-        </div> -->
-    <!-- </div> -->
+        </div> #}
+    {# </div> #}
 
     <nav>
         {% for menu in config.extra.menu %}
             <a href={{ menu.url }}>{{ menu.name }}</a>
         {% endfor %}
 
-        <!-- TODO: Cleanup bits from JS required to in-file CSS -->
-        <!-- main hack is the -5px margin from inline-block img thing -->
-        <a id="dark-mode-toggle" onclick="toggleTheme()" href="#">
-            <img src="feather/sun.svg" id="sun-icon" style="border: unset; filter: invert(1); display: none; margin-bottom: -5px;" height="20"/>
-            <img src="feather/moon.svg" id="moon-icon" style="border: unset; display: none; margin-bottom: -5px;" height="20" />
+        {% if config.extra.theme == "toggle" %}
+        <a id="dark-mode-toggle" onclick="toggleTheme()" href="javascript:void(0)">
+            <img src="/feather/sun.svg" id="sun-icon" style="filter: invert(1);" />
+            <img src="/feather/moon.svg" id="moon-icon" />
         </a>
         <script src={{ get_url(path="js/themetoggle.js" ) }}></script>
+        {% endif %}
     </nav>
 </header>
