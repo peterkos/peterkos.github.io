@@ -68,6 +68,7 @@ nav {
 }
 
 .list-item {
+    // emulate subgraph by unwrapping the children
     display: contents;
     margin-bottom: 30px;
     a {
@@ -77,6 +78,16 @@ nav {
 
 .post-desc-heading {
     display: contents;
+
+    .draft-label {
+        font-size: 1rem;
+        font-weight: normal;
+    }
+
+    .draft-label {
+        margin-left: 0;
+    }
+
     h1 {
         margin: 0;
     }
