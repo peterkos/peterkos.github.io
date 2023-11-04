@@ -103,3 +103,10 @@ nav {
 pre {
     padding: 2rem;
 }
+
+// Highlighted lines of code
+mark {
+    background-color: lighten(#101418, 10%);
+    color: inherit;
+    border-radius: 4px;
+}
