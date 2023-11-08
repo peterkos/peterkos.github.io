@@ -105,8 +105,14 @@ pre {
 }
 
 // Highlighted lines of code
-mark {
+pre mark {
     background-color: lighten(#101418, 10%);
     color: inherit;
-    border-radius: 4px;
+    padding: 0;
+    display: block;
+}
+
+
+pre table td {
+    padding: 0;
 }
