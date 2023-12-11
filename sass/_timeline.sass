@@ -8,9 +8,9 @@ $dot-width: 10px - $offset
 // Don't compensate for offset here.
 // Otherwise, aliasing will be incorrect
 // for lines between elements on certain zoom levels.
-$line-width: $dot-width / 8
+$line-width: $dot-width / 6
 $line-color: gray
-$event-gap: 1rem
+$event-gap: 2rem
 
 $z-line: 1
 $z-dot: 2
@@ -24,9 +24,8 @@ $z-dot: 2
     width: 80%
     margin: 0 auto
 
-
     .line
-        height: 1rem // gap we want between events
+        height: $event-gap
         width: $line-width
         margin-left: calc($dot-width / 2) - calc($line-width / 2)
         background-color: $line-color
@@ -37,22 +36,24 @@ $z-dot: 2
     width: 100%
     row-gap: $event-gap
 
-    // Top of timeline line
-    &:first-child .inner-line
-        background-color: transparent
-        background-image: linear-gradient(transparent 50%, $line-color 50%)
+    // Top of timeline line (i.e., first .event not in a dot group)
+    &:first-child:not(.event-color-group > &)
+        .inner-line
+            background-color: transparent
+            background-image: linear-gradient(transparent 0, $line-color 50%)
 
     // Bottom of timeline line
-    &:last-child .inner-line
-        background-color: transparent
-        background-image: linear-gradient($line-color 50%, transparent 50%)
+    // TODO: make work for RIT orange
+    &:last-child
+        // .inner-line
+            // background-color: transparent
+            // background-image: linear-gradient(red 50%, transparent 50%)
 
     .dot
-        align-self: center
+        margin-top: 1.8rem
         width: $dot-width
         height: $dot-width
         border-radius: 50%
-        background-color: white
         z-index: $z-dot
 
     .inner-line
@@ -64,7 +65,7 @@ $z-dot: 2
 
     .words
         width: 90%
-        padding: .5rem 0 .5rem .5rem
+        // padding: .5rem 0 .5rem .5rem
         margin-left: 1rem
 
         h3, p
@@ -81,3 +82,62 @@ $z-dot: 2
             &.year
                 color: #888
                 font-family: "Fira Code", monospace
+
+
+// MARK: Colors
+
+
+// A default
+#timeline .dot
+    background-color: gray
+
+
+.event-color-group
+    .line, .inner-line
+        // Won't match "actual" but is indistinguishable*
+        // b/c of gradient aliasing
+        //
+        // *colorblindness nonwithstanding
+        box-shadow: 0 0 5px 0 $line-color
+
+// TODO: Make glow buildup cleaner for start
+// .event:first-child:not(.event-color-group > .event) .inner-line
+    // box-shadow: 0 0 5px 0 $line-color
+
+
+#dots-uw
+    .dot, .line, .inner-line
+        background-color: var(--primary-color)
+
+    // Transition into UW block (low quality)
+    .event:first-child .inner-line
+        background-image: linear-gradient(gray 50%, var(--primary-color) 50%)
+
+    // Transition into RIT block (fancy)
+    @function mixed($percent)
+         @return color-mix(in srgb, var(--primary-color), orange $percent)
+
+    // last-of-type doesn't work here
+    // b/c both .event and .line are div
+    .event:nth-last-child(2)
+        .dot
+            background-color: mixed(10%)
+
+        .inner-line
+            background-color: transparent
+            background-image: linear-gradient(var(--primary-color) 30%, mixed(50%))
+
+    .line:nth-last-child(1)
+        background-color: transparent
+        background-image: linear-gradient(mixed(50%), orange)
+
+#dots-rit
+    .dot, .line, .inner-line
+        background-color: orange
+
+
+span
+    .rit
+        color: orange
+    .uw
+        color: var(--primary-color) // eh, close enough
