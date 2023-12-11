@@ -1,0 +1,83 @@
+
+
+// MARK: Vars
+
+// Odd number to allow middle alignment
+$offset: 1px
+$dot-width: 10px - $offset
+// Don't compensate for offset here.
+// Otherwise, aliasing will be incorrect
+// for lines between elements on certain zoom levels.
+$line-width: $dot-width / 8
+$line-color: gray
+$event-gap: 1rem
+
+$z-line: 1
+$z-dot: 2
+
+// MARK: Content
+
+#timeline
+    display: flex
+    flex-direction: column
+    justify-content: start
+    width: 80%
+    margin: 0 auto
+
+
+    .line
+        height: 1rem // gap we want between events
+        width: $line-width
+        margin-left: calc($dot-width / 2) - calc($line-width / 2)
+        background-color: $line-color
+
+.event
+    display: grid
+    grid-template-columns: $dot-width $line-width auto
+    width: 100%
+    row-gap: $event-gap
+
+    // Top of timeline line
+    &:first-child .inner-line
+        background-color: transparent
+        background-image: linear-gradient(transparent 50%, $line-color 50%)
+
+    // Bottom of timeline line
+    &:last-child .inner-line
+        background-color: transparent
+        background-image: linear-gradient($line-color 50%, transparent 50%)
+
+    .dot
+        align-self: center
+        width: $dot-width
+        height: $dot-width
+        border-radius: 50%
+        background-color: white
+        z-index: $z-dot
+
+    .inner-line
+        width: $line-width
+        // Doesn't wanna work with flexbox. huh.
+        margin-left: calc(-1 * ($dot-width / 2)) - calc($line-width / 2)
+        background-color: $line-color
+        z-index: $z-line
+
+    .words
+        width: 90%
+        padding: .5rem 0 .5rem .5rem
+        margin-left: 1rem
+
+        h3, p
+            margin: 0
+
+        h3
+            font-size: 1.1rem
+            &::before
+                content: none
+
+        p
+            font-size: 0.8rem
+
+            &.year
+                color: #888
+                font-family: "Fira Code", monospace

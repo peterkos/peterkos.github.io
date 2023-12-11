@@ -1,0 +1,64 @@
+
+{% extends "base.html" %}
+
+
+{% block main_content %}
+
+    {% set page = get_page(path="about.md") %}
+    {% if page %}
+        {{ page.content | safe }}
+    {% endif %}
+
+    <div id="timeline">
+        <div class="event">
+            <div class="dot"></div>
+            <div class="inner-line"></div>
+            <div class="words">
+                <p class="year">2016</p>
+                <h3>First iOS app: iLabeacon</h3>
+                <p>Created my first iOS app, <a href="https://github.com/peterkos/ilabeacon-ios">iLabeacon</a>. It used iBeacons to track which members of our makerspace were in and last in.</p>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="event">
+            <div class="dot"></div>
+            <div class="inner-line"></div>
+            <div class="words">
+                <p class="year">2016</p>
+                <h3>Title</h3>
+                <p>desc</p>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="event">
+            <div class="dot"></div>
+            <div class="inner-line"></div>
+            <div class="words">
+                <p class="year">2016</p>
+                <h3>Title</h3>
+                <p>desc</p>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="event">
+            <div class="dot"></div>
+            <div class="inner-line"></div>
+            <div class="words">
+                <p class="year">2016</p>
+                <h3>Title</h3>
+                <p>desc</p>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="event">
+            <div class="dot"></div>
+            <div class="inner-line"></div>
+            <div class="words">
+                <p class="year">2016</p>
+                <h3>Title</h3>
+                <p>desc</p>
+            </div>
+        </div>
+    </div>
+
+{% endblock main_content %}

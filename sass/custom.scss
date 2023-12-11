@@ -1,8 +1,13 @@
 
 
+@use "_timeline";
 
 
 // --- General
+
+* {
+    box-sizing: border-box;
+}
 
 :root.light, :root.dark {
     --primary-color: #A65AED;
