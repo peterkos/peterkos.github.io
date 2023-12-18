@@ -1,6 +1,7 @@
 
 
 @use "_timeline";
+@use "_note";
 
 
 // --- General
@@ -36,6 +37,16 @@ header #title {
 img {
     border: none;
 }
+
+blockquote {
+    border-left: 3px solid rgba(white, 0.5);
+    color: rgba(white, 0.5);
+    font-family: "Crimson Text", serif;
+    font-size: 1.2rem;
+    padding-left: .5rem;
+    font-style: italic;
+}
+
 
 .page-header {
     margin: 5rem 0 2rem 0;
@@ -113,7 +124,9 @@ nav {
 // ---- Code blocks
 
 pre {
-    padding: 2rem;
+    padding: 1rem;
+    margin: 1rem 0 2rem 0;
+    font-size: .9rem;
 }
 
 // Highlighted lines of code
