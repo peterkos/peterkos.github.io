@@ -1,8 +1,13 @@
 
 
+@use "_timeline";
 
 
 // --- General
+
+* {
+    box-sizing: border-box;
+}
 
 :root.light, :root.dark {
     --primary-color: #A65AED;
@@ -17,6 +22,7 @@
 
 .content {
     max-width: 1000px;
+    margin-bottom: 8rem; // overscroll, anyone?
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -33,6 +39,12 @@ img {
 
 .page-header {
     margin: 5rem 0 2rem 0;
+}
+
+.footnote-definition p {
+    display: inline;
+    font-style: italic;
+    opacity: 0.6;
 }
 
 // ---- Nav
@@ -102,4 +114,17 @@ nav {
 
 pre {
     padding: 2rem;
+}
+
+// Highlighted lines of code
+pre mark {
+    background-color: lighten(#101418, 10%);
+    color: inherit;
+    padding: 0;
+    display: block;
+}
+
+
+pre table td {
+    padding: 0;
 }

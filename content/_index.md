@@ -11,10 +11,3 @@ Hi! I compose music, hammer out lots of code, and spend too much time watching c
 
 Currently iOS @ [willowtree](https://willowtree.ai)
 
-
-
-
-
-
-
-

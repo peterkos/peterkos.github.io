@@ -1,0 +1,140 @@
+
+{% extends "base.html" %}
+
+
+{% block main_content %}
+
+    {% set page = get_page(path="about.md") %}
+    {% if page %}
+        {{ page.content | safe }}
+    {% endif %}
+
+<div id="timeline">
+    <div class="event">
+        <div class="dot"></div>
+        <div class="inner-line"></div>
+        <div class="words">
+            <p class="year">2016</p>
+            <h3>First iOS app: iLabeacon</h3>
+            <p>Created my first iOS app, <a href="https://github.com/peterkos/ilabeacon-ios">iLabeacon</a>. It used iBeacons to track which members of our makerspace were in and last in.</p>
+        </div>
+    </div>
+    <div class="line"></div>
+    <div class="event">
+        <div class="dot"></div>
+        <div class="inner-line"></div>
+        <div class="words">
+            <p class="year">2016</p>
+            <h3>Composed score for "The Kapok Tree", a ballet</h3>
+            <p>todo</p>
+        </div>
+    </div>
+    <div class="line"></div>
+
+    <!-- MARK: UW -->
+
+    <div id="dots-uw" class="event-color-group">
+        <div class="event">
+            <div class="dot"></div>
+            <div class="inner-line"></div>
+            <div class="words">
+                <p class="year">2017</p>
+                <h3><span class="uw">Started at UW</span></h3>
+                <p>Dual-degree music & computer science, but, not yet admitted into either department.</p>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="event">
+            <div class="dot"></div>
+            <div class="inner-line"></div>
+            <div class="words">
+                <p class="year">2018</p>
+                <h3>Internship: Tomorrow Ideas</h3>
+                <p>A PHP+Laravel-turned-fullstack-Vue.js internship.</p>
+                <p>Forever grateful to my mentor Brent for teaching me the ways of industry, and for the one week of PTO that helped me be confident in answering my own questions.</p>
+                <p></p>
+                <p><sub><i>(...and for giving me the CEO's desk)</i></sub></p>
+                <p><sub><sub><i>(...and for giving a new consult my desk. Building an Ikea desk is a 3 point ticket, who knew.)</i></sub></sub></p>
+                <!-- <p><i>(insert Drake blasting before standup. never change, marketing <3)</i></p> -->
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="event">
+            <div class="dot"></div>
+            <div class="inner-line"></div>
+            <div class="words">
+                <p class="year">2018</p>
+                <h3>Joined Dubstech</h3>
+                <p>This was/is a student org that gave cool talks on tech stuff.</p>
+                <p>I led a three-month (weekly) series on "Intro to iOS Development", assisted with other talks, and rebuilt the <a href="https://web.archive.org/web/20211202120909/http://dubstech.info/">org website.</a></p>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="event">
+            <div class="dot"></div>
+            <div class="inner-line"></div>
+            <div class="words">
+                <p class="year">2019</p>
+                <h3>Open-source: Firefox</h3>
+                <p>Landed a PR into Firefox-iOS to fix an accessibility bug.</p>
+            </div>
+        </div>
+        <div class="line"></div>
+    </div>
+
+    <!-- MARK: RIT -->
+
+    <div id="dots-rit" class="event-color-group">
+        <!-- THE DOTS -->
+        <div class="event">
+            <div class="dot"></div>
+            <div class="inner-line"></div>
+            <div class="words">
+                <p class="year">2019</p>
+                <h3><span class="rit">Transferred to RIT</span></h3>
+                <p><i>Gooooo tigers!</i></p>
+                <p>After 4 rejections from UW-CSE, where a dual-dgree 3.56 GPA wasn't high enough, I transferred to RIT to keep pursuing CS. I also wanted a smaller school vibe, and less competitiveness -- boy did RIT deliver!</p>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="event">
+            <div class="dot"></div>
+            <div class="inner-line"></div>
+            <div class="words">
+                <p class="year">2019</p>
+                <h3>BrickHack <sup><span class="rit">(1/3)</span></sup></h3>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="event">
+            <div class="dot"></div>
+            <div class="inner-line"></div>
+            <div class="words">
+                <p class="year">2020</p>
+                <h3>You know.</h3>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="event">
+            <div class="dot"></div>
+            <div class="inner-line"></div>
+            <div class="words">
+                <p class="year">2020</p>
+                <h3>AiH research</h3>
+                <p>desc</p>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="event">
+            <div class="dot"></div>
+            <div class="inner-line"></div>
+            <div class="words">
+                <p class="year">2016</p>
+                <h3>Title</h3>
+                <p>desc</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock main_content %}

@@ -6,6 +6,31 @@ draft = true
 
 # Local iOS Engineer Attmepts Devops, Chaos Ensues
 
+My blog is pretty simple. It's a static site generator ([Zola](https://www.getzola.org/)), with a customized theme ([apollo](https://github.com/not-matthias/apollo)).
+
+I also wanted to use [umami](https://umami.is/) for analytics. I did it before! It helped me see the ~1.4k views from my [orange website cameo](https://news.ycombinator.com/item?id=31238942), and looked snazzy. However, that was on a waay older version that needed some debugging.
+
+I needed to upgrade Umami from `v1.39`-ish to `v2.4`, which meant re-learning how umami, Railway, postgres, database migrations, and my stress ball worked.
+
+# The initial phase
+
+Railway! Choo choo!
+
+It grew a lot since I last used it. Notably, I got grandfathered in to the base monthly pay-for-use tier -- a change accompanied by one of the [funniest announcement posts I've read](https://blog.railway.app/p/pricing-and-plans-migration-guide-2023).
+
+Where were we?
+
+I had two instances:
+
+```
+
+
+```
+
+
+
+
+
 
 
 ```
