@@ -38,13 +38,14 @@ $z-dot: 2
 
     // Top of timeline line (i.e., first .event not in a dot group)
     &:first-child:not(.event-color-group > &)
-        .inner-line
-            background-color: transparent
-            background-image: linear-gradient(transparent 0, $line-color 50%)
+        // TODO: Gradient not workin' nice
+        // .inner-line
+            // background-color: transparent
+            // background-image: linear-gradient(transparent 0%, $line-color 50%)
 
     // Bottom of timeline line
-    // TODO: make work for RIT orange
     &:last-child
+        // TODO: make work for RIT orange
         // .inner-line
             // background-color: transparent
             // background-image: linear-gradient(red 50%, transparent 50%)
@@ -92,13 +93,13 @@ $z-dot: 2
     background-color: gray
 
 
-.event-color-group
-    .line, .inner-line
-        // Won't match "actual" but is indistinguishable*
-        // b/c of gradient aliasing
-        //
-        // *colorblindness nonwithstanding
-        box-shadow: 0 0 5px 0 $line-color
+// .event-color-group
+.line, .inner-line
+    // Won't match "actual" but is indistinguishable*
+    // b/c of gradient aliasing
+    //
+    // *colorblindness nonwithstanding
+    box-shadow: 0 0 5px 0 $line-color
 
 // TODO: Make glow buildup cleaner for start
 // .event:first-child:not(.event-color-group > .event) .inner-line
