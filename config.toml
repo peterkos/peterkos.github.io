@@ -9,11 +9,12 @@ title = "Peter Kos"
 
 [markdown]
 highlight_code = true
-highlight_theme = "css"
-highlight_themes_css = [
-    { theme = "ayu-dark", filename = "syntax-theme-dark.css" },
-    { theme = "ayu-dark", filename = "syntax-theme-light.css" },
-]
+highlight_theme = "carbonfox-dark"
+extra_syntaxes_and_themes = ["highlight_themes"]
+# highlight_themes_css = [
+#     { theme = "ayu-dark", filename = "syntax-theme-dark.css" },
+#     { theme = "ayu-dark", filename = "syntax-theme-light.css" },
+# ]
 
 
 [extra]
