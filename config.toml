@@ -9,7 +9,7 @@ title = "Peter Kos"
 
 [markdown]
 highlight_code = true
-highlight_theme = "carbonfox-dark"
+highlight_theme = "duskfox-dark"
 extra_syntaxes_and_themes = ["highlight_themes"]
 # highlight_themes_css = [
 #     { theme = "ayu-dark", filename = "syntax-theme-dark.css" },
