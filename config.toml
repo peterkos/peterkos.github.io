@@ -19,6 +19,8 @@ extra_syntaxes_and_themes = ["highlight_themes"]
 
 [extra]
 theme = "toggle" # light, dark, auto, toggle
+mathjax = true
+mathjax_dollar_inline_enable = true
 socials = [
     { name = "mastodon", url = "https://iosdev.space/@peterkos", icon = "mastodon" },
     { name = "github", url = "https://github.com/peterkos/", icon = "github" },
