@@ -25,6 +25,7 @@
 .content {
     max-width: 900px;
     margin-bottom: 8rem; // overscroll, anyone?
+    // line-height: 1rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -37,6 +38,17 @@ header #title {
 
 img {
     border: none;
+
+    &.almost-max {
+        max-width: 70%;
+        margin: 0 auto;
+        display: block;
+        border-radius: 5px;
+    }
+}
+
+p {
+  line-height: 1.7;
 }
 
 a {
