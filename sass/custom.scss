@@ -1,6 +1,7 @@
 
 
 @use "_timeline";
+@use "_note";
 
 
 // --- General
@@ -11,8 +12,9 @@
 
 :root.light, :root.dark {
     --primary-color: #A65AED;
-    --text-font: "Fira Sans", "Helvetica", sans-serif;
-    // --code-font: 'Fira Code';
+    --text-font: "Lato", "Helvetica", sans-serif;
+    --header-font: "Fira Sans", "Helvetica", sans-serif;
+    --code-font: 'Fira Code', monospace; // FIXME: doesn't wanna work in `pre`
 }
 
 // :root.dark {
@@ -21,8 +23,9 @@
 // }
 
 .content {
-    max-width: 1000px;
+    max-width: 900px;
     margin-bottom: 8rem; // overscroll, anyone?
+    // line-height: 1rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -35,6 +38,25 @@ header #title {
 
 img {
     border: none;
+
+    &.almost-max {
+        max-width: 70%;
+        margin: 0 auto;
+        display: block;
+        border-radius: 5px;
+    }
+}
+
+p {
+  line-height: 1.7;
+}
+
+a {
+  border-bottom: 2px solid var(--primary-color);
+}
+
+blockquote {
+    border-left: 3px solid rgba(white, 0.5);
 }
 
 .page-header {
@@ -113,7 +135,14 @@ nav {
 // ---- Code blocks
 
 pre {
-    padding: 2rem;
+    padding: 1rem;
+    margin: 1rem 0 2rem 0;
+    font-size: .8rem;
+}
+
+// The lang attribute
+pre code[class*="language-"]::before {
+    display: none;
 }
 
 // Highlighted lines of code

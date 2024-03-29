@@ -9,15 +9,18 @@ title = "Peter Kos"
 
 [markdown]
 highlight_code = true
-highlight_theme = "css"
-highlight_themes_css = [
-    { theme = "ayu-dark", filename = "syntax-theme-dark.css" },
-    { theme = "ayu-dark", filename = "syntax-theme-light.css" },
-]
+highlight_theme = "duskfox-dark"
+extra_syntaxes_and_themes = ["highlight_themes"]
+# highlight_themes_css = [
+#     { theme = "ayu-dark", filename = "syntax-theme-dark.css" },
+#     { theme = "ayu-dark", filename = "syntax-theme-light.css" },
+# ]
 
 
 [extra]
 theme = "toggle" # light, dark, auto, toggle
+mathjax = true
+mathjax_dollar_inline_enable = true
 socials = [
     { name = "mastodon", url = "https://iosdev.space/@peterkos", icon = "mastodon" },
     { name = "github", url = "https://github.com/peterkos/", icon = "github" },
@@ -30,3 +33,8 @@ menu = [
 stylesheets = [
     "custom.css"
 ]
+
+
+[extra.analytics.umami]
+website_id = "99946fb4-dcf8-4aa9-a7b0-e2d0876fb29c"
+host_url = "https://umami.peterkos.me"

@@ -7,7 +7,6 @@ nested_drafts_section_path = "posts/drafts/_index.md"
 +++
 
 
-Hi! I compose music, hammer out lots of code, and spend too much time watching cat videos.
+I compose music, hammer out lots of code, and spend too much time watching cat videos. I'm also developing a macOS app, [Cabinette](https://cabinette.app). Check it out!
 
-Currently iOS @ [willowtree](https://willowtree.ai)
-
+Currently iOS II @ [willowtree](https://willowtreeapps.com)
