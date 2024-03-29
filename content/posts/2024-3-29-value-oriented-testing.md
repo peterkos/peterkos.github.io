@@ -1,7 +1,6 @@
 +++
 title = "Value-Oriented Testing"
 date = 2024-03-29
-draft = true
 +++
 
 
