@@ -33,3 +33,8 @@ menu = [
 stylesheets = [
     "custom.css"
 ]
+
+
+[extra.analytics.umami]
+website_id = "99946fb4-dcf8-4aa9-a7b0-e2d0876fb29c"
+host_url = "https://umami.peterkos.me"
