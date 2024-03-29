@@ -106,17 +106,7 @@
         {% if config.extra.analytics.umami.website_id %}
             {% set website_id = config.extra.analytics.umami.website_id %}
             {% set host_url = config.extra.analytics.umami.host_url | default(value="https://analytics.eu.umami.is") %}
-
-            <script>
-                (function () {
-                  var el = document.createElement('script');
-                  el.setAttribute('src', '/js/imamu.js');
-                  el.setAttribute('data-website-id', '{{ website_id }}');
-                  el.setAttribute('data-host-url', '{{ host_url }}');
-                  document.body.appendChild(el);
-                })();
-              </script>
-            <script async src="/js/imamu.js" data-website-id="{{ website_id }}" data-host-url="{{ host_url }}"></script>
+            <script async src="/js/imamu.js" data-website-id="{{ website_id }}" data-host-url="{{ host_url }}" data-domains="peterkos.me"></script>
         {% endif %}
 
         {% if config.extra.analytics.goatcounter.user %}
