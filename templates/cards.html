@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+<!-- {% block header_content %}
+
+
+{% endblock header_content %} -->
+
+{% block main_content %}
+
+    {% if section.extra.nested_active_projects_path %}
+        {% set section = get_section(path=section.extra.nested_active_projects_path) %}
+
+        {{ post_macros::page_header(title=section.title) }}
+
+        <main>
+            {%- if paginator %}
+                {%- set show_pages = paginator.pages -%}
+            {% else %}
+                {%- set show_pages = section.pages -%}
+            {% endif -%}
+
+            {{ post_macros::cards_posts(pages=show_pages, layout="card-col") }}
+        </main>
+    {% endif %}
+
+    {% if section.extra.nested_inactive_projects_path %}
+        {% set section = get_section(path=section.extra.nested_inactive_projects_path) %}
+        {{ post_macros::page_header(title=section.title) }}
+
+        <main>
+            {%- if paginator %}
+                {%- set show_pages = paginator.pages -%}
+            {% else %}
+                {%- set show_pages = section.pages -%}
+            {% endif -%}
+
+            {{ post_macros::cards_posts(pages=show_pages, layout="card-col") }}
+        </main>
+    {% endif %}
+
+
+    {% if section.extra.path %}
+        {% set section = get_section(path=section.extra.path) %}
+        {{ post_macros::page_header(title=section.title) }}
+
+        <main>
+            {%- if paginator %}
+                {%- set show_pages = paginator.pages -%}
+            {% else %}
+                {%- set show_pages = section.pages -%}
+            {% endif -%}
+
+            {{ post_macros::cards_posts(pages=show_pages, layout="card-row") }}
+        </main>
+    {% endif %}
+
+
+
+    {% if paginator %}
+        <ul class="pagination">
+            {% if paginator.previous %}
+                <span class="page-item page-prev">
+                    <a href={{ paginator.previous }} class="page-link" aria-label="Previous"><span aria-hidden="true">← Prev</span></a>
+                </span>
+            {% endif %}
+
+            {% if paginator.next %}
+                <span class="page-item page-next">
+                    <a href={{ paginator.next }} class="page-link" aria-label="Next"><span aria-hidden="true">Next →</span></a>
+                </span>
+            {% endif %}
+        </ul>
+    {% endif %}
+
+
+
+    {# JS for Clickable Cards #}
+    <script type="text/javascript">
+        const cards = Array.from(document.querySelectorAll(".card"))
+
+        cards.forEach(function(element) {
+            element.addEventListener("click", function handleClick(e) {
+                window.open(element.querySelector(".card-link").href, "_blank")
+                e.preventDefault()
+            })
+        })
+    </script>
+{% endblock main_content %}
