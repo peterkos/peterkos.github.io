@@ -1,6 +1,6 @@
 +++
 title = "PocketBread"
-description = "Organize your music catalog."
+description = "A small, clean iOS budgeting app. Built the foundation, and then skipped to work on Cabinette (see above)."
 weight = 1
 
 [extra]
