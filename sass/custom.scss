@@ -59,13 +59,45 @@ blockquote {
     border-left: 3px solid rgba(white, 0.5);
 }
 
+
+
+.card-col {
+    grid-template-columns: 1fr 4fr;
+    justify-items: flex-start;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    img, .card-image-placeholder {
+        max-width: 100px;
+        width: 100px;
+        height: 100px;
+        border-radius: 4px;
+        display: block;
+    }
+
+}
+
+.card-row {
+    grid-template-rows: 2fr 1fr;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+
+    .card-image-bg {
+        justify-content: center;
+    }
+
+    img, .card-image-placeholder {
+        max-width: 100%;
+        display: block;
+        border-radius: 4px;
+    }
+}
+
 .card {
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    justify-content: flex-start;
-    gap: 1rem;
     padding: 1rem;
-    align-items: center;
     transition: 0.15s ease-in-out background-color;
 
     &:hover {
@@ -74,6 +106,9 @@ blockquote {
     }
 
     .card-info {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
         padding: 0;
         h1 {
             margin: 0
@@ -81,10 +116,19 @@ blockquote {
     }
 
     .card-image-bg {
-        display: contents;
+        display: flex;
+        align-content: center;
+
+    }
+
+    .card-image-placeholder {
+        background-color: rgba(white, 0.1);
+    }
+
+    .card-description p {
+        margin: 0;
     }
 }
-
 
 
 .page-header {

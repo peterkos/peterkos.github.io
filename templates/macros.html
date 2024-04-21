@@ -142,17 +142,17 @@
 </main>
 {% endmacro content %}
 
-{% macro cards_posts(pages) %}
+{% macro cards_posts(pages, layout) %}
     <div class="cards">
     {%- for page in pages %}
-        <div class="card">
+        <div class="card {{ layout }}">
             <div class="card-image-bg">
                 {% if page.extra.local_image %}
                     <img class="card-image" alt={{ page.extra.local_image }} src="{{ get_url(path=page.extra.local_image) }}">
                 {% elif page.extra.remote_image %}
                     <img class="card-image" alt={{ page.extra.remote_image }} src="{{ page.extra.remote_image }}">
                 {% else %}
-                    <div class="card-image-placeholder"></div>
+                    <div class="card-image card-image-placeholder"></div>
                 {% endif %}
             </div>
             <div class="card-info">
@@ -174,9 +174,11 @@
                 </div>
 
                 <div class="card-description">
-                    {% if page.description %}
-                        {{ page.description }}
-                    {% endif %}
+                    <p>
+                        {% if page.description %}
+                            {{ page.description }}
+                        {% endif %}
+                    </p>
                 </div>
             </div>
         </div>

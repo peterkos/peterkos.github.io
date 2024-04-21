@@ -19,7 +19,7 @@
                 {%- set show_pages = section.pages -%}
             {% endif -%}
 
-            {{ post_macros::cards_posts(pages=show_pages) }}
+            {{ post_macros::cards_posts(pages=show_pages, layout="card-col") }}
         </main>
     {% endif %}
 
@@ -34,9 +34,26 @@
                 {%- set show_pages = section.pages -%}
             {% endif -%}
 
-            {{ post_macros::cards_posts(pages=show_pages) }}
+            {{ post_macros::cards_posts(pages=show_pages, layout="card-col") }}
         </main>
     {% endif %}
+
+
+    {% if section.extra.path %}
+        {% set section = get_section(path=section.extra.path) %}
+        {{ post_macros::page_header(title=section.title) }}
+
+        <main>
+            {%- if paginator %}
+                {%- set show_pages = paginator.pages -%}
+            {% else %}
+                {%- set show_pages = section.pages -%}
+            {% endif -%}
+
+            {{ post_macros::cards_posts(pages=show_pages, layout="card-row") }}
+        </main>
+    {% endif %}
+
 
 
     {% if paginator %}
