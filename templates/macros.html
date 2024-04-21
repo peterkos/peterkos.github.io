@@ -153,20 +153,21 @@
     <div class="cards">
     {%- for page in pages %}
         <div class="card">
-            {% if page.extra.local_image %}
-                <img class="card-image" alt={{ page.extra.local_image }} src="{{ get_url(path=page.extra.local_image) }}">
-            {% elif page.extra.remote_image %}
-                <img class="card-image" alt={{ page.extra.remote_image }} src="{{ page.extra.remote_image }}">
-            {% else %}
-                <div class="card-image-placeholder"></div>
-            {% endif %}
-
+            <div class="card-image-bg">
+                {% if page.extra.local_image %}
+                    <img class="card-image" alt={{ page.extra.local_image }} src="{{ get_url(path=page.extra.local_image) }}">
+                {% elif page.extra.remote_image %}
+                    <img class="card-image" alt={{ page.extra.remote_image }} src="{{ page.extra.remote_image }}">
+                {% else %}
+                    <div class="card-image-placeholder"></div>
+                {% endif %}
+            </div>
             <div class="card-info">
                 <h1 class="card-title">
                     {% if page.extra.link_to %}
-                    <a href={{ page.extra.link_to }}>{{page.title}}</a>
+                    <a href={{ page.extra.link_to }} class="card-link">{{page.title}}</a>
                     {% else %}
-                    <a href={{ page.permalink }}>{{page.title}}</a>
+                    <a href={{ page.permalink }} class="card-link">{{page.title}}</a>
                     {% endif %}
                 </h1>
 
@@ -186,7 +187,6 @@
                 </div>
             </div>
         </div>
-
     {% endfor -%}
     </div>
 {% endmacro cards_posts %}

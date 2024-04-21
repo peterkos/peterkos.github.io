@@ -59,6 +59,34 @@ blockquote {
     border-left: 3px solid rgba(white, 0.5);
 }
 
+.card {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    align-items: center;
+    transition: 0.15s ease-in-out background-color;
+
+    &:hover {
+        background-color: var(--bg-1);
+        cursor: pointer;
+    }
+
+    .card-info {
+        padding: 0;
+        h1 {
+            margin: 0
+        }
+    }
+
+    .card-image-bg {
+        display: contents;
+    }
+}
+
+
+
 .page-header {
     margin: 5rem 0 2rem 0;
 }
