@@ -1,7 +1,7 @@
 +++
 title = "MUSIC-216"
 description = "Use your phone as a 3D instrument to spatially adjust parameters."
-weight = 1
+weight = 2
 
 [extra]
 

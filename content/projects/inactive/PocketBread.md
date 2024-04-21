@@ -4,8 +4,5 @@ description = "A small, clean iOS budgeting app. Built the foundation, and then 
 weight = 1
 
 [extra]
-
-link_to = "https://google.com"
+link_to = "https://github.com/peterkos/PocketBread"
 +++
-
-Example project page
