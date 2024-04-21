@@ -80,7 +80,8 @@
 
         cards.forEach(function(element) {
             element.addEventListener("click", function handleClick(e) {
-                element.querySelector(".card-link").click()
+                window.open(element.querySelector(".card-link").href, "_blank")
+                e.preventDefault()
             })
         })
     </script>
