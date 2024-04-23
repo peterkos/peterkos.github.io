@@ -1,6 +1,6 @@
 +++
 title = "Cabinette"
-description = "My flagship macOS app, for musicians to oragnize their discography. Track WIP versions, batch-rename files (soon!), and more."
+description = "My flagship macOS app for musicians to oragnize their discography. Track WIP versions, batch-rename files (soon!), and more."
 weight = 1
 
 [extra]

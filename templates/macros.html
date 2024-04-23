@@ -159,6 +159,8 @@
                 <h1 class="card-title">
                     {% if page.extra.link_to %}
                     <a href={{ page.extra.link_to }} class="card-link">{{page.title}}</a>
+                    {% elif page.extra.path_to_file %}
+                    <a href={{ get_url(path=page.extra.path_to_file) }} class="card-link">{{page.title}}</a>
                     {% else %}
                     <a href={{ page.permalink }} class="card-link">{{page.title}}</a>
                     {% endif %}
