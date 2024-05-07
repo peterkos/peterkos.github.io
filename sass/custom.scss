@@ -12,28 +12,31 @@
 
 :root.light, :root.dark {
     --primary-color: #A65AED;
-    --text-font: "Lato", "Helvetica", sans-serif;
-    --header-font: "Fira Sans", "Helvetica", sans-serif;
+    --text-font: "Lora", "Lato", "Helvetica", sans-serif;
+    --header-font: "DIN Alternate", sans-serif;
     --code-font: 'Fira Code', monospace; // FIXME: doesn't wanna work in `pre`
 }
 
-// :root.dark {
-//     Perhaps. Perhaps. (ayu-dark bg)
-//     --bg-0: #0f141d;
-// }
+:root.dark {
+    --bg-0: rgb(15, 15, 15);
+}
 
 .content {
     max-width: 900px;
     margin-bottom: 8rem; // overscroll, anyone?
-    // line-height: 1rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-size: 130%;
+    font-size: 2em;
+    font-family: var(--header-font);
 }
 
 header #title {
     font-size: 150%;
+    text-decoration: none;
+    border-bottom: none;
+    font-weight: bold;
+    font-family: var(--header-font);
 }
 
 img {
@@ -48,11 +51,11 @@ img {
 }
 
 p {
-  line-height: 1.7;
+    line-height: 1.7;
 }
 
 a {
-  border-bottom: 2px solid var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
 }
 
 blockquote {
@@ -116,6 +119,12 @@ blockquote {
     p {
         font-size: 0.9rem;
         line-height: 1.5;
+        font-family: var(--header-font);
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        padding-bottom: 0.5rem;
     }
 
     .card-info {
@@ -144,7 +153,9 @@ blockquote {
 
 
 .page-header {
-    margin: 5rem 0 2rem 0;
+    font-family: var(--header-font);
+    font-size: 2rem;
+    margin: 5rem 0 1rem 0;
 }
 
 .footnote-definition p {
@@ -158,6 +169,7 @@ blockquote {
 nav {
     display: flex;
     gap: 1rem;
+
 }
 
 // ---- Homepage
@@ -181,7 +193,6 @@ nav {
     padding: 0;
     display: grid;
     gap: 1rem;
-    grid-row-gap: 1.5rem;
     grid-template-columns: auto 1fr;
 }
 
@@ -189,9 +200,21 @@ nav {
     // emulate subgraph by unwrapping the children
     display: contents;
     margin-bottom: 30px;
+
     a {
         border-bottom: none;
     }
+
+    .title {
+        font-size: 1.2rem;
+    }
+}
+
+//  ---- Post stuff
+
+
+.title .meta {
+    font-family: var(--header-font);
 }
 
 .post-desc-heading {
@@ -209,10 +232,6 @@ nav {
     h1 {
         margin: 0;
     }
-}
-
-.page-header {
-    font-size: 2.5em;
 }
 
 
