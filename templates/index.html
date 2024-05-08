@@ -12,8 +12,13 @@
         <!-- Put the about header content in markdown 'cause easier lol -->
         {% set section = get_section(path="./_index.md") %}
         {% if section %}
-            {{ section.content | safe }}
 
+            <div id="hero">
+                <div id="md-content">
+                    {{ section.content | safe }}
+                </div>
+                <img src="/pfp.jpg">
+            </div>
             <div class="socials">
                 {% for social in config.extra.socials %}
                     <a rel="me" href="{{ social.url }}" class="social">
