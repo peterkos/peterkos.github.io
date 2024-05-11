@@ -1,0 +1,59 @@
+
+* {
+    box-sizing: border-box;
+}
+
+.content {
+    max-width: 900px;
+    margin-bottom: 8rem; // overscroll, anyone?
+}
+
+h1 {
+    margin-top: 0.5rem;
+    // We only want the `#` on the post's page
+    &::before {
+        content: none;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1.7rem;
+    font-family: var(--header-font);
+    letter-spacing: -1px;
+    font-weight: 600;
+}
+
+header #title {
+    font-size: 150%;
+    text-decoration: none;
+    border-bottom: none;
+}
+
+img {
+    border: none;
+
+    &.almost-max {
+        max-width: 70%;
+        margin: 0 auto;
+        display: block;
+        border-radius: 5px;
+    }
+}
+
+p {
+    line-height: 1.7;
+}
+
+a {
+    border-bottom: 2px solid var(--primary-color);
+}
+
+blockquote {
+    border-left: 3px solid rgba(white, 0.5);
+}
+
+
+nav {
+    display: flex;
+    gap: 1rem;
+}

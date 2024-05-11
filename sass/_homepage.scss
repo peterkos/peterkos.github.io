@@ -1,0 +1,53 @@
+
+#hero {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2rem;
+
+    p {
+        // Woo, optical alignmnet
+        margin-top: -7px;
+    }
+
+    img {
+        max-width: 10rem;
+        max-height: 10rem;
+        border-radius: 4px;
+    }
+}
+
+.socials {
+    align-items: flex-start;
+    gap: 10px;
+
+    .social {
+        padding-bottom: 0;
+        & > img {
+            // wahoo! https://albertwalicki.com/learn/solutions/extra-space-below-image
+            display: block;
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+.list>ul {
+    padding: 0;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: auto 1fr;
+}
+
+.list-item {
+    // emulate subgraph by unwrapping the children
+    display: contents;
+    margin-bottom: 30px;
+
+    a {
+        border-bottom: none;
+    }
+
+    .title {
+        font-size: 1.2rem;
+    }
+}

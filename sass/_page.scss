@@ -1,0 +1,94 @@
+
+section.body {
+    h1 {
+        margin-left: -1.7rem;
+        &::before {
+            color: var(--primary-color);
+            content: "# ";
+        }
+    }
+}
+
+.post-desc-heading {
+    display: contents;
+
+    .draft-label {
+        font-size: 1rem;
+        font-weight: normal;
+    }
+
+    .draft-label {
+        margin-left: 0;
+    }
+
+    h1 {
+        margin: 0;
+    }
+}
+
+
+
+
+
+
+.page-header {
+    margin: 3rem 0 0 0;
+    font-family: var(--header-font);
+    font-size: 2rem;
+    font-weight: bold;
+    }
+
+.title {
+    margin-bottom: 2rem;
+
+    h1 {
+        margin: 0;
+    }
+
+
+    // Post title styling, but NOT for titles on main page
+    &:not(section.list-item .title) {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+
+        .meta {
+            font-family: var(--header-font);
+        }
+    }
+
+}
+
+.footnote-definition p {
+    display: inline;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+
+// ---- Code blocks
+
+pre {
+    padding: 1rem;
+    margin: 1rem 0 2rem 0;
+    font-size: .8rem;
+}
+
+// The lang attribute
+pre code[class*="language-"]::before {
+    display: none;
+}
+
+// Highlighted lines of code
+pre mark {
+    background-color: lighten(#101418, 10%);
+    color: inherit;
+    padding: 0;
+    display: block;
+}
+
+
+pre table td {
+    padding: 0;
+}
