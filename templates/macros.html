@@ -9,14 +9,14 @@
                         <time>{{ page.date | date(format="%b %Y") }}</time>
                     {% endif -%}
                 </div>
-                <a href={{ page.permalink }}>
-                    <h1 class="title">
+                <p class="title">
+                    <a href={{ page.permalink }}>
                         {% if page.draft %}
                             <span class="draft-label">DRAFT</span>
                         {% endif %}
                         {{page.title}}
-                    </h1>
-                </a>
+                    </a>
+                </p>
             </div>
             <!-- TODO: Bring this back -->
             <!-- <div class="description">

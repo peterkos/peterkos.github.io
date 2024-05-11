@@ -54,11 +54,14 @@ li {
 
 a {
     border: none;
-    position: relative;
     text-decoration: underline;
     text-decoration-skip: spaces;
     text-decoration-thickness: 2px;
     text-decoration-color: var(--primary-color);
+
+    &:hover {
+        border-radius: 2px;
+    }
 }
 
 nav {
