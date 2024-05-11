@@ -159,14 +159,14 @@
                     {% endif %}
                 </h1>
 
-                <div class="meta">
-                    {%- if page.date %}
+                {%- if page.date %}
+                    <div class="meta">
                         <time>{{ page.date | date(format="%Y-%m-%d") }}</time>
-                    {% endif -%}
-                    {% if page.draft %}
-                        <span class="draft-label">DRAFT</span>
-                    {% endif %}
-                </div>
+                        {% if page.draft %}
+                            <span class="draft-label">DRAFT</span>
+                        {% endif %}
+                    </div>
+                {% endif -%}
 
                 <div class="card-description">
                     <p>
@@ -176,20 +176,19 @@
                     </p>
                 </div>
             </div>
-            <div class="card-image-bg">
-                {% if page.extra.local_image %}
-                    <img class="card-image" alt={{ page.extra.local_image }} src="{{ get_url(path=page.extra.local_image) }}">
-                {% elif page.extra.remote_image %}
-                    <img class="card-image" alt={{ page.extra.remote_image }} src="{{ page.extra.remote_image }}">
-                {% else %}
+            {% if page.extra.local_image %}
+                <img class="card-image" alt={{ page.extra.local_image }} src="{{ get_url(path=page.extra.local_image) }}">
+            {% elif page.extra.remote_image %}
+                <img class="card-image" alt={{ page.extra.remote_image }} src="{{ page.extra.remote_image }}">
+            {% else %}
+                <div class="card-image-bg">
                     <div class="card-image card-image-placeholder">
                         {% if page.extra and page.extra.fa_icon_name %}
                             <i class="fa-solid {{ page.extra.fa_icon_name }}"></i>
                         {% endif %}
-
                     </div>
-                {% endif %}
-            </div>
+                </div>
+            {% endif %}
         </div>
     {% endfor -%}
     </div>

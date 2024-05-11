@@ -1,15 +1,12 @@
 .cards {
     display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: auto auto;
-    // max-width: 600px;
+    grid-template-columns: 1fr;
     margin: 0 auto;
     align-items: start;
     gap: 1rem;
-    padding: 1rem 0;
 }
 
-.card-col {
+.card-projects {
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
@@ -20,34 +17,18 @@
         max-width: 100px;
         width: 100px;
         height: 100px;
-        border-radius: 4px;
         display: block;
     }
-
 }
 
-.card-row {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 1rem;
-
-    .card-image-bg {
-        justify-content: center;
-        aspect-ratio: 16/9;
-    }
-
-    img,
-    .card-image-placeholder {
-        max-width: 100%;
-        display: block;
-        border-radius: 4px;
-    }
+.card-talks {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
 }
 
 .card {
-    padding: 1rem;
+    padding: 2rem;
     border-radius: 6px;
     transition: 0.15s ease-in-out all;
 
@@ -56,28 +37,25 @@
         border-color: var(--primary-color);
     }
 
-    h1 {
-        font-size: 1.3rem;
-
-        // Hover effect is on the surrounding card border
-        a {
-            background-color: inherit;
-        }
+    &.active {
+        border-color: var(--primary-color);
     }
 
-    p {
-        font-size: 0.9rem;
-        line-height: 1.5;
-        font-family: var(--header-font);
+    h1 {
+        @include no-link-border;
+        font-size: 1.3rem;
+        font-family: var(--text-font);
+        font-weight: 600;
+        margin: 0;
     }
 
     a {
         border-bottom: none;
     }
 
-
-    &.active {
-        border-color: var(--primary-color);
+    img {
+        border-radius: 4px;
+        border: 2px solid var(--bg-1);
     }
 
     .card-info {
@@ -85,6 +63,7 @@
         flex-direction: column;
         align-items: flex-start;
         padding: 0;
+        gap: 0.5rem;
 
         h1 {
             margin: 0;
@@ -109,7 +88,11 @@
         }
     }
 
-    .card-description p {
+    .card-description {
         margin: 0;
+
+        p {
+            margin: 0;
+        }
     }
 }
