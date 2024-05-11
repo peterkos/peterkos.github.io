@@ -1,4 +1,3 @@
-
 #hero {
     display: grid;
     grid-template-columns: 3fr 1fr;
@@ -22,7 +21,8 @@
 
     .social {
         padding-bottom: 0;
-        & > img {
+
+        &>img {
             // wahoo! https://albertwalicki.com/learn/solutions/extra-space-below-image
             display: block;
             width: 30px;

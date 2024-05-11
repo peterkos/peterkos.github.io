@@ -1,7 +1,3 @@
-
-
-
-
 // $colors: (
 //     Icolor: #9B89F4,
 //     IIcolor: #C3D278,
@@ -13,8 +9,8 @@ $defaultOpacity: 0.2;
 $hoverOpacity: 0.25;
 
 :root {
-    --Icolor:   155, 137, 244;
-    --IIcolor:  195, 210, 120;
+    --Icolor: 155, 137, 244;
+    --IIcolor: 195, 210, 120;
     --IIIcolor: 229, 143, 101;
 }
 
@@ -27,7 +23,9 @@ body {
     color: white;
 }
 
-h1, h2, p {
+h1,
+h2,
+p {
     font-family: "Quicksand", serif;
 }
 
@@ -56,17 +54,26 @@ h2 {
 
 
     #groupI:hover {
-        p.desc        { color: rgba(var(--Icolor), $hoverOpacity); }
+        p.desc {
+            color: rgba(var(--Icolor), $hoverOpacity);
+        }
+
         // .tracks .time { color: rgba(var(--Icolor), $hoverOpacity); }
     }
 
     #groupII:hover {
-        p.desc        { color: rgba(var(--IIcolor), $hoverOpacity); }
+        p.desc {
+            color: rgba(var(--IIcolor), $hoverOpacity);
+        }
+
         // .tracks .time { color: rgba(var(--IIcolor), $hoverOpacity); }
     }
 
     #groupIII:hover {
-        p.desc        { color: rgba(var(--IIIcolor), $hoverOpacity); }
+        p.desc {
+            color: rgba(var(--IIIcolor), $hoverOpacity);
+        }
+
         // .tracks .time { color: rgba(var(--IIIcolor), $hoverOpacity); }
     }
 
@@ -114,9 +121,17 @@ h2 {
             word-break: break-all;
             user-select: none;
 
-            &.I   { color: rgba(var(--Icolor), $defaultOpacity); }
-            &.II  { color: rgba(var(--IIcolor), $defaultOpacity); }
-            &.III { color: rgba(var(--IIIcolor), $defaultOpacity); }
+            &.I {
+                color: rgba(var(--Icolor), $defaultOpacity);
+            }
+
+            &.II {
+                color: rgba(var(--IIcolor), $defaultOpacity);
+            }
+
+            &.III {
+                color: rgba(var(--IIIcolor), $defaultOpacity);
+            }
         }
     }
 }

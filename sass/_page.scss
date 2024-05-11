@@ -1,7 +1,7 @@
-
 section.body {
     h1 {
         margin-left: -1.7rem;
+
         &::before {
             color: var(--primary-color);
             content: "# ";
@@ -27,16 +27,12 @@ section.body {
 }
 
 
-
-
-
-
 .page-header {
     margin: 3rem 0 0 0;
     font-family: var(--header-font);
     font-size: 2rem;
     font-weight: bold;
-    }
+}
 
 .title {
     margin-bottom: 2rem;
