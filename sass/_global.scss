@@ -8,7 +8,6 @@
 }
 
 h1 {
-    margin-top: 0.5rem;
 
     // We only want the `#` on the post's page
     &::before {
@@ -22,16 +21,18 @@ h3,
 h4,
 h5,
 h6 {
-    font-size: 1.7rem;
+    margin: 3rem 0 1.5rem 0;
+    font-size: 2rem;
     font-family: var(--header-font);
-    letter-spacing: -1px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
-header #title {
-    font-size: 150%;
-    text-decoration: none;
-    border-bottom: none;
+header h1 {
+    font-size: 2rem;
+    margin: 0;
+    margin-top: 5px; // Optical vcenter with nav link bottom borders
+
+    @include no-link-border;
 }
 
 img {
@@ -45,12 +46,33 @@ img {
     }
 }
 
-p {
-    line-height: 1.7;
+p,
+li {
+    line-height: 1.5;
+    font-size: 1.1rem;
 }
 
 a {
-    border-bottom: 2px solid var(--primary-color);
+    border: none;
+    position: relative;
+    text-decoration: underline;
+    text-decoration-skip: spaces;
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--primary-color);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    a#dark-mode-toggle {
+        padding-bottom: 3px; // Optical vcenter
+
+        img {
+            vertical-align: middle;
+        }
+    }
 }
 
 blockquote {

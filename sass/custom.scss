@@ -1,4 +1,12 @@
-@use "_note";
-@use "_vars_fonts";
-@use "_global";
-@use "static/_timeline";
+@import "_fonts.scss";
+@import "_vars.scss";
+@import "_global.scss";
+
+@import "_homepage.scss";
+@import "_cards.scss";
+@import "_note.scss";
+@import "_page.scss";
+
+// TODO: refactor to not-sass
+// @import "static/_timeline.sass";
+// @import "static/_music.scss";

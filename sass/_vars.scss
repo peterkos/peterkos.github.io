@@ -1,0 +1,32 @@
+// MARK: Variables
+
+:root.light,
+:root.dark {
+    --primary-color: rgb(166, 90, 237);
+    --text-font: "Spectral", "Garamond", serif;
+    --header-font: "Amiri", "Helvetica", sans-serif;
+    --code-font: 'Fira Code', monospace; // FIXME: doesn't wanna work in `pre`
+}
+
+:root.dark {
+    --bg-0: rgb(20, 20, 20);
+}
+
+
+
+// MARK: Mixins
+
+
+/// Clears for self and any nested `a` links
+@mixin no-link-border {
+
+    &,
+    a {
+        text-decoration: none;
+        border-bottom: none;
+
+        &::after {
+            content: none;
+        }
+    }
+}
