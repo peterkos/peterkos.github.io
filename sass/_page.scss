@@ -27,24 +27,22 @@ section.body {
 }
 
 
-.page-header {
-    margin: 3rem 0 0 0;
+.page-title {
     font-family: var(--header-font);
     font-size: 2rem;
-    font-weight: bold;
+
 
     @media screen and (max-width: $phone) {
-        margin: 0;
+        // margin: 0;
     }
 }
 
-.title {
+div.title {
     margin-bottom: 2rem;
 
-    h1 {
-        margin: 0;
+    h1.page-title {
+        margin-bottom: 0;
     }
-
 
     // Post title styling, but NOT for titles on main page
     &:not(section.list-item .title) {
