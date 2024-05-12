@@ -25,14 +25,29 @@ h6 {
     font-size: 2rem;
     font-family: var(--header-font);
     font-weight: 500;
+
+    @media screen and (max-width: $phone) {
+        margin: 2rem 0 1rem 0;
+    }
 }
 
-header h1 {
-    font-size: 2rem;
-    margin: 0;
-    margin-top: 5px; // Optical vcenter with nav link bottom borders
+header {
+    h1 {
+        @include no-link-border;
+        font-size: 2rem;
+        margin: 0;
 
-    @include no-link-border;
+        @media screen and (min-width: $phone) {
+            margin-top: 5px; // Optical vcenter with nav link bottom borders
+        }
+    }
+
+    @media screen and (max-width: $phone) {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 1rem;
+        align-items: center;
+    }
 }
 
 img {
@@ -68,13 +83,23 @@ a {
 nav {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
+    flex-wrap: wrap;
 
     a#dark-mode-toggle {
         padding-bottom: 3px; // Optical vcenter
 
         img {
             vertical-align: middle;
+        }
+    }
+
+    @media screen and (max-width: $phone) {
+        gap: 0.5rem;
+        justify-content: center;
+
+        a {
+            word-break: none;
         }
     }
 }

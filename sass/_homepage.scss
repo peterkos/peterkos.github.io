@@ -1,23 +1,42 @@
-#hero {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    gap: 2rem;
 
+#hero #about-me {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1rem;
+
+    img {
+        order: 2;
+        max-width: 10rem;
+        max-height: 10rem;
+        border-radius: 4px;
+    }
     p {
         // Woo, optical alignmnet
         margin-top: -7px;
     }
 
-    img {
-        max-width: 10rem;
-        max-height: 10rem;
-        border-radius: 4px;
+    @media screen and (max-width: $phone) {
+        display: block;
+
+        img {
+            max-width: 6rem;
+            max-height: 6rem;
+            float: left;
+            margin: 0.5rem 1rem 0 0;
+        }
     }
 }
 
 .socials {
+    display: flex;
     align-items: flex-start;
-    gap: 10px;
+    gap: 0.5rem;
+}
+
+.social {
+    border-bottom: unset;
+    background-image: unset;
+    padding: 2px;
 
     .social {
         padding-bottom: 0;
@@ -29,6 +48,12 @@
             height: 30px;
         }
     }
+}
+
+.social>img {
+    border: unset;
+    width: 24px;
+    height: 24px;
 }
 
 .list>ul {

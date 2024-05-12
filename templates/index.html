@@ -5,35 +5,34 @@
 {% block main_content %}
 
 
-    <!-- Custom hero -->
-    {{ post_macros::page_header(title="About Me") }}
+    <div id="hero">
+        {{ post_macros::page_header(title="About Me") }}
 
-    <section class="body">
-        <!-- Put the about header content in markdown 'cause easier lol -->
-        {% set section = get_section(path="./_index.md") %}
-        {% if section %}
+        <section class="body">
+            <!-- Put the about header content in markdown 'cause easier lol -->
+            {% set section = get_section(path="./_index.md") %}
+            {% if section %}
 
-            <div id="hero">
-                <div id="md-content">
-                    {{ section.content | safe }}
+                <div id="about-me">
+                    <img src="/pfp.jpg"/>
+                    <div id="md-content">
+                        {{ section.content | safe }}
+                    </div>
                 </div>
-                <img src="/pfp.jpg">
-            </div>
-            <div class="socials">
-                {% for social in config.extra.socials %}
-                    <a rel="me" href="{{ social.url }}" class="social">
-                        <img alt={{ social.name }} src="/social_icons/{{ social.icon }}.svg">
-                    </a>
-                {% endfor %}
-                <!-- Note: match width to custom.css .socials > img -->
-                <!-- Edited for transparency, 60% of speed, reversed -->
-                <!-- https://www.deviantart.com/valcreon/art/Nyan-Cat-212131133 -->
-                <img src="./nyan.gif" height="30px">
-            </div>
-        {% endif %}
-
-
-    </section>
+                <div class="socials">
+                    {% for social in config.extra.socials %}
+                        <a rel="me" href="{{ social.url }}" class="social">
+                            <img alt={{ social.name }} src="/social_icons/{{ social.icon }}.svg">
+                        </a>
+                    {% endfor %}
+                    <!-- Note: match width to custom.css .socials > img -->
+                    <!-- Edited for transparency, 60% of speed, reversed -->
+                    <!-- https://www.deviantart.com/valcreon/art/Nyan-Cat-212131133 -->
+                    <img src="./nyan.gif" height="30px">
+                </div>
+            {% endif %}
+        </section>
+    </div>
 
 
 

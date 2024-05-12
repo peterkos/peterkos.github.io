@@ -32,6 +32,10 @@ section.body {
     font-family: var(--header-font);
     font-size: 2rem;
     font-weight: bold;
+
+    @media screen and (max-width: $phone) {
+        margin: 0;
+    }
 }
 
 .title {
