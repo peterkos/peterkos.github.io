@@ -116,10 +116,16 @@ $max-image-width: 20rem;
             margin: 0;
         }
 
-        time {
+        div.meta {
             font-size: 0.9rem;
         }
+
+        .type-label {
+            color: gray;
+            border-radius: 4px;
+        }
     }
+
 
     .card-image-bg {
         display: flex;

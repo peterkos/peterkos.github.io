@@ -163,8 +163,19 @@
                             {% if page.draft %}
                                 <span class="draft-label">DRAFT</span>
                             {% endif %}
+
+
                         </div>
                     {% endif -%}
+                    {% if page.extra.type %}
+                        <span class="type-label">
+                            {% if page.extra.type == "Video" %}
+                                <i class="fa-solid fa-video"></i>
+                            {% elif page.extra.type == "PDF" %}
+                                <i class="fa-solid fa-file-pdf"></i>
+                            {% endif %}
+                        </span>
+                    {% endif %}
                 </div>
                 <div class="card-description">
                     <p>
@@ -172,6 +183,7 @@
                             {{ page.description }}
                         {% endif %}
                     </p>
+
                 </div>
             </div>
             {% if page.extra.local_image %}

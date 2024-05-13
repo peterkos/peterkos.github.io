@@ -7,4 +7,5 @@ date = 2022-09-13
 [extra]
 local_image = "talks/thumbnails/lldbchisel.png"
 link_to = "talks/files/lldbchisel.pdf"
+type = "PDF"
 +++
