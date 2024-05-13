@@ -142,9 +142,9 @@
 {% endmacro content %}
 
 {% macro cards_posts(pages, layout, active) %}
-    <div class="cards">
+    <div class="cards cards-{{ layout }} ">
     {%- for page in pages %}
-        <div class="card {{ layout }} {{ active }}">
+        <div class="card card-{{ layout }} {{ active }}">
             <div class="card-info">
                 <div class="card-heading">
                     <h1 class="card-title">

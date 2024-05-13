@@ -1,3 +1,9 @@
+
+
+$max-image-width: 20rem;
+
+// MARK: Containers
+
 .cards {
     display: grid;
     grid-template-columns: 1fr;
@@ -5,6 +11,24 @@
     align-items: start;
     gap: 1rem;
 }
+
+.cards-talks {
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto 1fr;
+    align-items: stretch;
+
+    @media screen and (max-width: $laptop) {
+        grid-template-columns: auto auto;
+        justify-content: center;
+    }
+
+    @media screen and (max-width: $phone) {
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+}
+
+// MARK: Per-card styling
 
 .card-projects {
     display: grid;
@@ -22,22 +46,31 @@
 }
 
 .card-talks {
+     // Span 2 rows of the PARENT grid layout
+     // We're getting our layout from the parent grid.
+     // src: https://blog.logrocket.com/using-css-subgrid-design-advanced-layouts/
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-rows: subgrid;
+    grid-row: span 2;
     gap: 1rem;
 
-    @media screen and (max-width: $phone) {
-        grid-template-columns: auto;
-        grid-template-rows: 1fr auto;
+    img {
+        grid-row: 1/1;
+    }
 
+    @media screen and (max-width: $phone) {
+        justify-content: center;
+        max-width: $max-image-width;
         img {
-            order: -1;
+            margin: 0 auto;
         }
     }
 }
 
+// MARK: Individual cards
+
 .card {
-    padding: 1.5rem;
+    padding: 1.2rem;
     border-radius: 6px;
     border-color: var(--bg-1);
     transition: 0.15s ease-in-out all;
@@ -59,23 +92,32 @@
         margin: 0;
     }
 
+    p {
+        font-size: 1rem;
+    }
+
     a {
         border-bottom: none;
     }
 
     img {
         border-radius: 4px;
+        max-height: $max-image-width;
+        max-width: $max-image-width;
     }
 
     .card-info {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
         padding: 0;
+        display: grid;
         gap: 0.5rem;
+        align-content: start;
 
         h1 {
             margin: 0;
+        }
+
+        time {
+            font-size: 0.9rem;
         }
     }
 

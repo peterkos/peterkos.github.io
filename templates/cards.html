@@ -19,7 +19,7 @@
                 {%- set show_pages = section.pages -%}
             {% endif -%}
 
-            {{ post_macros::cards_posts(pages=show_pages, layout="card-projects", active="active") }}
+            {{ post_macros::cards_posts(pages=show_pages, layout="projects", active="active") }}
         </main>
     {% endif %}
 
@@ -34,7 +34,7 @@
                 {%- set show_pages = section.pages -%}
             {% endif -%}
 
-            {{ post_macros::cards_posts(pages=show_pages, layout="card-projects", active="") }}
+            {{ post_macros::cards_posts(pages=show_pages, layout="projects", active="") }}
         </main>
     {% endif %}
 
@@ -50,7 +50,7 @@
                 {%- set show_pages = section.pages -%}
             {% endif -%}
 
-            {{ post_macros::cards_posts(pages=show_pages, layout="card-talks", active="") }}
+            {{ post_macros::cards_posts(pages=show_pages, layout="talks", active="") }}
         </main>
     {% endif %}
 
