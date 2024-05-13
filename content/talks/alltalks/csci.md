@@ -4,6 +4,6 @@ description = "The final presesentation for CSCI 761, where I presented a paper 
 weight = 1
 
 [extra]
-local_image = "talks/csci.png"
+local_image = "talks/thumbnails/csci-shadow.png"
 link_to = "https://www.youtube.com/watch?v=yGHhZjGcU7o"
 +++
