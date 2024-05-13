@@ -24,7 +24,7 @@
 .card-talks {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 1.5rem;
+    gap: 1rem;
 
     @media screen and (max-width: $phone) {
         grid-template-columns: auto;
@@ -37,8 +37,9 @@
 }
 
 .card {
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 6px;
+    border-color: var(--bg-1);
     transition: 0.15s ease-in-out all;
 
     &:hover {

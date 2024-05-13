@@ -3,6 +3,7 @@
 :root.light,
 :root.dark {
     --primary-color: rgb(166, 90, 237);
+    --bg-1: rgb(230, 230, 230);
     --text-font: "Spectral", "Garamond", serif;
     --header-font: "Amiri", "Helvetica", sans-serif;
     --code-font: 'Fira Code', monospace; // FIXME: doesn't wanna work in `pre`
@@ -10,6 +11,7 @@
 
 :root.dark {
     --bg-0: rgb(20, 20, 20);
+    --bg-1: rgb(40, 40, 40);
 }
 
 

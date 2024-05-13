@@ -146,25 +146,26 @@
     {%- for page in pages %}
         <div class="card {{ layout }} {{ active }}">
             <div class="card-info">
-                <h1 class="card-title">
-                    {% if page.extra.link_to %}
-                    <a href={{ page.extra.link_to }} class="card-link">{{page.title}}</a>
-                    {% elif page.extra.path_to_file %}
-                    <a href={{ get_url(path=page.extra.path_to_file) }} class="card-link">{{page.title}}</a>
-                    {% else %}
-                    <a href={{ page.permalink }} class="card-link">{{page.title}}</a>
-                    {% endif %}
-                </h1>
-
-                {%- if page.date %}
-                    <div class="meta">
-                        <time>{{ page.date | date(format="%Y-%m-%d") }}</time>
-                        {% if page.draft %}
-                            <span class="draft-label">DRAFT</span>
+                <div class="card-heading">
+                    <h1 class="card-title">
+                        {% if page.extra.link_to %}
+                        <a href={{ page.extra.link_to }} class="card-link">{{page.title}}</a>
+                        {% elif page.extra.path_to_file %}
+                        <a href={{ get_url(path=page.extra.path_to_file) }} class="card-link">{{page.title}}</a>
+                        {% else %}
+                        <a href={{ page.permalink }} class="card-link">{{page.title}}</a>
                         {% endif %}
-                    </div>
-                {% endif -%}
+                    </h1>
 
+                    {%- if page.date %}
+                        <div class="meta">
+                            <time>{{ page.date | date(format="%h %d, %Y") }}</time>
+                            {% if page.draft %}
+                                <span class="draft-label">DRAFT</span>
+                            {% endif %}
+                        </div>
+                    {% endif -%}
+                </div>
                 <div class="card-description">
                     <p>
                         {% if page.description %}
