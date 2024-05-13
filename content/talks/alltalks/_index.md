@@ -1,5 +1,5 @@
 +++
 path = "alltalks"
 title = "Talks"
-sort_by = "weight"
+sort_by = "date"
 +++
