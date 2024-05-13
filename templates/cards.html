@@ -50,11 +50,11 @@
                 {%- set show_pages = section.pages -%}
             {% endif -%}
 
+            {{ section.content | safe }}
+
             {{ post_macros::cards_posts(pages=show_pages, layout="talks", active="") }}
         </main>
     {% endif %}
-
-
 
     {% if paginator %}
         <ul class="pagination">
