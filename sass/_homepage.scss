@@ -1,28 +1,37 @@
 
-#hero #about-me {
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 1rem;
+#hero  {
 
-    img {
-        order: 2;
-        max-width: 10rem;
-        max-height: 10rem;
-        border-radius: 4px;
-    }
-    p {
-        // Woo, optical alignmnet
-        margin-top: -7px;
+    h1 {
+        // Optical negative space yay
+        margin-bottom: 1.4rem;
     }
 
-    @media screen and (max-width: $phone) {
-        display: block;
+
+    #about-me {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 1rem;
 
         img {
-            max-width: 6rem;
-            max-height: 6rem;
-            float: left;
-            margin: 0.5rem 1rem 0 0;
+            order: 2;
+            max-width: 10rem;
+            max-height: 10rem;
+            border-radius: 4px;
+        }
+        p {
+            // Woo, optical alignmnet
+            margin-top: -7px;
+        }
+
+        @media screen and (max-width: $phone) {
+            display: block;
+
+            img {
+                max-width: 6rem;
+                max-height: 6rem;
+                float: left;
+                margin: 0.5rem 1rem 0.5rem 0;
+            }
         }
     }
 }
@@ -68,9 +77,12 @@
     // emulate subgraph by unwrapping the children
     display: contents;
 
+    a {
+        text-decoration: none;
+    }
+
     p.title {
         font-size: 1.2rem;
-        font-weight: 600;
         padding: 0;
         margin: 0;
     }
