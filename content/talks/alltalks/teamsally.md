@@ -5,7 +5,7 @@ weight = 1
 date = 2022-03-23
 
 [extra]
-local_image = "talks/thumbnails/teamsally.png"
-path_to_file = "talks/files/teamsally.pdf"
+local_image = "/talks/thumbnails/teamsally.png"
+path_to_file = "/talks/files/teamsally.pdf"
 type = "PDF"
 +++
