@@ -176,6 +176,15 @@
                             {% endif %}
                         </span>
                     {% endif %}
+                    {% if page.extra.type2 %}
+                        <span class="type-label">
+                            {% if page.extra.type2 == "Video" %}
+                                <i class="fa-solid fa-video"></i>
+                            {% elif page.extra.type2 == "PDF" %}
+                                <i class="fa-solid fa-file-pdf"></i>
+                            {% endif %}
+                        </span>
+                    {% endif %}
                 </div>
                 <div class="card-description">
                     <p>
