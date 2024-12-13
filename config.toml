@@ -8,6 +8,7 @@ title = "Peter Kos"
 
 
 [markdown]
+bottom_footnotes = true
 highlight_code = true
 highlight_theme = "duskfox-dark"
 extra_syntaxes_and_themes = ["highlight_themes"]

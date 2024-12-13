@@ -60,18 +60,29 @@ header {
 img {
     border: none;
 
-    &.almost-max {
-        max-width: 70%;
+    &.almost-max, &.half-center, &.fullwidth, &.overwidth {
         margin: 0 auto;
         display: block;
         border-radius: 5px;
     }
 
+    &.almost-max {
+        max-width: 70%;
+    }
+
     &.half-center {
         max-width: 40%;
+    }
+
+    &.fullwidth {
+        max-width: 100%;
+    }
+
+    &.overwidth {
+        --overflow: 20%;
+        max-width: calc(100% + var(--overflow));
         margin: 0 auto;
-        display: block;
-        border-radius: 5px;
+        margin-left: calc(var(--overflow) / -2);
     }
 }
 
