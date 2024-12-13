@@ -5,8 +5,8 @@
     --primary-color: rgb(166, 90, 237);
     --bg-1: rgb(230, 230, 230);
     --header-font: "Newsreader", "Garamond", serif;
-    --text-font: "Fira Sans", "Inter", sans-serif;
-    --code-font: 'Fira Code', monospace; // FIXME: doesn't wanna work in `pre`
+    --text-font: "Mulish", "Fira Sans", "Inter", sans-serif;
+    --code-font: "Cascadia Mono", "Fira Code", monospace;
 }
 
 :root.dark {
@@ -14,18 +14,14 @@
     --bg-1: rgb(40, 40, 40);
 }
 
-
 // Not sure why this doesn't work as CSS var :(
 $laptop: 1100px;
 $phone: 600px;
 
-
 // MARK: Mixins
-
 
 /// Clears for self and any nested `a` links
 @mixin no-link-border {
-
     &,
     a {
         text-decoration: none;
