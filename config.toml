@@ -19,6 +19,7 @@ extra_syntaxes_and_themes = ["highlight_themes"]
 
 
 [extra]
+toc = false
 theme = "toggle" # light, dark, auto, toggle
 mathjax = true
 mathjax_dollar_inline_enable = true

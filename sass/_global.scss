@@ -6,8 +6,47 @@
     max-width: 900px;
     margin-bottom: 8rem; // overscroll, anyone?
 
+
+
     &:has(.cards-talks) {
         max-width: 1200px;
+    }
+}
+
+article {
+    display: grid;
+    grid-template-areas:
+        "header blank"
+        "content toc";
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 100% 300px;
+
+    // Table of contents
+    &>ul {
+        grid-area: toc;
+        position: sticky;
+        height: 5rem;
+        top: 3rem;
+        margin-top: 3rem; // Match content h1
+        list-style: none;
+
+        // Any nested lists
+        ul {
+            list-style: none;
+        }
+
+        li a {
+            font-size: 0.8rem;
+            text-decoration: none;
+        }
+    }
+
+    .title {
+        grid-area: header;
+    }
+
+    section.body {
+        grid-area: content;
     }
 }
 
