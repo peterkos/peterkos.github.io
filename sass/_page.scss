@@ -6,6 +6,10 @@ section.body {
             color: var(--primary-color);
             content: "# ";
         }
+
+        &:first-child {
+            margin-top: 2rem;
+        }
     }
 }
 
@@ -38,10 +42,8 @@ section.body {
 }
 
 div.title {
-    margin-bottom: 2rem;
-
     h1.page-title {
-        margin-bottom: 0;
+        margin-bottom: 0.5rem;
     }
 
     // Post title styling, but NOT for titles on main page
