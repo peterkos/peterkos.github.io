@@ -1,6 +1,8 @@
 section.body {
+    margin: 0 var(--content-margin);
+
     h1 {
-        text-indent: -1.7rem;
+        text-indent: -1.5rem; // MAGIC: Leading edge of text flush with body
 
         &::before {
             color: var(--primary-color);
@@ -78,7 +80,7 @@ pre {
 @media screen and (max-width: $phone) {
     pre {
         width: 100vw;
-        margin-left: calc(-1 * var(--content-padding));
+        margin-left: calc(-1 * (var(--content-padding) + var(--content-margin)));
 
     }
 }

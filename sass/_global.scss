@@ -54,15 +54,6 @@ article {
     }
 }
 
-h1 {
-    // We only want the `#` on the post's page
-    &::before {
-        content: none;
-    }
-
-    line-height: 2.5rem;
-}
-
 h1,
 h2,
 h3,
@@ -78,6 +69,19 @@ h6 {
         margin: 2rem 0 1rem 0;
     }
 }
+
+h1 {
+    // We only want the `#` on the post's page
+    &::before {
+        content: none;
+    }
+    line-height: 2.5rem;
+}
+
+h2 {
+    line-height: 2rem;
+}
+
 
 header {
     padding: 0;
@@ -124,10 +128,13 @@ img {
     }
 
     &.overwidth {
-        --overflow: 20%;
-        max-width: calc(100% + var(--overflow));
-        margin: 0 auto;
-        margin-left: calc(var(--overflow) / -2);
+
+        @media screen and (min-width: $phone) {
+            --overflow: 20%;
+            max-width: calc(100% + var(--overflow));
+            margin: 0 auto;
+            margin-left: calc(var(--overflow) / -2);
+        }
     }
 }
 
