@@ -1,6 +1,6 @@
 section.body {
     h1 {
-        margin-left: -1.7rem;
+        text-indent: -1.7rem;
 
         &::before {
             color: var(--primary-color);
@@ -34,7 +34,6 @@ section.body {
 .page-title {
     font-family: var(--header-font);
     font-size: 2rem;
-
 
     @media screen and (max-width: $phone) {
         // margin: 0;
@@ -73,6 +72,15 @@ pre {
     padding: 1rem;
     margin: 1rem 0;
     font-size: .8rem;
+
+}
+
+@media screen and (max-width: $phone) {
+    pre {
+        width: 100vw;
+        margin-left: calc(-1 * var(--content-padding));
+
+    }
 }
 
 // The lang attribute

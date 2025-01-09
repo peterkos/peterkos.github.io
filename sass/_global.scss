@@ -2,11 +2,15 @@
     box-sizing: border-box;
 }
 
+body {
+    // We want code blocks to be 100vw on mobile.
+    margin: 0;
+}
+
 .content {
     max-width: 900px;
     margin-bottom: 8rem; // overscroll, anyone?
-
-
+    padding: 0 var(--content-padding); // want rem instead of px, + reference later
 
     &:has(.cards-talks) {
         max-width: 1200px;
@@ -55,6 +59,8 @@ h1 {
     &::before {
         content: none;
     }
+
+    line-height: 2.5rem;
 }
 
 h1,
