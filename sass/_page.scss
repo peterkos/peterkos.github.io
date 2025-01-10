@@ -1,7 +1,6 @@
 section.body {
     &:not(#hero &) {
         margin: 0 var(--content-margin); // Otherwise, heading octothorpes look weird.
-        background-color: black;
     }
 
     h1 {
