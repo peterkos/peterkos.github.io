@@ -10,7 +10,6 @@ body {
 .content {
     max-width: 900px;
     margin-bottom: 8rem; // overscroll, anyone?
-    padding: 0 var(--content-padding); // want rem instead of px, + reference later
 
     &:has(.cards-talks) {
         max-width: 1200px;

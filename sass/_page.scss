@@ -1,18 +1,23 @@
 section.body {
-    margin: 0 var(--content-margin);
+    &:not(#hero &) {
+        margin: 0 var(--content-margin); // Otherwise, heading octothorpes look weird.
+        background-color: black;
+    }
 
     h1 {
         text-indent: -1.5rem; // MAGIC: Leading edge of text flush with body
-
         &::before {
             color: var(--primary-color);
             content: "# ";
         }
-
         &:first-child {
             margin-top: 2rem;
         }
     }
+}
+
+.content {
+    padding: 0 var(--content-padding); // want rem instead of px, + reference later
 }
 
 .post-desc-heading {
@@ -51,7 +56,6 @@ div.title {
     &:not(section.list-item .title) {
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
         align-items: center;
 
         .meta {
