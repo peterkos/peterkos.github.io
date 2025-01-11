@@ -335,7 +335,7 @@ platforms: [
 ],
 ```
 
-Our dependency has a lower minimum for macOS (.v10_13) than our package supports (.v10_14)! Yes, yes, this is exactly what the error message said. But we're at a semantic impasse. While I could set something silly, like a `.macOS("v99")`, that would only solve the dependency resolution issue. This is an iOS package, and we only want it to be built for iOS. Maybe we can set this as a flag in SPM? How can we make SPM target iOS, not macOS?
+Our dependency has a higher minimum for macOS (.v10_14) than our package supports (.v10_13)! Yes, yes, this is exactly what the error message said. But we're at a semantic impasse. While I could set something silly, like a `.macOS("v99")`, that would only solve the dependency resolution issue. This is an iOS package, and we only want it to be built for iOS. Maybe we can set this as a flag in SPM? How can we make SPM target iOS, not macOS?
 
 ## Get SPM to target iOS, not macOS
 
